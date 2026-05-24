@@ -1,0 +1,3406 @@
+* SPICE3 file created from DPLLlay2.ext - technology: sky130A
+
+.subckt Caplay1 top bot VSUBS
+X0 top bot sky130_fd_pr__cap_mim_m3_1 l=10 w=10
+C0 top bot 1.19418f
+C1 top VSUBS 0.55041f
+C2 bot VSUBS 3.33627f
+.ends
+
+.subckt inverter A B VDD GND
+X0 B A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.45 pd=2.9 as=0.45 ps=2.9 w=1 l=0.15
+X1 B A GND GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.9 as=0.45 ps=2.9 w=1 l=0.15
+C0 B A 0.06678f
+C1 A VDD 0.07153f
+C2 B VDD 0.12853f
+C3 B GND 0.33657f
+C4 A GND 0.40779f
+C5 VDD GND 0.69294f
+.ends
+
+.subckt PMOS a_280_840# a_160_790# w_n610_790# a_580_790# a_n260_790# a_700_840# a_n140_840#
++ VSUBS
+X0 a_280_840# a_160_790# w_n610_790# w_n610_790# sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+X1 a_700_840# a_580_790# w_n610_790# w_n610_790# sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+X2 a_n140_840# a_n260_790# w_n610_790# w_n610_790# sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+C0 a_280_840# w_n610_790# 0.31574f
+C1 a_580_790# w_n610_790# 0.18652f
+C2 a_n260_790# a_160_790# 0.00533f
+C3 a_700_840# w_n610_790# 0.18492f
+C4 a_160_790# w_n610_790# 0.18965f
+C5 a_160_790# a_280_840# 0.07042f
+C6 a_580_790# a_700_840# 0.07042f
+C7 a_160_790# a_580_790# 0.00533f
+C8 a_n260_790# a_n140_840# 0.07042f
+C9 a_n260_790# w_n610_790# 0.19037f
+C10 a_n140_840# w_n610_790# 0.31574f
+C11 a_700_840# VSUBS 0.12444f
+C12 a_280_840# VSUBS 0.02803f
+C13 a_n140_840# VSUBS 0.02803f
+C14 a_580_790# VSUBS 0.07481f
+C15 a_160_790# VSUBS 0.06632f
+C16 a_n260_790# VSUBS 0.07095f
+C17 w_n610_790# VSUBS 3.30585f
+.ends
+
+.subckt NAND3lay A B C VDD GND Y a_110_90# a_350_90#
+X0 Y A a_350_90# GND sky130_fd_pr__nfet_01v8 ad=2.7 pd=10.2 as=1.35 ps=5.1 w=4.5 l=0.6
+X1 a_110_90# C GND GND sky130_fd_pr__nfet_01v8 ad=1.35 pd=5.1 as=2.7 ps=10.2 w=4.5 l=0.6
+X2 Y B VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+X3 Y A VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+X4 a_350_90# B a_110_90# GND sky130_fd_pr__nfet_01v8 ad=1.35 pd=5.1 as=1.35 ps=5.1 w=4.5 l=0.6
+X5 Y C VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+C0 VDD C 0.20604f
+C1 B a_350_90# 0.10544f
+C2 VDD a_350_90# 0.00138f
+C3 VDD B 0.26164f
+C4 Y a_110_90# 0
+C5 A C 0.08281f
+C6 Y C 0.08845f
+C7 A a_350_90# 0.11064f
+C8 A B 0.38267f
+C9 Y a_350_90# 0.1333f
+C10 Y B 0.1278f
+C11 VDD A 0.4622f
+C12 Y VDD 1.08182f
+C13 a_110_90# C 0.10442f
+C14 a_110_90# a_350_90# 0.13254f
+C15 a_110_90# B 0.11468f
+C16 a_110_90# VDD 0.00138f
+C17 Y A 0.46488f
+C18 B C 0.30907f
+C19 Y GND 0.95911f
+C20 A GND 0.91562f
+C21 B GND 0.67944f
+C22 C GND 0.80237f
+C23 VDD GND 3.24008f
+C24 a_350_90# GND 0.1294f
+C25 a_110_90# GND 0.25955f
+.ends
+
+.subckt NMOS a_n300_0# a_240_n50# a_360_0# a_600_0# a_120_0# a_480_n50# a_0_n50#
+X0 a_120_0# a_0_n50# a_n300_0# a_n300_0# sky130_fd_pr__nfet_01v8 ad=1.35 pd=5.1 as=2.7 ps=10.2 w=4.5 l=0.6
+X1 a_360_0# a_240_n50# a_120_0# a_n300_0# sky130_fd_pr__nfet_01v8 ad=1.35 pd=5.1 as=1.35 ps=5.1 w=4.5 l=0.6
+X2 a_600_0# a_480_n50# a_360_0# a_n300_0# sky130_fd_pr__nfet_01v8 ad=2.7 pd=10.2 as=1.35 ps=5.1 w=4.5 l=0.6
+C0 a_480_n50# a_360_0# 0.10442f
+C1 a_600_0# a_360_0# 0.13254f
+C2 a_480_n50# a_600_0# 0.10442f
+C3 a_240_n50# a_120_0# 0.10442f
+C4 a_240_n50# a_0_n50# 0.01333f
+C5 a_240_n50# a_360_0# 0.10442f
+C6 a_240_n50# a_480_n50# 0.01333f
+C7 a_120_0# a_0_n50# 0.10442f
+C8 a_360_0# a_120_0# 0.13254f
+C9 a_600_0# a_n300_0# 0.27884f
+C10 a_360_0# a_n300_0# 0.11878f
+C11 a_120_0# a_n300_0# 0.25131f
+C12 a_480_n50# a_n300_0# 0.19144f
+C13 a_240_n50# a_n300_0# 0.17973f
+C14 a_0_n50# a_n300_0# 0.29586f
+.ends
+
+.subckt NAND2lay A B VDD GND C a_110_n10#
+X0 a_110_n10# B GND GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X1 C A a_110_n10# GND sky130_fd_pr__nfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+X2 VDD A C VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+X3 C B VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+C0 B A 0.24311f
+C1 B C 0.1267f
+C2 VDD a_110_n10# 0.00111f
+C3 a_110_n10# A 0.10272f
+C4 a_110_n10# C 0.09423f
+C5 VDD A 0.1918f
+C6 a_110_n10# B 0.07581f
+C7 VDD C 0.31297f
+C8 VDD B 0.26271f
+C9 C A 0.34483f
+C10 C GND 0.43806f
+C11 A GND 0.61157f
+C12 B GND 0.57584f
+C13 VDD GND 2.20835f
+C14 a_110_n10# GND 0.20293f
+.ends
+
+.subckt DLATCHlay2 NMOS_0/a_360_0# NMOS_0/a_120_0# NAND3lay_0/a_110_90# NAND2lay_0/a_110_n10#
++ NMOS_1/a_360_0# NAND2lay_1/a_110_n10# NMOS_1/a_120_0# NAND3lay_0/a_350_90# NMOS_2/a_360_0#
++ NAND2lay_1/B d NMOS_2/a_120_0# q a_3880_1000# clock NAND3lay_0/A NAND3lay_0/Y VN
++ VP NAND2lay_0/A clear
+XPMOS_0 a_3880_1000# clock VP NAND3lay_0/Y NAND2lay_0/A a_3880_1000# a_3880_1000#
++ VN PMOS
+XPMOS_1 NAND2lay_0/A clear VP d a_3880_1000# NAND2lay_0/A NAND2lay_0/A VN PMOS
+XPMOS_2 NAND2lay_1/B a_3880_1000# VP q clear NAND2lay_1/B NAND2lay_1/B VN PMOS
+XNAND3lay_0 NAND3lay_0/A clear clock VP VN NAND3lay_0/Y NAND3lay_0/a_110_90# NAND3lay_0/a_350_90#
++ NAND3lay
+XNMOS_0 VN clock NMOS_0/a_360_0# a_3880_1000# NMOS_0/a_120_0# NAND3lay_0/Y NAND2lay_0/A
++ NMOS
+XNMOS_1 VN clear NMOS_1/a_360_0# NAND2lay_0/A NMOS_1/a_120_0# d a_3880_1000# NMOS
+XNMOS_2 VN a_3880_1000# NMOS_2/a_360_0# NAND2lay_1/B NMOS_2/a_120_0# q clear NMOS
+XNAND2lay_0 NAND2lay_0/A NAND3lay_0/Y VP VN NAND3lay_0/A NAND2lay_0/a_110_n10# NAND2lay
+XNAND2lay_1 NAND3lay_0/Y NAND2lay_1/B VP VN q NAND2lay_1/a_110_n10# NAND2lay
+C0 NAND3lay_0/a_350_90# NAND2lay_0/A 0
+C1 NAND3lay_0/Y d 0.00528f
+C2 clear a_3880_1000# 1.40834f
+C3 VP q 0.27748f
+C4 NAND2lay_1/B NMOS_2/a_360_0# 0.00123f
+C5 d clear 0.6604f
+C6 VP NMOS_0/a_120_0# 0.00116f
+C7 NAND3lay_0/Y NMOS_1/a_120_0# 0
+C8 VP NMOS_2/a_120_0# 0.00116f
+C9 NAND2lay_1/a_110_n10# NAND2lay_1/B 0.01781f
+C10 NAND3lay_0/A VP 0.18345f
+C11 NAND3lay_0/a_350_90# NAND3lay_0/A 0
+C12 d a_3880_1000# 0.04139f
+C13 NAND2lay_0/A q 0.01478f
+C14 VP NMOS_0/a_360_0# 0.00116f
+C15 NAND3lay_0/Y NMOS_1/a_360_0# 0
+C16 NAND3lay_0/Y NAND2lay_1/B 0.67623f
+C17 VP NMOS_2/a_360_0# 0.00116f
+C18 VP clock 0.05606f
+C19 NAND3lay_0/a_350_90# clock 0.02821f
+C20 NAND2lay_1/a_110_n10# VP 0
+C21 NAND3lay_0/a_110_90# NAND2lay_0/A 0
+C22 NAND2lay_0/A NMOS_0/a_120_0# 0.01021f
+C23 NMOS_1/a_120_0# a_3880_1000# 0.02977f
+C24 NAND2lay_0/A NMOS_2/a_120_0# 0.02857f
+C25 NMOS_1/a_360_0# clear 0.0026f
+C26 NAND2lay_1/B clear 0.03937f
+C27 q NMOS_2/a_120_0# 0
+C28 NAND3lay_0/Y VP 1.29759f
+C29 NAND2lay_0/A NAND3lay_0/A 0.05486f
+C30 NAND2lay_0/A NMOS_0/a_360_0# 0.01787f
+C31 NMOS_1/a_360_0# a_3880_1000# 0
+C32 NAND2lay_1/B a_3880_1000# 0.15657f
+C33 NAND2lay_0/A NMOS_2/a_360_0# 0.00657f
+C34 NAND2lay_0/A clock 0.87113f
+C35 q NMOS_2/a_360_0# 0
+C36 clear VP 0.1828f
+C37 NAND3lay_0/a_110_90# NAND3lay_0/A 0
+C38 d NMOS_1/a_360_0# 0.01997f
+C39 NAND2lay_1/a_110_n10# q 0.001f
+C40 NAND2lay_1/B d 0
+C41 NAND3lay_0/Y NAND2lay_0/A 0.577f
+C42 a_3880_1000# VP 0.48587f
+C43 NAND3lay_0/a_110_90# clock 0.02821f
+C44 NMOS_0/a_120_0# clock 0.02773f
+C45 NAND3lay_0/Y q 0.07143f
+C46 NAND3lay_0/A clock 0.05182f
+C47 d VP 0.10606f
+C48 NAND2lay_0/A clear 0.95698f
+C49 NAND3lay_0/Y NMOS_0/a_120_0# 0.00603f
+C50 NMOS_0/a_360_0# clock 0.00225f
+C51 clear q 0
+C52 NAND3lay_0/Y NMOS_2/a_120_0# 0
+C53 NAND2lay_1/B NMOS_1/a_360_0# 0
+C54 NAND3lay_0/Y NAND3lay_0/A 0.08286f
+C55 NAND2lay_0/A a_3880_1000# 0.58757f
+C56 NMOS_1/a_120_0# VP 0.00116f
+C57 NAND3lay_0/Y NMOS_0/a_360_0# 0.00594f
+C58 a_3880_1000# q 0.50936f
+C59 clear NMOS_2/a_120_0# 0.0033f
+C60 NAND3lay_0/Y NMOS_2/a_360_0# 0
+C61 NAND3lay_0/Y clock 0.38435f
+C62 d NAND2lay_0/A 0.26326f
+C63 clear NAND3lay_0/A 0.01142f
+C64 a_3880_1000# NMOS_0/a_120_0# 0
+C65 d q 0
+C66 NMOS_1/a_360_0# VP 0.00172f
+C67 NAND2lay_1/B VP 0.36697f
+C68 a_3880_1000# NMOS_2/a_120_0# 0.02773f
+C69 clear NMOS_2/a_360_0# 0.00106f
+C70 clear clock 0.0883f
+C71 NAND3lay_0/A a_3880_1000# 0
+C72 NMOS_1/a_120_0# NAND2lay_0/A 0.02821f
+C73 a_3880_1000# NMOS_0/a_360_0# 0
+C74 a_3880_1000# NMOS_2/a_360_0# 0.00395f
+C75 a_3880_1000# clock 0.0569f
+C76 NAND3lay_0/Y clear 0.02495f
+C77 NMOS_1/a_360_0# NAND2lay_0/A 0.02913f
+C78 NAND2lay_1/B NAND2lay_0/A 0.04134f
+C79 d NMOS_2/a_360_0# 0
+C80 NAND2lay_1/B q 0.44018f
+C81 NAND3lay_0/Y a_3880_1000# 0.80886f
+C82 NAND2lay_1/B NMOS_2/a_120_0# 0
+C83 NAND2lay_0/A VP 0.43478f
+C84 NAND2lay_1/a_110_n10# VN 0.01819f
+C85 NAND3lay_0/Y VN 3.41407f
+C86 NAND2lay_0/a_110_n10# VN 0.00173f
+C87 NMOS_2/a_360_0# VN 0.01268f
+C88 NMOS_2/a_120_0# VN 0.00535f
+C89 q VN 1.68638f
+C90 NMOS_1/a_360_0# VN 0
+C91 NMOS_1/a_120_0# VN 0
+C92 d VN 0.6762f
+C93 NMOS_0/a_360_0# VN 0
+C94 NMOS_0/a_120_0# VN 0.001f
+C95 clock VN 0.78949f
+C96 NAND3lay_0/A VN 0.07435f
+C97 clear VN 2.74978f
+C98 VP VN -1.28403f
+C99 NAND3lay_0/a_350_90# VN 0.00161f
+C100 NAND3lay_0/a_110_90# VN 0.0015f
+C101 NAND2lay_1/B VN 0.49901f
+C102 NAND2lay_0/A VN 2.05872f
+C103 a_3880_1000# VN 1.76551f
+.ends
+
+.subckt PFDlay2 Dclock Out DLATCHlay2_0/NAND2lay_0/a_110_n10# DLATCHlay2_1/NMOS_2/a_120_0#
++ DLATCHlay2_1/NAND2lay_0/a_110_n10# DLATCHlay2_1/NMOS_0/a_360_0# NAND2lay_0/a_110_n10#
++ DLATCHlay2_1/NAND2lay_1/a_110_n10# DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_1/NMOS_0/a_120_0#
++ DLATCHlay2_1/NAND3lay_0/a_110_90# DLATCHlay2_1/NMOS_1/a_360_0# DLATCHlay2_0/NAND3lay_0/A
++ inverter_0/B DLATCHlay2_1/NMOS_1/a_120_0# DLATCHlay2_1/NAND3lay_0/a_350_90# DLATCHlay2_1/NAND3lay_0/Y
++ Data DLATCHlay2_0/NAND2lay_1/B DLATCHlay2_0/NAND2lay_0/A DLATCHlay2_1/NMOS_2/a_360_0#
++ VDD NAND2lay_0/C DLATCHlay2_0/NAND3lay_0/Y inverter_0/A DLATCHlay2_1/NAND2lay_0/A
++ DLATCHlay2_1/a_3880_1000# DLATCHlay2_1/NAND2lay_1/B GND DLATCHlay2_0/a_3880_1000#
++ NAND2lay_0/A
+Xinverter_0 inverter_0/A inverter_0/B VDD GND inverter
+XDLATCHlay2_0 DLATCHlay2_0/NMOS_0/a_360_0# DLATCHlay2_0/NMOS_0/a_120_0# DLATCHlay2_0/NAND3lay_0/a_110_90#
++ DLATCHlay2_0/NAND2lay_0/a_110_n10# DLATCHlay2_0/NMOS_1/a_360_0# DLATCHlay2_0/NAND2lay_1/a_110_n10#
++ DLATCHlay2_0/NMOS_1/a_120_0# DLATCHlay2_0/NAND3lay_0/a_350_90# DLATCHlay2_0/NMOS_2/a_360_0#
++ DLATCHlay2_0/NAND2lay_1/B VDD DLATCHlay2_0/NMOS_2/a_120_0# inverter_0/A DLATCHlay2_0/a_3880_1000#
++ Data DLATCHlay2_0/NAND3lay_0/A DLATCHlay2_0/NAND3lay_0/Y GND VDD DLATCHlay2_0/NAND2lay_0/A
++ NAND2lay_0/C DLATCHlay2
+XDLATCHlay2_1 DLATCHlay2_1/NMOS_0/a_360_0# DLATCHlay2_1/NMOS_0/a_120_0# DLATCHlay2_1/NAND3lay_0/a_110_90#
++ DLATCHlay2_1/NAND2lay_0/a_110_n10# DLATCHlay2_1/NMOS_1/a_360_0# DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ DLATCHlay2_1/NMOS_1/a_120_0# DLATCHlay2_1/NAND3lay_0/a_350_90# DLATCHlay2_1/NMOS_2/a_360_0#
++ DLATCHlay2_1/NAND2lay_1/B VDD DLATCHlay2_1/NMOS_2/a_120_0# NAND2lay_0/A DLATCHlay2_1/a_3880_1000#
++ Dclock DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_1/NAND3lay_0/Y GND VDD DLATCHlay2_1/NAND2lay_0/A
++ NAND2lay_0/C DLATCHlay2
+XNAND2lay_0 NAND2lay_0/A inverter_0/A VDD GND NAND2lay_0/C NAND2lay_0/a_110_n10# NAND2lay
+X0 GND NAND2lay_0/A Out GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.9 ps=4.2 w=1.5 l=0.6
+X1 Out inverter_0/B VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=4.2 as=0.9 ps=4.2 w=1.5 l=0.6
+C0 Out VDD 0.18635f
+C1 DLATCHlay2_0/NAND3lay_0/A VDD 0.0089f
+C2 DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_0/NAND2lay_0/A 0
+C3 DLATCHlay2_1/NAND3lay_0/Y DLATCHlay2_0/NAND2lay_0/A 0.10903f
+C4 DLATCHlay2_1/NAND3lay_0/Y Dclock 0
+C5 DLATCHlay2_0/NAND2lay_0/A Data 0.0117f
+C6 DLATCHlay2_0/NMOS_2/a_360_0# DLATCHlay2_1/NAND3lay_0/Y 0.0066f
+C7 Dclock Data 0.0042f
+C8 DLATCHlay2_0/NAND3lay_0/Y DLATCHlay2_1/a_3880_1000# 0.00526f
+C9 inverter_0/A NAND2lay_0/C 0.00234f
+C10 DLATCHlay2_0/NAND3lay_0/a_110_90# VDD 0
+C11 DLATCHlay2_1/NAND2lay_0/A VDD 0.00959f
+C12 DLATCHlay2_0/NAND3lay_0/a_350_90# NAND2lay_0/C 0
+C13 DLATCHlay2_0/NMOS_2/a_120_0# VDD 0.00113f
+C14 DLATCHlay2_0/NAND2lay_0/A DLATCHlay2_1/a_3880_1000# 0
+C15 DLATCHlay2_1/NAND3lay_0/A NAND2lay_0/C 0.00114f
+C16 DLATCHlay2_1/NAND3lay_0/Y NAND2lay_0/C 1.20954f
+C17 DLATCHlay2_0/NAND3lay_0/Y Dclock 0.00145f
+C18 DLATCHlay2_0/NMOS_1/a_120_0# DLATCHlay2_1/NAND3lay_0/Y 0.00108f
+C19 DLATCHlay2_1/NAND3lay_0/Y DLATCHlay2_0/a_3880_1000# 0.02669f
+C20 DLATCHlay2_1/NAND2lay_1/B NAND2lay_0/C 0
+C21 DLATCHlay2_0/NAND2lay_0/a_110_n10# DLATCHlay2_1/NAND3lay_0/Y 0.00292f
+C22 NAND2lay_0/C Data 0.00153f
+C23 inverter_0/A inverter_0/B 0.00593f
+C24 inverter_0/A VDD 0.28685f
+C25 inverter_0/A Out 0.03945f
+C26 Dclock DLATCHlay2_0/NAND2lay_0/A 0.00102f
+C27 DLATCHlay2_1/NMOS_2/a_360_0# NAND2lay_0/C 0.01429f
+C28 DLATCHlay2_0/NAND3lay_0/a_350_90# VDD 0
+C29 inverter_0/A DLATCHlay2_0/NAND2lay_1/a_110_n10# 0
+C30 NAND2lay_0/A NAND2lay_0/C 0.91054f
+C31 DLATCHlay2_0/NMOS_0/a_360_0# VDD 0.00113f
+C32 DLATCHlay2_1/NMOS_1/a_360_0# VDD 0
+C33 DLATCHlay2_1/NAND3lay_0/Y NAND2lay_0/a_110_n10# 0
+C34 DLATCHlay2_1/a_3880_1000# NAND2lay_0/C 0.10075f
+C35 DLATCHlay2_0/NAND2lay_1/B NAND2lay_0/C 0
+C36 DLATCHlay2_0/NMOS_1/a_360_0# VDD 0.00186f
+C37 DLATCHlay2_1/NAND3lay_0/A VDD 0.00148f
+C38 DLATCHlay2_1/NAND3lay_0/Y VDD 0.10768f
+C39 DLATCHlay2_0/NAND3lay_0/Y NAND2lay_0/C 0
+C40 DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_0/NAND3lay_0/A 0
+C41 NAND2lay_0/a_110_n10# DLATCHlay2_1/NAND2lay_1/B 0
+C42 DLATCHlay2_1/NAND3lay_0/Y DLATCHlay2_0/NAND3lay_0/A 0
+C43 DLATCHlay2_0/a_3880_1000# DLATCHlay2_1/a_3880_1000# 0.0013f
+C44 inverter_0/A DLATCHlay2_1/NAND2lay_0/A 0
+C45 DLATCHlay2_1/NAND2lay_1/B VDD 0
+C46 VDD Data 0.01582f
+C47 DLATCHlay2_0/NAND2lay_0/A NAND2lay_0/C 0.00373f
+C48 Dclock NAND2lay_0/C 0.00113f
+C49 DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_0/NMOS_0/a_360_0# 0
+C50 NAND2lay_0/A NAND2lay_0/a_110_n10# 0.00993f
+C51 DLATCHlay2_0/a_3880_1000# DLATCHlay2_0/NAND2lay_0/A -0
+C52 Dclock DLATCHlay2_0/a_3880_1000# 0
+C53 DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_1/NAND3lay_0/Y 0
+C54 NAND2lay_0/A VDD 0.02569f
+C55 NAND2lay_0/A Out 0.0754f
+C56 DLATCHlay2_0/NAND2lay_1/B inverter_0/B 0
+C57 DLATCHlay2_0/NAND3lay_0/Y inverter_0/B 0.022f
+C58 DLATCHlay2_1/a_3880_1000# VDD 0.11107f
+C59 DLATCHlay2_0/NAND2lay_1/B VDD 0.02179f
+C60 DLATCHlay2_1/NAND2lay_0/A Data 0.00201f
+C61 Out DLATCHlay2_0/NAND2lay_1/B 0
+C62 DLATCHlay2_0/NAND3lay_0/Y VDD 0.18191f
+C63 DLATCHlay2_0/NAND3lay_0/Y Out 0.00186f
+C64 DLATCHlay2_0/NMOS_0/a_120_0# VDD 0.00113f
+C65 DLATCHlay2_0/NAND2lay_0/A VDD 0.04596f
+C66 DLATCHlay2_0/NAND3lay_0/A DLATCHlay2_0/NAND2lay_0/A 0
+C67 Dclock VDD 0.00551f
+C68 inverter_0/A DLATCHlay2_1/NAND3lay_0/Y 0.21113f
+C69 DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_1/a_3880_1000# -0
+C70 DLATCHlay2_0/NMOS_2/a_360_0# VDD 0.00124f
+C71 DLATCHlay2_0/a_3880_1000# NAND2lay_0/C 0
+C72 inverter_0/A DLATCHlay2_1/NAND2lay_1/B 0
+C73 DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_0/NMOS_0/a_120_0# 0
+C74 DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_0/NAND2lay_0/A 0.00463f
+C75 DLATCHlay2_1/NAND2lay_0/A Dclock 0.02264f
+C76 inverter_0/A NAND2lay_0/A 0.02378f
+C77 DLATCHlay2_1/NAND3lay_0/A Data 0
+C78 DLATCHlay2_1/NAND3lay_0/Y Data 0.00138f
+C79 inverter_0/B NAND2lay_0/C 0
+C80 NAND2lay_0/a_110_n10# NAND2lay_0/C 0
+C81 inverter_0/A DLATCHlay2_1/a_3880_1000# 0
+C82 inverter_0/A DLATCHlay2_0/NAND2lay_1/B 0.00127f
+C83 NAND2lay_0/C VDD 0.13158f
+C84 Out NAND2lay_0/C 0.01428f
+C85 DLATCHlay2_0/NAND3lay_0/Y inverter_0/A 0
+C86 DLATCHlay2_0/NAND3lay_0/A NAND2lay_0/C 0.003f
+C87 DLATCHlay2_0/NMOS_1/a_120_0# VDD 0.00113f
+C88 DLATCHlay2_0/a_3880_1000# VDD 0.12148f
+C89 DLATCHlay2_0/NAND2lay_0/a_110_n10# VDD 0.00269f
+C90 DLATCHlay2_0/NAND2lay_1/a_110_n10# NAND2lay_0/C 0
+C91 NAND2lay_0/A DLATCHlay2_1/NAND3lay_0/Y 0.02338f
+C92 DLATCHlay2_0/NMOS_1/a_360_0# DLATCHlay2_1/a_3880_1000# 0
+C93 NAND2lay_0/A DLATCHlay2_1/NAND2lay_1/B 0
+C94 DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_0/NAND3lay_0/Y 0
+C95 DLATCHlay2_0/NAND3lay_0/Y DLATCHlay2_1/NAND3lay_0/Y 0.00458f
+C96 DLATCHlay2_1/NAND2lay_0/A NAND2lay_0/C 0.00238f
+C97 DLATCHlay2_0/NAND3lay_0/Y DLATCHlay2_1/NAND2lay_1/B 0
+C98 DLATCHlay2_0/NAND3lay_0/Y Data 0
+C99 inverter_0/B VDD 0.19913f
+C100 Out inverter_0/B 0.19027f
+C101 DLATCHlay2_0/NMOS_2/a_120_0# NAND2lay_0/C 0
+C102 DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_0/a_3880_1000# 0.00115f
+C103 Out GND 1.02606f
+C104 NAND2lay_0/a_110_n10# GND 0.00756f
+C105 DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00624f
+C106 DLATCHlay2_1/NAND3lay_0/Y GND -1.64679f
+C107 NAND2lay_0/A GND -0.08635f
+C108 DLATCHlay2_1/NMOS_1/a_360_0# GND -0
+C109 Dclock GND -0.57467f
+C110 DLATCHlay2_1/NAND3lay_0/A GND -0.40097f
+C111 VDD GND -1.84797f
+C112 DLATCHlay2_1/NAND2lay_1/B GND -0.76181f
+C113 DLATCHlay2_1/NAND2lay_0/A GND -1.19183f
+C114 DLATCHlay2_1/a_3880_1000# GND -1.39364f
+C115 DLATCHlay2_0/NAND2lay_1/a_110_n10# GND 0.00599f
+C116 DLATCHlay2_0/NAND3lay_0/Y GND -2.14255f
+C117 DLATCHlay2_0/NAND2lay_0/a_110_n10# GND 0
+C118 inverter_0/A GND -0.1805f
+C119 DLATCHlay2_0/NMOS_1/a_360_0# GND -0
+C120 Data GND -0.59197f
+C121 DLATCHlay2_0/NAND3lay_0/A GND -0.40293f
+C122 NAND2lay_0/C GND -0.24024f
+C123 DLATCHlay2_0/NAND2lay_1/B GND -0.8084f
+C124 DLATCHlay2_0/NAND2lay_0/A GND -1.19272f
+C125 DLATCHlay2_0/a_3880_1000# GND -1.40443f
+C126 inverter_0/B GND 0.11095f
+.ends
+
+.subckt bufferlay In VDD GND Out a_n6232_n13130#
+X0 VDD In a_n6232_n13130# VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+X1 Out a_n6232_n13130# GND GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.9 ps=4.2 w=1.5 l=0.6
+X2 GND In a_n6232_n13130# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.9 ps=4.2 w=1.5 l=0.6
+X3 Out a_n6232_n13130# VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=1.8 ps=7.2 w=3 l=0.6
+C0 VDD In 0.20355f
+C1 Out In 0
+C2 In a_n6232_n13130# 0.23651f
+C3 VDD Out 0.12418f
+C4 VDD a_n6232_n13130# 0.33329f
+C5 Out a_n6232_n13130# 0.14011f
+C6 Out GND 0.32436f
+C7 In GND 0.45389f
+C8 VDD GND 2.24076f
+C9 a_n6232_n13130# GND 1.01033f
+.ends
+
+.subckt VCOlay12 In VDD GND Out a_1780_n60# a_4580_n60# a_2600_n60# a_5880_490# a_5400_n60#
++ a_480_n60# a_1780_490# a_0_n60# a_3280_n60# a_1300_n60# a_4580_490# a_4100_n60#
++ a_480_490# a_3280_490# a_5880_n60#
+X0 a_2600_n60# a_1300_n60# a_1780_490# VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=3.5
+X1 a_1780_n60# In GND GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.1 as=0.9 ps=4.2 w=1.5 l=0.6
+X2 a_4100_n60# a_2600_n60# a_3280_490# VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=3.5
+X3 a_3280_n60# In GND GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.1 as=0.9 ps=4.2 w=1.5 l=0.6
+X4 a_5880_490# a_0_n60# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X5 Out a_5400_n60# a_5880_n60# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.45 ps=2.1 w=1.5 l=3.5
+X6 a_480_490# a_0_n60# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X7 a_4580_490# a_0_n60# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X8 a_1780_490# a_0_n60# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X9 a_3280_490# a_0_n60# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X10 GND In a_0_n60# GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.1 as=0.9 ps=4.2 w=1.5 l=0.6
+X11 a_1300_n60# Out a_480_n60# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.45 ps=2.1 w=1.5 l=3.5
+X12 Out a_5400_n60# a_5880_490# VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=3.5
+X13 a_5400_n60# a_4100_n60# a_4580_n60# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.45 ps=2.1 w=1.5 l=3.5
+X14 a_2600_n60# a_1300_n60# a_1780_n60# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.45 ps=2.1 w=1.5 l=3.5
+X15 a_4100_n60# a_2600_n60# a_3280_n60# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.2 as=0.45 ps=2.1 w=1.5 l=3.5
+X16 a_5880_n60# In GND GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.1 as=0.9 ps=4.2 w=1.5 l=0.6
+X17 VDD a_0_n60# a_0_n60# VDD sky130_fd_pr__pfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X18 a_1300_n60# Out a_480_490# VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=3.5
+X19 a_480_n60# In GND GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.1 as=0.45 ps=2.1 w=1.5 l=0.6
+X20 a_5400_n60# a_4100_n60# a_4580_490# VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=3.5
+X21 a_4580_n60# In GND GND sky130_fd_pr__nfet_01v8 ad=0.45 pd=2.1 as=0.9 ps=4.2 w=1.5 l=0.6
+C0 a_2600_n60# In 0.36375f
+C1 a_480_490# a_0_n60# 0.00163f
+C2 VDD a_3280_490# 0.03045f
+C3 VDD a_5880_n60# 0
+C4 a_1300_n60# a_480_n60# 0
+C5 a_2600_n60# a_1780_n60# 0
+C6 In a_5400_n60# 0.20716f
+C7 a_5880_490# VDD 0.01346f
+C8 a_3280_490# a_4100_n60# 0
+C9 VDD a_4100_n60# 0.59641f
+C10 a_2600_n60# Out 0.00367f
+C11 In a_480_490# 0.00231f
+C12 VDD a_4580_n60# 0
+C13 Out a_5400_n60# 0.274f
+C14 In a_0_n60# 0.1621f
+C15 a_1300_n60# a_1780_490# 0.01796f
+C16 a_2600_n60# a_1300_n60# 0.07546f
+C17 a_3280_n60# In 0.01756f
+C18 VDD a_480_n60# 0.00154f
+C19 a_4580_n60# a_4100_n60# 0.00883f
+C20 Out a_0_n60# 2.09819f
+C21 a_1300_n60# a_480_490# 0
+C22 In a_1780_n60# 0.01779f
+C23 VDD a_1780_490# 0.02649f
+C24 a_2600_n60# a_3280_490# 0.01652f
+C25 a_1300_n60# a_0_n60# 0.06534f
+C26 a_2600_n60# VDD 0.66193f
+C27 Out In 0.21169f
+C28 a_4580_490# VDD 0.026f
+C29 a_2600_n60# a_4100_n60# 0.06813f
+C30 VDD a_5400_n60# 0.46343f
+C31 a_5400_n60# a_5880_n60# 0.00929f
+C32 a_4580_490# a_4100_n60# 0.01704f
+C33 a_5880_490# a_5400_n60# 0.01719f
+C34 In a_1300_n60# 0.36241f
+C35 a_5400_n60# a_4100_n60# 0.07615f
+C36 VDD a_480_490# 0.02773f
+C37 a_1300_n60# a_1780_n60# 0.00847f
+C38 VDD a_0_n60# 2.71275f
+C39 a_4580_n60# a_5400_n60# 0
+C40 VDD a_3280_n60# 0
+C41 Out a_1300_n60# 0.07178f
+C42 a_4100_n60# a_0_n60# 0.05569f
+C43 a_3280_n60# a_4100_n60# 0
+C44 VDD In 0.07794f
+C45 In a_5880_n60# 0.00536f
+C46 a_2600_n60# a_1780_490# 0
+C47 VDD a_1780_n60# 0
+C48 a_480_n60# a_0_n60# 0.00119f
+C49 In a_4100_n60# 0.42562f
+C50 Out VDD 1.45659f
+C51 Out a_5880_n60# 0
+C52 a_2600_n60# a_5400_n60# 0
+C53 In a_4580_n60# 0.01942f
+C54 a_5880_490# Out 0.01274f
+C55 a_4580_490# a_5400_n60# 0
+C56 Out a_4100_n60# 0.0037f
+C57 In a_480_n60# 0.01339f
+C58 VDD a_1300_n60# 0.61465f
+C59 a_2600_n60# a_0_n60# 0.05424f
+C60 a_2600_n60# a_3280_n60# 0.00883f
+C61 a_5400_n60# a_0_n60# 0.04895f
+C62 In GND 4.75404f
+C63 Out GND 3.39076f
+C64 VDD GND 17.6183f
+C65 a_5880_n60# GND 0.01223f
+C66 a_4580_n60# GND 0.00424f
+C67 a_3280_n60# GND 0.00826f
+C68 a_1780_n60# GND 0.00492f
+C69 a_480_n60# GND 0.01519f
+C70 a_5400_n60# GND 1.16072f
+C71 a_4100_n60# GND 1.04555f
+C72 a_2600_n60# GND 1.12304f
+C73 a_1300_n60# GND 1.0644f
+C74 a_0_n60# GND 1.94841f
+.ends
+
+.subckt XNORlay VDD GND out a_110_2000# A inverter_1/B a_110_960# inverter_0/B B a_1110_960#
+Xinverter_0 B inverter_0/B VDD GND inverter
+Xinverter_1 A inverter_1/B VDD GND inverter
+X0 out inverter_1/B a_110_2000# VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=1.8 ps=6.6 w=6 l=0.6
+X1 a_110_960# A out GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X2 GND B a_1110_960# GND sky130_fd_pr__nfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+X3 a_1110_960# inverter_1/B out GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X4 a_110_2000# inverter_0/B VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=6.6 as=3.6 ps=13.2 w=6 l=0.6
+X5 out B a_110_2000# VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=1.8 ps=6.6 w=6 l=0.6
+X6 a_110_2000# A VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=6.6 as=3.6 ps=13.2 w=6 l=0.6
+X7 GND inverter_0/B a_110_960# GND sky130_fd_pr__nfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+C0 a_110_960# B 0
+C1 out A 0.29812f
+C2 B A 0.01337f
+C3 out a_1110_960# 0.10227f
+C4 VDD inverter_0/B 0.40713f
+C5 VDD a_110_2000# 0.70905f
+C6 VDD inverter_1/B 0.28848f
+C7 B a_1110_960# 0.09347f
+C8 out B 0.27322f
+C9 VDD a_110_960# 0
+C10 a_110_2000# inverter_0/B 0.19533f
+C11 inverter_1/B inverter_0/B 0.30512f
+C12 inverter_1/B a_110_2000# 0.30187f
+C13 VDD A 0.53275f
+C14 a_110_960# inverter_0/B 0.1085f
+C15 VDD a_1110_960# 0
+C16 out VDD 0.60035f
+C17 VDD B 0.12177f
+C18 inverter_0/B A 0.08747f
+C19 a_110_2000# A 0.16248f
+C20 inverter_1/B A 0.07523f
+C21 inverter_0/B a_1110_960# 0
+C22 inverter_1/B a_1110_960# 0.07581f
+C23 out inverter_0/B 0.2165f
+C24 out a_110_2000# 0.48948f
+C25 out inverter_1/B 0.64977f
+C26 a_110_960# A 0.07581f
+C27 inverter_0/B B 0.46003f
+C28 a_110_2000# B 0.16375f
+C29 inverter_1/B B 0.04789f
+C30 out a_110_960# 0.10232f
+C31 out GND 1.00728f
+C32 a_1110_960# GND 0.20895f
+C33 a_110_960# GND 0.20878f
+C34 a_110_2000# GND 0.26728f
+C35 inverter_1/B GND 1.35043f
+C36 A GND 0.98984f
+C37 VDD GND 7.56368f
+C38 inverter_0/B GND 1.1554f
+C39 B GND 1.38986f
+.ends
+
+.subckt XORlay VDD GND out a_100_30# a_800_30# a_100_990# A inverter_1/B B inverter_0/B
+Xinverter_0 B inverter_0/B VDD GND inverter
+Xinverter_1 A inverter_1/B VDD GND inverter
+X0 out inverter_1/B a_100_990# VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=1.8 ps=6.6 w=6 l=0.6
+X1 a_100_990# B VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=6.6 as=3.6 ps=13.2 w=6 l=0.6
+X2 a_100_30# A out GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X3 a_100_990# A VDD VDD sky130_fd_pr__pfet_01v8 ad=1.8 pd=6.6 as=3.6 ps=13.2 w=6 l=0.6
+X4 GND B a_100_30# GND sky130_fd_pr__nfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+X5 a_800_30# inverter_1/B out GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X6 GND inverter_0/B a_800_30# GND sky130_fd_pr__nfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+X7 out inverter_0/B a_100_990# VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=1.8 ps=6.6 w=6 l=0.6
+C0 A out 0.12356f
+C1 A inverter_1/B 0.46929f
+C2 inverter_1/B out 0.41508f
+C3 A a_100_30# 0.07581f
+C4 a_100_30# out 0.13598f
+C5 a_100_990# inverter_0/B 0.16381f
+C6 A VDD 0.53424f
+C7 B inverter_0/B 0.70607f
+C8 out VDD 0.74089f
+C9 inverter_1/B VDD 0.36242f
+C10 a_100_30# VDD 0.00213f
+C11 A a_100_990# 0.18205f
+C12 a_100_990# out 0.4548f
+C13 a_100_990# inverter_1/B 0.29328f
+C14 B A 0.05561f
+C15 B out 0.18472f
+C16 B inverter_1/B 0.25327f
+C17 a_800_30# inverter_0/B 0.09455f
+C18 a_100_30# a_100_990# 0.00654f
+C19 B a_100_30# 0.07581f
+C20 a_100_990# VDD 0.81356f
+C21 B VDD 0.37703f
+C22 A inverter_0/B 0.00981f
+C23 out inverter_0/B 0.62663f
+C24 inverter_1/B inverter_0/B 0.06028f
+C25 a_800_30# out 0.11952f
+C26 a_800_30# inverter_1/B 0.07581f
+C27 a_100_30# inverter_0/B 0
+C28 B a_100_990# 0.19506f
+C29 inverter_0/B VDD 0.21651f
+C30 a_800_30# VDD 0.00122f
+C31 out GND 1.13608f
+C32 a_800_30# GND 0.19396f
+C33 a_100_30# GND 0.20093f
+C34 a_100_990# GND 0.1822f
+C35 inverter_1/B GND 0.98757f
+C36 A GND 0.62307f
+C37 VDD GND 5.93713f
+C38 inverter_0/B GND 1.12229f
+C39 B GND 1.3886f
+.ends
+
+.subckt Countlay DLATCHlay2_1/NMOS_2/a_120_0# XORlay_1/a_800_30# XORlay_1/a_100_990#
++ XORlay_1/inverter_0/B DLATCHlay2_1/NAND2lay_0/a_110_n10# DLATCHlay2_1/NMOS_0/a_360_0#
++ DLATCHlay2_1/NAND2lay_1/a_110_n10# NAND2lay_1/a_110_n10# DLATCHlay2_1/NMOS_0/a_120_0#
++ DLATCHlay2_1/NAND3lay_0/a_110_90# inverter_1/A DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_1/NMOS_1/a_360_0#
++ XORlay_1/B XORlay_1/A XORlay_1/inverter_1/B DLATCHlay2_1/NMOS_1/a_120_0# DLATCHlay2_1/NAND3lay_0/a_350_90#
++ inverter_1/B XORlay_1/a_100_30# XORlay_1/out DLATCHlay2_1/NMOS_2/a_360_0# DLATCHlay2_1/NAND3lay_0/Y
++ DLATCHlay2_1/q DLATCHlay2_1/NAND2lay_1/B DLATCHlay2_1/a_3880_1000# DLATCHlay2_1/clear
++ XORlay_1/VDD DLATCHlay2_1/NAND2lay_0/A VSUBS DLATCHlay2_1/clock
+Xinverter_1 inverter_1/A inverter_1/B XORlay_1/VDD VSUBS inverter
+XXORlay_1 XORlay_1/VDD VSUBS XORlay_1/out XORlay_1/a_100_30# XORlay_1/a_800_30# XORlay_1/a_100_990#
++ XORlay_1/A XORlay_1/inverter_1/B XORlay_1/B XORlay_1/inverter_0/B XORlay
+XDLATCHlay2_1 DLATCHlay2_1/NMOS_0/a_360_0# DLATCHlay2_1/NMOS_0/a_120_0# DLATCHlay2_1/NAND3lay_0/a_110_90#
++ DLATCHlay2_1/NAND2lay_0/a_110_n10# DLATCHlay2_1/NMOS_1/a_360_0# DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ DLATCHlay2_1/NMOS_1/a_120_0# DLATCHlay2_1/NAND3lay_0/a_350_90# DLATCHlay2_1/NMOS_2/a_360_0#
++ DLATCHlay2_1/NAND2lay_1/B XORlay_1/out DLATCHlay2_1/NMOS_2/a_120_0# DLATCHlay2_1/q
++ DLATCHlay2_1/a_3880_1000# DLATCHlay2_1/clock DLATCHlay2_1/NAND3lay_0/A DLATCHlay2_1/NAND3lay_0/Y
++ VSUBS XORlay_1/VDD DLATCHlay2_1/NAND2lay_0/A DLATCHlay2_1/clear DLATCHlay2
+XNAND2lay_1 XORlay_1/A XORlay_1/B XORlay_1/VDD VSUBS inverter_1/A NAND2lay_1/a_110_n10#
++ NAND2lay
+C0 DLATCHlay2_1/NAND3lay_0/A XORlay_1/inverter_1/B 0
+C1 DLATCHlay2_1/NAND3lay_0/Y DLATCHlay2_1/NAND2lay_0/A -0
+C2 XORlay_1/a_800_30# DLATCHlay2_1/NAND3lay_0/Y 0
+C3 XORlay_1/inverter_0/B DLATCHlay2_1/NAND2lay_0/A 0.00593f
+C4 XORlay_1/A inverter_1/A 0.16336f
+C5 XORlay_1/a_100_30# DLATCHlay2_1/NAND3lay_0/Y 0
+C6 XORlay_1/out DLATCHlay2_1/NAND3lay_0/Y 1.90256f
+C7 XORlay_1/out DLATCHlay2_1/clock 0.00241f
+C8 XORlay_1/out XORlay_1/inverter_0/B 0
+C9 XORlay_1/a_100_990# DLATCHlay2_1/NAND3lay_0/Y 0
+C10 DLATCHlay2_1/NAND3lay_0/Y XORlay_1/VDD 0.00853f
+C11 XORlay_1/VDD DLATCHlay2_1/clock 0
+C12 XORlay_1/inverter_0/B XORlay_1/VDD 0.00346f
+C13 XORlay_1/out DLATCHlay2_1/NAND3lay_0/A 0.00927f
+C14 XORlay_1/inverter_1/B inverter_1/B 0.01687f
+C15 XORlay_1/inverter_0/B XORlay_1/A 0.00997f
+C16 XORlay_1/VDD XORlay_1/inverter_1/B 0.00901f
+C17 XORlay_1/out DLATCHlay2_1/NAND2lay_0/A 0.03677f
+C18 DLATCHlay2_1/NAND3lay_0/A XORlay_1/VDD 0.00129f
+C19 XORlay_1/A XORlay_1/inverter_1/B -0
+C20 XORlay_1/B NAND2lay_1/a_110_n10# 0.03269f
+C21 inverter_1/A XORlay_1/inverter_1/B 0.0011f
+C22 DLATCHlay2_1/NAND2lay_0/A XORlay_1/VDD 0
+C23 XORlay_1/inverter_0/B DLATCHlay2_1/NAND2lay_0/a_110_n10# 0
+C24 XORlay_1/A NAND2lay_1/a_110_n10# 0
+C25 DLATCHlay2_1/a_3880_1000# XORlay_1/out 0.00145f
+C26 XORlay_1/out XORlay_1/a_100_990# 0.00197f
+C27 XORlay_1/out XORlay_1/VDD 0.2011f
+C28 XORlay_1/out DLATCHlay2_1/NAND2lay_1/B 0
+C29 XORlay_1/B inverter_1/B 0
+C30 XORlay_1/inverter_0/B DLATCHlay2_1/NAND3lay_0/Y 0.00789f
+C31 XORlay_1/a_100_30# XORlay_1/A 0
+C32 XORlay_1/VDD inverter_1/B 0.16039f
+C33 XORlay_1/out XORlay_1/A 0
+C34 XORlay_1/a_100_990# XORlay_1/VDD 0.00134f
+C35 XORlay_1/B XORlay_1/VDD 0.01188f
+C36 XORlay_1/A inverter_1/B 0.00321f
+C37 XORlay_1/a_100_990# XORlay_1/A 0
+C38 XORlay_1/B XORlay_1/A 0.05684f
+C39 DLATCHlay2_1/NAND3lay_0/Y DLATCHlay2_1/NAND3lay_0/A 0
+C40 XORlay_1/A XORlay_1/VDD 0.30401f
+C41 XORlay_1/out DLATCHlay2_1/clear 0.00246f
+C42 XORlay_1/inverter_0/B DLATCHlay2_1/NAND3lay_0/A 0
+C43 inverter_1/A inverter_1/B 0.01678f
+C44 XORlay_1/a_100_990# inverter_1/A 0
+C45 XORlay_1/B inverter_1/A 0.14363f
+C46 XORlay_1/out DLATCHlay2_1/NAND2lay_0/a_110_n10# 0
+C47 inverter_1/A XORlay_1/VDD 0.01594f
+C48 inverter_1/A VSUBS -0.17396f
+C49 NAND2lay_1/a_110_n10# VSUBS 0
+C50 DLATCHlay2_1/NAND3lay_0/Y VSUBS -2.19303f
+C51 DLATCHlay2_1/NAND2lay_0/a_110_n10# VSUBS 0
+C52 DLATCHlay2_1/q VSUBS -0.78594f
+C53 XORlay_1/out VSUBS 1.26015f
+C54 DLATCHlay2_1/clock VSUBS -0.59472f
+C55 DLATCHlay2_1/NAND3lay_0/A VSUBS -0.40301f
+C56 DLATCHlay2_1/clear VSUBS -0.6647f
+C57 DLATCHlay2_1/NAND2lay_1/B VSUBS -0.82122f
+C58 DLATCHlay2_1/NAND2lay_0/A VSUBS -1.18887f
+C59 DLATCHlay2_1/a_3880_1000# VSUBS -1.40552f
+C60 XORlay_1/a_800_30# VSUBS 0
+C61 XORlay_1/a_100_30# VSUBS 0
+C62 XORlay_1/a_100_990# VSUBS 0
+C63 XORlay_1/inverter_1/B VSUBS -0.1949f
+C64 XORlay_1/A VSUBS 0.13732f
+C65 XORlay_1/VDD VSUBS -1.98481f
+C66 XORlay_1/inverter_0/B VSUBS -0.11727f
+C67 XORlay_1/B VSUBS 0.40635f
+C68 inverter_1/B VSUBS 0.06215f
+.ends
+
+.subckt Countlay2 DLATCHlay2_0/NAND2lay_0/a_110_n10# XORlay_0/a_100_990# DLATCHlay2_0/NMOS_2/a_360_0#
++ DLATCHlay2_0/NAND2lay_1/a_110_n10# DLATCHlay2_0/NMOS_2/a_120_0# DLATCHlay2_0/NAND3lay_0/a_350_90#
++ XORlay_0/inverter_0/B DLATCHlay2_0/NMOS_0/a_360_0# XORlay_0/B XORlay_0/a_100_30#
++ DLATCHlay2_0/NMOS_0/a_120_0# DLATCHlay2_0/NMOS_1/a_360_0# DLATCHlay2_0/NAND3lay_0/A
++ VDD XORlay_0/a_800_30# DLATCHlay2_0/NAND2lay_1/B DLATCHlay2_0/NAND2lay_0/A DLATCHlay2_0/clear
++ XORlay_0/inverter_1/B DLATCHlay2_0/NMOS_1/a_120_0# DLATCHlay2_0/clock XORlay_0/A
++ DLATCHlay2_0/NAND3lay_0/Y DLATCHlay2_0/NAND3lay_0/a_110_90# XORlay_0/out GND DLATCHlay2_0/a_3880_1000#
+XXORlay_0 VDD GND XORlay_0/out XORlay_0/a_100_30# XORlay_0/a_800_30# XORlay_0/a_100_990#
++ XORlay_0/A XORlay_0/inverter_1/B XORlay_0/B XORlay_0/inverter_0/B XORlay
+XDLATCHlay2_0 DLATCHlay2_0/NMOS_0/a_360_0# DLATCHlay2_0/NMOS_0/a_120_0# DLATCHlay2_0/NAND3lay_0/a_110_90#
++ DLATCHlay2_0/NAND2lay_0/a_110_n10# DLATCHlay2_0/NMOS_1/a_360_0# DLATCHlay2_0/NAND2lay_1/a_110_n10#
++ DLATCHlay2_0/NMOS_1/a_120_0# DLATCHlay2_0/NAND3lay_0/a_350_90# DLATCHlay2_0/NMOS_2/a_360_0#
++ DLATCHlay2_0/NAND2lay_1/B XORlay_0/out DLATCHlay2_0/NMOS_2/a_120_0# XORlay_0/A DLATCHlay2_0/a_3880_1000#
++ DLATCHlay2_0/clock DLATCHlay2_0/NAND3lay_0/A DLATCHlay2_0/NAND3lay_0/Y GND VDD DLATCHlay2_0/NAND2lay_0/A
++ DLATCHlay2_0/clear DLATCHlay2
+C0 XORlay_0/A XORlay_0/inverter_0/B 0.0153f
+C1 XORlay_0/out DLATCHlay2_0/NAND3lay_0/Y 1.69309f
+C2 VDD DLATCHlay2_0/NAND3lay_0/Y 0.00575f
+C3 DLATCHlay2_0/NAND3lay_0/A DLATCHlay2_0/NAND3lay_0/Y 0
+C4 XORlay_0/a_800_30# DLATCHlay2_0/NAND3lay_0/Y 0
+C5 XORlay_0/inverter_0/B DLATCHlay2_0/NAND2lay_0/A 0.00424f
+C6 XORlay_0/A DLATCHlay2_0/clock 0.00105f
+C7 DLATCHlay2_0/NAND2lay_1/B XORlay_0/A 0.00246f
+C8 XORlay_0/inverter_0/B XORlay_0/out 0
+C9 VDD XORlay_0/inverter_0/B 0.00846f
+C10 DLATCHlay2_0/NAND3lay_0/A XORlay_0/inverter_0/B 0
+C11 DLATCHlay2_0/clear XORlay_0/A 0.00189f
+C12 XORlay_0/out DLATCHlay2_0/clock 0.00269f
+C13 XORlay_0/A XORlay_0/inverter_1/B 0.1933f
+C14 XORlay_0/A DLATCHlay2_0/NAND2lay_0/A 0
+C15 VDD DLATCHlay2_0/clock 0
+C16 XORlay_0/a_100_990# XORlay_0/A 0.08359f
+C17 DLATCHlay2_0/NAND2lay_1/B XORlay_0/out 0
+C18 DLATCHlay2_0/NAND2lay_0/A XORlay_0/inverter_1/B 0
+C19 XORlay_0/A XORlay_0/out 1.04386f
+C20 VDD XORlay_0/A 0.08475f
+C21 DLATCHlay2_0/NAND3lay_0/A XORlay_0/A 0
+C22 DLATCHlay2_0/clear XORlay_0/out 0.00228f
+C23 DLATCHlay2_0/clear VDD 0
+C24 XORlay_0/inverter_0/B DLATCHlay2_0/NAND3lay_0/Y 0.01137f
+C25 DLATCHlay2_0/NAND2lay_0/A XORlay_0/out 0.03299f
+C26 VDD XORlay_0/inverter_1/B 0
+C27 DLATCHlay2_0/NAND3lay_0/A XORlay_0/inverter_1/B 0
+C28 XORlay_0/a_100_990# XORlay_0/out 0.00204f
+C29 VDD DLATCHlay2_0/NAND2lay_0/A 0
+C30 XORlay_0/a_100_990# VDD 0.0015f
+C31 XORlay_0/A XORlay_0/B 0
+C32 VDD XORlay_0/out 0.18964f
+C33 DLATCHlay2_0/NAND3lay_0/A XORlay_0/out 0.00857f
+C34 XORlay_0/A DLATCHlay2_0/a_3880_1000# 0.00133f
+C35 DLATCHlay2_0/NAND2lay_0/A XORlay_0/B 0.00224f
+C36 XORlay_0/a_100_30# DLATCHlay2_0/NAND3lay_0/Y 0
+C37 DLATCHlay2_0/NAND3lay_0/A VDD 0
+C38 DLATCHlay2_0/NAND3lay_0/A XORlay_0/a_800_30# 0
+C39 XORlay_0/A DLATCHlay2_0/NAND3lay_0/Y 0.84027f
+C40 XORlay_0/inverter_0/B DLATCHlay2_0/clock 0
+C41 DLATCHlay2_0/NAND2lay_0/a_110_n10# XORlay_0/inverter_0/B 0
+C42 VDD XORlay_0/B 0.00138f
+C43 DLATCHlay2_0/NAND2lay_0/A DLATCHlay2_0/NAND3lay_0/Y -0
+C44 XORlay_0/a_100_990# DLATCHlay2_0/NAND3lay_0/Y 0
+C45 DLATCHlay2_0/a_3880_1000# XORlay_0/out 0.00135f
+C46 DLATCHlay2_0/NAND3lay_0/Y GND -2.19125f
+C47 DLATCHlay2_0/NAND2lay_0/a_110_n10# GND 0
+C48 XORlay_0/A GND 0.80349f
+C49 XORlay_0/out GND 0.62301f
+C50 DLATCHlay2_0/clock GND -0.59472f
+C51 DLATCHlay2_0/NAND3lay_0/A GND -0.40118f
+C52 DLATCHlay2_0/clear GND -0.6647f
+C53 VDD GND -2.56711f
+C54 DLATCHlay2_0/NAND2lay_1/B GND -0.82122f
+C55 DLATCHlay2_0/NAND2lay_0/A GND -1.18771f
+C56 DLATCHlay2_0/a_3880_1000# GND -1.40552f
+C57 XORlay_0/a_800_30# GND 0.00213f
+C58 XORlay_0/a_100_30# GND 0
+C59 XORlay_0/a_100_990# GND -0
+C60 XORlay_0/inverter_1/B GND -0.19444f
+C61 XORlay_0/inverter_0/B GND -0.11546f
+C62 XORlay_0/B GND -0.09297f
+.ends
+
+.subckt NAND8lay in1 in2 in3 in4 in5 in6 in7 in8 VDD GND out a_1080_n200# a_840_n200#
++ a_600_n200# a_360_n200# a_1560_n200# a_120_n200# a_1320_n200#
+X0 VDD in8 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X1 a_360_n200# in2 a_120_n200# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X2 VDD in6 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X3 a_1560_n200# in7 a_1320_n200# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X4 VDD in4 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X5 VDD in7 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X6 VDD in5 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X7 a_600_n200# in3 a_360_n200# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X8 VDD in3 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X9 GND in8 a_1560_n200# GND sky130_fd_pr__nfet_01v8 ad=1.8 pd=7.2 as=0.9 ps=3.6 w=3 l=0.6
+X10 a_840_n200# in4 a_600_n200# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X11 VDD in2 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+X12 a_120_n200# in1 out GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=1.8 ps=7.2 w=3 l=0.6
+X13 a_1080_n200# in5 a_840_n200# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X14 a_1320_n200# in6 a_1080_n200# GND sky130_fd_pr__nfet_01v8 ad=0.9 pd=3.6 as=0.9 ps=3.6 w=3 l=0.6
+X15 VDD in1 out VDD sky130_fd_pr__pfet_01v8 ad=3.6 pd=13.2 as=3.6 ps=13.2 w=6 l=0.6
+C0 in1 out 0.61122f
+C1 in4 a_840_n200# 0.07417f
+C2 in1 in5 0
+C3 a_360_n200# a_120_n200# 0.09149f
+C4 a_360_n200# a_600_n200# 0.09149f
+C5 in7 in6 0.55613f
+C6 a_360_n200# in2 0.07299f
+C7 a_1320_n200# in7 0.07581f
+C8 a_1080_n200# in3 0
+C9 in7 VDD 0.35931f
+C10 out in7 0.19254f
+C11 a_1320_n200# a_1560_n200# 0.09149f
+C12 in7 in5 0
+C13 in2 in6 0
+C14 a_1080_n200# a_840_n200# 0.09149f
+C15 VDD a_1560_n200# 0
+C16 out a_1560_n200# 0
+C17 a_120_n200# VDD 0.00295f
+C18 a_120_n200# out 0.08981f
+C19 in6 in8 0.00185f
+C20 a_120_n200# in1 0.07042f
+C21 in4 in6 0
+C22 VDD a_600_n200# 0
+C23 out a_600_n200# 0
+C24 a_360_n200# in3 0.07581f
+C25 in2 VDD 0.44239f
+C26 in2 out 0.2339f
+C27 in2 in5 0
+C28 in2 in1 0.25922f
+C29 VDD in8 0.36333f
+C30 out in8 0.15475f
+C31 VDD in4 0.38835f
+C32 out in4 0.2006f
+C33 in5 in8 0
+C34 in5 in4 0.37605f
+C35 in3 in6 0
+C36 in7 a_1560_n200# 0.08366f
+C37 a_1080_n200# in6 0.07581f
+C38 in3 VDD 0.41572f
+C39 out in3 0.20745f
+C40 in5 in3 0.00314f
+C41 in1 in3 0
+C42 a_1320_n200# a_1080_n200# 0.09149f
+C43 VDD a_840_n200# 0
+C44 out a_840_n200# 0
+C45 a_1080_n200# VDD 0
+C46 a_1080_n200# out 0
+C47 in5 a_840_n200# 0.07581f
+C48 in7 in8 0.62514f
+C49 in2 a_120_n200# 0.07581f
+C50 a_1080_n200# in5 0.07544f
+C51 in7 in4 0.00184f
+C52 in8 a_1560_n200# 0.07581f
+C53 in4 a_1560_n200# 0
+C54 a_360_n200# VDD 0
+C55 a_360_n200# out 0
+C56 a_600_n200# in4 0.07581f
+C57 in2 in4 0
+C58 a_1320_n200# in6 0.07812f
+C59 VDD in6 0.37501f
+C60 out in6 0.1934f
+C61 in3 a_600_n200# 0.07347f
+C62 in5 in6 0.40218f
+C63 in2 in3 0.29598f
+C64 in1 in6 0
+C65 a_1320_n200# VDD 0
+C66 a_1320_n200# out 0
+C67 a_600_n200# a_840_n200# 0.09149f
+C68 out VDD 5.23184f
+C69 in3 in4 0.33866f
+C70 in5 VDD 0.37535f
+C71 out in5 0.19508f
+C72 in1 VDD 0.34665f
+C73 out GND 1.71725f
+C74 in8 GND 1.68222f
+C75 in7 GND 1.08036f
+C76 in6 GND 1.03653f
+C77 in5 GND 0.98285f
+C78 in4 GND 0.8784f
+C79 in3 GND 0.79743f
+C80 in2 GND 0.70607f
+C81 in1 GND 0.70118f
+C82 VDD GND 18.8939f
+C83 a_1560_n200# GND 0.22459f
+C84 a_1320_n200# GND 0.13644f
+C85 a_1080_n200# GND 0.13868f
+C86 a_840_n200# GND 0.13992f
+C87 a_600_n200# GND 0.14064f
+C88 a_360_n200# GND 0.14116f
+C89 a_120_n200# GND 0.14175f
+.ends
+
+.subckt FDlay2 In n1 n2 n3 n4 n5 n6 Countlay2_0/DLATCHlay2_0/NMOS_1/a_120_0# Countlay_4/XORlay_1/inverter_0/B
++ XNORlay_5/inverter_0/B NAND8lay_0/a_1560_n200# NAND8lay_0/a_840_n200# XNORlay_0/inverter_0/B
++ Countlay2_0/XORlay_0/a_800_30# XNORlay_7/a_1110_960# Countlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10#
++ Countlay_1/XORlay_1/inverter_1/B Countlay2_0/DLATCHlay2_0/NMOS_2/a_360_0# Countlay2_0/DLATCHlay2_0/NAND2lay_1/a_110_n10#
++ Countlay_5/XORlay_1/inverter_0/B Countlay_6/DLATCHlay2_1/NAND2lay_1/B Countlay_5/DLATCHlay2_1/NAND3lay_0/A
++ inverter_2/A NAND8lay_0/a_1320_n200# NAND8lay_0/a_600_n200# Countlay_6/XORlay_1/inverter_1/B
++ Countlay_4/DLATCHlay2_1/NAND2lay_0/A Out Countlay_4/NAND2lay_1/a_110_n10# XNORlay_7/out
++ Countlay2_0/DLATCHlay2_0/NMOS_2/a_120_0# Countlay_0/XORlay_1/inverter_1/B Countlay_0/XORlay_1/out
++ XNORlay_3/out Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_110_90# XNORlay_5/out NAND8lay_0/a_1080_n200#
++ NAND8lay_0/a_360_n200# Countlay_3/XORlay_1/out XNORlay_7/a_110_960# Countlay_5/DLATCHlay2_1/NAND2lay_0/A
++ Countlay_6/XORlay_1/inverter_0/B Countlay2_0/DLATCHlay2_0/NAND2lay_1/B Countlay_5/XORlay_1/inverter_1/B
++ XNORlay_3/inverter_0/B XNORlay_1/out XNORlay_0/inverter_1/B Countlay2_0/XORlay_0/B
++ XNORlay_6/a_110_2000# Countlay_4/XORlay_1/out Countlay2_0/XORlay_0/out XNORlay_7/a_110_2000#
++ XNORlay_2/A XNORlay_2/inverter_1/B Countlay_6/DLATCHlay2_1/NAND3lay_0/A Countlay2_0/DLATCHlay2_0/NMOS_0/a_360_0#
++ Countlay_4/XORlay_1/B XNORlay_5/A Countlay2_0/XORlay_0/inverter_1/B XNORlay_5/inverter_1/B
++ Countlay_4/XORlay_1/inverter_1/B XNORlay_7/inverter_0/B XNORlay_7/inverter_1/B Countlay_5/XORlay_1/B
++ XNORlay_4/out Countlay_5/XORlay_1/out Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_350_90#
++ Countlay2_0/DLATCHlay2_0/NMOS_0/a_120_0# inverter_0/A Countlay_4/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_3/A XNORlay_1/A Countlay_6/XORlay_1/B Countlay_2/XORlay_1/B XNORlay_2/out
++ XNORlay_4/inverter_1/B Countlay_4/inverter_1/A inverter_3/A XNORlay_6/out XNORlay_7/A
++ XNORlay_4/A Countlay_3/XORlay_1/inverter_1/B Countlay_1/XORlay_1/out Countlay2_0/XORlay_0/a_100_30#
++ Countlay2_0/DLATCHlay2_0/a_3880_1000# XNORlay_6/inverter_0/B n0 Countlay2_0/XORlay_0/inverter_0/B
++ Countlay2_0/DLATCHlay2_0/NMOS_1/a_360_0# Countlay_6/DLATCHlay2_1/NAND2lay_0/A Countlay2_0/DLATCHlay2_0/NAND3lay_0/A
++ n7 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Countlay_2/XORlay_1/out
++ Countlay_4/DLATCHlay2_1/a_3880_1000# Countlay_4/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ VDD XNORlay_0/a_1110_960# XNORlay_0/A Countlay_6/DLATCHlay2_1/a_3880_1000# Countlay_1/XORlay_1/B
++ XNORlay_0/out Countlay2_0/DLATCHlay2_0/NAND2lay_0/A Countlay_4/DLATCHlay2_1/NAND3lay_0/A
++ inverter_3/B Countlay_6/XORlay_1/out Countlay_5/DLATCHlay2_1/NAND3lay_0/Y Countlay_2/XORlay_1/inverter_1/B
++ Countlay_5/DLATCHlay2_1/a_3880_1000# XNORlay_3/inverter_1/B Countlay_3/XORlay_1/B
++ GND XNORlay_6/A
+XXNORlay_3 VDD GND XNORlay_3/out XNORlay_3/a_110_2000# XNORlay_3/A XNORlay_3/inverter_1/B
++ XNORlay_3/a_110_960# XNORlay_3/inverter_0/B n5 XNORlay_3/a_1110_960# XNORlay
+XXNORlay_4 VDD GND XNORlay_4/out XNORlay_4/a_110_2000# XNORlay_4/A XNORlay_4/inverter_1/B
++ XNORlay_4/a_110_960# XNORlay_4/inverter_0/B n3 XNORlay_4/a_1110_960# XNORlay
+Xinverter_0 inverter_0/A Out VDD GND inverter
+XXNORlay_5 VDD GND XNORlay_5/out XNORlay_5/a_110_2000# XNORlay_5/A XNORlay_5/inverter_1/B
++ XNORlay_5/a_110_960# XNORlay_5/inverter_0/B n4 XNORlay_5/a_1110_960# XNORlay
+Xinverter_1 Out inverter_2/A VDD GND inverter
+XXNORlay_6 VDD GND XNORlay_6/out XNORlay_6/a_110_2000# XNORlay_6/A XNORlay_6/inverter_1/B
++ XNORlay_6/a_110_960# XNORlay_6/inverter_0/B n0 XNORlay_6/a_1110_960# XNORlay
+Xinverter_2 inverter_2/A inverter_3/A VDD GND inverter
+XXNORlay_7 VDD GND XNORlay_7/out XNORlay_7/a_110_2000# XNORlay_7/A XNORlay_7/inverter_1/B
++ XNORlay_7/a_110_960# XNORlay_7/inverter_0/B n7 XNORlay_7/a_1110_960# XNORlay
+Xinverter_3 inverter_3/A inverter_3/B VDD GND inverter
+XCountlay_0 Countlay_0/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_0/XORlay_1/a_800_30#
++ Countlay_0/XORlay_1/a_100_990# Countlay_0/XORlay_1/inverter_0/B Countlay_0/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_0/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_0/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_0/NAND2lay_1/a_110_n10# Countlay_0/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_0/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_0/inverter_1/A Countlay_0/DLATCHlay2_1/NAND3lay_0/A Countlay_0/DLATCHlay2_1/NMOS_1/a_360_0#
++ VDD XNORlay_6/A Countlay_0/XORlay_1/inverter_1/B Countlay_0/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_0/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay_1/XORlay_1/B Countlay_0/XORlay_1/a_100_30#
++ Countlay_0/XORlay_1/out Countlay_0/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_0/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_6/A Countlay_0/DLATCHlay2_1/NAND2lay_1/B Countlay_0/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_0/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XCountlay_1 Countlay_1/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_1/XORlay_1/a_800_30#
++ Countlay_1/XORlay_1/a_100_990# Countlay_1/XORlay_1/inverter_0/B Countlay_1/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_1/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_1/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_1/NAND2lay_1/a_110_n10# Countlay_1/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_1/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_1/inverter_1/A Countlay_1/DLATCHlay2_1/NAND3lay_0/A Countlay_1/DLATCHlay2_1/NMOS_1/a_360_0#
++ Countlay_1/XORlay_1/B XNORlay_1/A Countlay_1/XORlay_1/inverter_1/B Countlay_1/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_1/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay_2/XORlay_1/B Countlay_1/XORlay_1/a_100_30#
++ Countlay_1/XORlay_1/out Countlay_1/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_1/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_1/A Countlay_1/DLATCHlay2_1/NAND2lay_1/B Countlay_1/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_1/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XCountlay_2 Countlay_2/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_2/XORlay_1/a_800_30#
++ Countlay_2/XORlay_1/a_100_990# Countlay_2/XORlay_1/inverter_0/B Countlay_2/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_2/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_2/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_2/NAND2lay_1/a_110_n10# Countlay_2/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_2/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_2/inverter_1/A Countlay_2/DLATCHlay2_1/NAND3lay_0/A Countlay_2/DLATCHlay2_1/NMOS_1/a_360_0#
++ Countlay_2/XORlay_1/B XNORlay_2/A Countlay_2/XORlay_1/inverter_1/B Countlay_2/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_2/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay_3/XORlay_1/B Countlay_2/XORlay_1/a_100_30#
++ Countlay_2/XORlay_1/out Countlay_2/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_2/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_2/A Countlay_2/DLATCHlay2_1/NAND2lay_1/B Countlay_2/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_2/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XCountlay_3 Countlay_3/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_3/XORlay_1/a_800_30#
++ Countlay_3/XORlay_1/a_100_990# Countlay_3/XORlay_1/inverter_0/B Countlay_3/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_3/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_3/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_3/NAND2lay_1/a_110_n10# Countlay_3/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_3/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_3/inverter_1/A Countlay_3/DLATCHlay2_1/NAND3lay_0/A Countlay_3/DLATCHlay2_1/NMOS_1/a_360_0#
++ Countlay_3/XORlay_1/B XNORlay_4/A Countlay_3/XORlay_1/inverter_1/B Countlay_3/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_3/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay_4/XORlay_1/B Countlay_3/XORlay_1/a_100_30#
++ Countlay_3/XORlay_1/out Countlay_3/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_3/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_4/A Countlay_3/DLATCHlay2_1/NAND2lay_1/B Countlay_3/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_3/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XCountlay_4 Countlay_4/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_4/XORlay_1/a_800_30#
++ Countlay_4/XORlay_1/a_100_990# Countlay_4/XORlay_1/inverter_0/B Countlay_4/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_4/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_4/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_4/NAND2lay_1/a_110_n10# Countlay_4/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_4/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_4/inverter_1/A Countlay_4/DLATCHlay2_1/NAND3lay_0/A Countlay_4/DLATCHlay2_1/NMOS_1/a_360_0#
++ Countlay_4/XORlay_1/B XNORlay_5/A Countlay_4/XORlay_1/inverter_1/B Countlay_4/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_4/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay_5/XORlay_1/B Countlay_4/XORlay_1/a_100_30#
++ Countlay_4/XORlay_1/out Countlay_4/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_4/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_5/A Countlay_4/DLATCHlay2_1/NAND2lay_1/B Countlay_4/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_4/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XCountlay_5 Countlay_5/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_5/XORlay_1/a_800_30#
++ Countlay_5/XORlay_1/a_100_990# Countlay_5/XORlay_1/inverter_0/B Countlay_5/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_5/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_5/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_5/NAND2lay_1/a_110_n10# Countlay_5/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_5/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_5/inverter_1/A Countlay_5/DLATCHlay2_1/NAND3lay_0/A Countlay_5/DLATCHlay2_1/NMOS_1/a_360_0#
++ Countlay_5/XORlay_1/B XNORlay_3/A Countlay_5/XORlay_1/inverter_1/B Countlay_5/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_5/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay_6/XORlay_1/B Countlay_5/XORlay_1/a_100_30#
++ Countlay_5/XORlay_1/out Countlay_5/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_5/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_3/A Countlay_5/DLATCHlay2_1/NAND2lay_1/B Countlay_5/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_5/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XCountlay2_0 Countlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10# Countlay2_0/XORlay_0/a_100_990#
++ Countlay2_0/DLATCHlay2_0/NMOS_2/a_360_0# Countlay2_0/DLATCHlay2_0/NAND2lay_1/a_110_n10#
++ Countlay2_0/DLATCHlay2_0/NMOS_2/a_120_0# Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_350_90#
++ Countlay2_0/XORlay_0/inverter_0/B Countlay2_0/DLATCHlay2_0/NMOS_0/a_360_0# Countlay2_0/XORlay_0/B
++ Countlay2_0/XORlay_0/a_100_30# Countlay2_0/DLATCHlay2_0/NMOS_0/a_120_0# Countlay2_0/DLATCHlay2_0/NMOS_1/a_360_0#
++ Countlay2_0/DLATCHlay2_0/NAND3lay_0/A VDD Countlay2_0/XORlay_0/a_800_30# Countlay2_0/DLATCHlay2_0/NAND2lay_1/B
++ Countlay2_0/DLATCHlay2_0/NAND2lay_0/A inverter_3/B Countlay2_0/XORlay_0/inverter_1/B
++ Countlay2_0/DLATCHlay2_0/NMOS_1/a_120_0# In XNORlay_7/A Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y
++ Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_110_90# Countlay2_0/XORlay_0/out GND Countlay2_0/DLATCHlay2_0/a_3880_1000#
++ Countlay2
+XCountlay_6 Countlay_6/DLATCHlay2_1/NMOS_2/a_120_0# Countlay_6/XORlay_1/a_800_30#
++ Countlay_6/XORlay_1/a_100_990# Countlay_6/XORlay_1/inverter_0/B Countlay_6/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ Countlay_6/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_6/DLATCHlay2_1/NAND2lay_1/a_110_n10#
++ Countlay_6/NAND2lay_1/a_110_n10# Countlay_6/DLATCHlay2_1/NMOS_0/a_120_0# Countlay_6/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ Countlay_6/inverter_1/A Countlay_6/DLATCHlay2_1/NAND3lay_0/A Countlay_6/DLATCHlay2_1/NMOS_1/a_360_0#
++ Countlay_6/XORlay_1/B XNORlay_0/A Countlay_6/XORlay_1/inverter_1/B Countlay_6/DLATCHlay2_1/NMOS_1/a_120_0#
++ Countlay_6/DLATCHlay2_1/NAND3lay_0/a_350_90# Countlay2_0/XORlay_0/B Countlay_6/XORlay_1/a_100_30#
++ Countlay_6/XORlay_1/out Countlay_6/DLATCHlay2_1/NMOS_2/a_360_0# Countlay_6/DLATCHlay2_1/NAND3lay_0/Y
++ XNORlay_0/A Countlay_6/DLATCHlay2_1/NAND2lay_1/B Countlay_6/DLATCHlay2_1/a_3880_1000#
++ inverter_3/B VDD Countlay_6/DLATCHlay2_1/NAND2lay_0/A GND In Countlay
+XNAND8lay_0 XNORlay_6/out XNORlay_1/out XNORlay_2/out XNORlay_4/out XNORlay_5/out
++ XNORlay_3/out XNORlay_0/out XNORlay_7/out VDD GND inverter_0/A NAND8lay_0/a_1080_n200#
++ NAND8lay_0/a_840_n200# NAND8lay_0/a_600_n200# NAND8lay_0/a_360_n200# NAND8lay_0/a_1560_n200#
++ NAND8lay_0/a_120_n200# NAND8lay_0/a_1320_n200# NAND8lay
+XXNORlay_0 VDD GND XNORlay_0/out XNORlay_0/a_110_2000# XNORlay_0/A XNORlay_0/inverter_1/B
++ XNORlay_0/a_110_960# XNORlay_0/inverter_0/B n6 XNORlay_0/a_1110_960# XNORlay
+XXNORlay_1 VDD GND XNORlay_1/out XNORlay_1/a_110_2000# XNORlay_1/A XNORlay_1/inverter_1/B
++ XNORlay_1/a_110_960# XNORlay_1/inverter_0/B n1 XNORlay_1/a_1110_960# XNORlay
+XXNORlay_2 VDD GND XNORlay_2/out XNORlay_2/a_110_2000# XNORlay_2/A XNORlay_2/inverter_1/B
++ XNORlay_2/a_110_960# XNORlay_2/inverter_0/B n2 XNORlay_2/a_1110_960# XNORlay
+C0 inverter_2/A inverter_0/A 0
+C1 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_0/inverter_0/B 0
+C2 Countlay_4/DLATCHlay2_1/NAND2lay_1/B VDD 0.00423f
+C3 XNORlay_5/inverter_1/B Countlay_5/inverter_1/A 0
+C4 inverter_2/A inverter_3/B 0
+C5 XNORlay_1/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.045f
+C6 XNORlay_5/out Countlay2_0/DLATCHlay2_0/NAND3lay_0/A 0
+C7 Countlay2_0/XORlay_0/out Countlay2_0/XORlay_0/B 0
+C8 XNORlay_7/inverter_1/B Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C9 Countlay_3/DLATCHlay2_1/NAND2lay_1/B XNORlay_4/a_110_960# 0
+C10 Countlay_6/XORlay_1/inverter_1/B VDD 0.01224f
+C11 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y XNORlay_0/out 0
+C12 inverter_3/B n7 0.68382f
+C13 inverter_3/B Countlay_4/XORlay_1/out 0
+C14 XNORlay_7/A Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C15 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y XNORlay_6/A 0
+C16 XNORlay_1/out Countlay_0/inverter_1/A 0.00881f
+C17 XNORlay_1/A Countlay_1/XORlay_1/a_100_990# 0.0336f
+C18 XNORlay_3/out XNORlay_0/inverter_0/B 0
+C19 Countlay_1/XORlay_1/B XNORlay_2/inverter_1/B 0
+C20 Countlay_1/XORlay_1/B In 0.00241f
+C21 Countlay2_0/DLATCHlay2_0/NAND3lay_0/A Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C22 XNORlay_7/A Countlay_0/inverter_1/A 0
+C23 XNORlay_2/inverter_1/B XNORlay_2/out 0
+C24 In XNORlay_2/out 0
+C25 Countlay_2/DLATCHlay2_1/a_3880_1000# inverter_3/B 0.09055f
+C26 Countlay_1/XORlay_1/B XNORlay_4/out 0
+C27 XNORlay_4/out XNORlay_2/out 12.5691f
+C28 Countlay_5/XORlay_1/B Countlay_3/XORlay_1/inverter_0/B 0
+C29 XNORlay_5/out XNORlay_3/A 1.62538f
+C30 Countlay_2/DLATCHlay2_1/NMOS_2/a_120_0# inverter_3/B 0
+C31 XNORlay_2/inverter_0/B XNORlay_3/out 0
+C32 Countlay_3/XORlay_1/B XNORlay_4/inverter_1/B 0.38346f
+C33 inverter_3/B n4 0.77968f
+C34 Countlay_5/XORlay_1/B XNORlay_3/A 0.0015f
+C35 XNORlay_3/inverter_1/B XNORlay_3/A 0
+C36 Countlay_6/DLATCHlay2_1/a_3880_1000# Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.0015f
+C37 inverter_3/B Countlay_2/XORlay_1/inverter_0/B 0.08655f
+C38 Countlay_2/DLATCHlay2_1/NAND2lay_0/A XNORlay_3/A 0
+C39 XNORlay_7/inverter_0/B VDD 0.01096f
+C40 Countlay_2/DLATCHlay2_1/NAND3lay_0/A XNORlay_3/A 0
+C41 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_5/out 0
+C42 Countlay2_0/XORlay_0/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C43 XNORlay_5/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0.02029f
+C44 XNORlay_6/inverter_0/B Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C45 Countlay_2/DLATCHlay2_1/a_3880_1000# Countlay_5/DLATCHlay2_1/a_3880_1000# 0
+C46 inverter_3/B Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0.00252f
+C47 inverter_2/A NAND8lay_0/a_1560_n200# 0
+C48 Countlay_6/XORlay_1/B Countlay_1/XORlay_1/inverter_0/B 0
+C49 Countlay_0/DLATCHlay2_1/a_3880_1000# Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C50 XNORlay_5/out XNORlay_3/out 10.24739f
+C51 XNORlay_1/A Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.29937f
+C52 XNORlay_3/out XNORlay_3/inverter_1/B 0
+C53 XNORlay_2/a_1110_960# n5 0
+C54 XNORlay_0/inverter_1/B XNORlay_1/A 0
+C55 XNORlay_1/inverter_1/B VDD 0.00231f
+C56 Countlay_5/DLATCHlay2_1/NAND2lay_0/A Countlay_5/XORlay_1/out -0
+C57 inverter_3/B Countlay2_0/XORlay_0/B 0.3454f
+C58 In Countlay_1/DLATCHlay2_1/a_3880_1000# 0.00252f
+C59 XNORlay_3/out Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C60 inverter_3/B Countlay_6/XORlay_1/out 0.00211f
+C61 XNORlay_3/out XNORlay_7/out 0
+C62 Countlay_1/DLATCHlay2_1/NAND2lay_1/B XNORlay_1/A 0.02968f
+C63 Countlay_6/DLATCHlay2_1/a_3880_1000# In 0.00256f
+C64 XNORlay_4/out Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C65 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y VDD 0.08554f
+C66 XNORlay_3/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C67 Countlay_5/XORlay_1/a_100_990# Countlay_6/XORlay_1/B 0.20438f
+C68 XNORlay_3/out n1 0
+C69 Countlay_3/XORlay_1/B VDD 0.1149f
+C70 inverter_2/A XNORlay_7/a_110_2000# 0
+C71 XNORlay_6/out VDD 0.17049f
+C72 inverter_2/A NAND8lay_0/a_1320_n200# 0
+C73 Out NAND8lay_0/a_840_n200# 0
+C74 XNORlay_5/out NAND8lay_0/a_1080_n200# 0.00447f
+C75 XNORlay_4/A Countlay_4/XORlay_1/inverter_1/B 0
+C76 XNORlay_5/A In 0.29545f
+C77 Countlay_6/DLATCHlay2_1/NAND2lay_0/A XNORlay_0/A 0
+C78 Countlay_2/DLATCHlay2_1/NAND2lay_1/B XNORlay_2/a_110_960# 0
+C79 XNORlay_5/A XNORlay_4/out 0
+C80 XNORlay_4/A n3 0.02312f
+C81 Countlay_0/NAND2lay_1/a_110_n10# VDD 0
+C82 XNORlay_2/inverter_1/B XNORlay_1/A 0
+C83 Countlay_2/XORlay_1/a_800_30# Countlay_5/XORlay_1/inverter_0/B 0
+C84 n0 XNORlay_7/inverter_0/B 0
+C85 In XNORlay_1/A 0.00301f
+C86 Countlay_1/XORlay_1/B Countlay_6/XORlay_1/B 0.00124f
+C87 XNORlay_4/out XNORlay_1/A 0.00218f
+C88 XNORlay_5/a_110_2000# XNORlay_4/A 0
+C89 Countlay_2/XORlay_1/inverter_1/B Countlay_5/XORlay_1/a_100_990# 0
+C90 Countlay_3/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C91 NAND8lay_0/a_840_n200# VDD 0
+C92 Countlay_2/XORlay_1/B n2 0.02324f
+C93 Countlay2_0/DLATCHlay2_0/NAND3lay_0/A XNORlay_3/out 0
+C94 inverter_3/B Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.007f
+C95 XNORlay_0/out Countlay_0/XORlay_1/inverter_0/B 0
+C96 Countlay_3/DLATCHlay2_1/NAND2lay_1/B XNORlay_4/out 0
+C97 Countlay_3/XORlay_1/out Countlay_3/DLATCHlay2_1/NAND3lay_0/Y -0
+C98 Countlay_3/DLATCHlay2_1/NAND2lay_0/A XNORlay_4/A 0
+C99 Countlay_0/XORlay_1/inverter_0/B XNORlay_6/A 0.00852f
+C100 Out XNORlay_0/out 0.00105f
+C101 XNORlay_2/A Countlay_2/XORlay_1/a_100_990# 0.10061f
+C102 inverter_3/B XNORlay_5/inverter_0/B 0.0012f
+C103 Countlay_2/DLATCHlay2_1/NMOS_1/a_120_0# Countlay_5/DLATCHlay2_1/NAND3lay_0/Y 0
+C104 XNORlay_3/out XNORlay_3/A 0
+C105 Countlay_1/XORlay_1/inverter_1/B Countlay_2/XORlay_1/B 0
+C106 Countlay_6/XORlay_1/a_100_990# VDD 0.01816f
+C107 XNORlay_1/out XNORlay_0/inverter_0/B 0
+C108 Countlay_2/DLATCHlay2_1/NAND2lay_1/B XNORlay_2/inverter_0/B 0
+C109 XNORlay_1/inverter_0/B XNORlay_0/out 0
+C110 n0 XNORlay_6/out 0.00109f
+C111 Countlay_4/XORlay_1/out In 0
+C112 XNORlay_0/out VDD 0.14613f
+C113 XNORlay_5/inverter_1/B VDD 0.00204f
+C114 Countlay_5/XORlay_1/inverter_1/B VDD 0.01244f
+C115 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/out 0
+C116 XNORlay_6/A VDD 0.12815f
+C117 Countlay_2/DLATCHlay2_1/a_3880_1000# In 0.0019f
+C118 Countlay_2/XORlay_1/a_800_30# VDD 0
+C119 Countlay_3/XORlay_1/B Countlay_4/inverter_1/A 0
+C120 Countlay_4/DLATCHlay2_1/a_3880_1000# inverter_3/B 0.09085f
+C121 Countlay_2/XORlay_1/B Countlay_5/inverter_1/A 0
+C122 Countlay2_0/XORlay_0/B Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C123 XNORlay_3/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C124 Countlay_2/DLATCHlay2_1/a_3880_1000# XNORlay_4/out 0
+C125 Countlay_6/DLATCHlay2_1/NAND2lay_1/B n6 0
+C126 In n4 0
+C127 Countlay2_0/XORlay_0/B XNORlay_0/inverter_1/B 0.44663f
+C128 Countlay_3/DLATCHlay2_1/a_3880_1000# XNORlay_4/A 0
+C129 Countlay_6/XORlay_1/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C130 NAND8lay_0/a_840_n200# n0 0
+C131 XNORlay_2/out Countlay_0/XORlay_1/out 0
+C132 In Countlay_2/XORlay_1/inverter_0/B 0
+C133 Countlay_1/DLATCHlay2_1/NAND2lay_1/B Countlay_6/XORlay_1/out 0
+C134 Countlay_4/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C135 XNORlay_4/out Countlay_2/XORlay_1/inverter_0/B 0
+C136 Countlay2_0/XORlay_0/inverter_1/B Countlay2_0/XORlay_0/B 0.12027f
+C137 XNORlay_4/inverter_1/B Countlay_3/DLATCHlay2_1/NAND3lay_0/Y 0.02964f
+C138 XNORlay_5/out XNORlay_7/inverter_1/B 0
+C139 XNORlay_0/A Countlay_6/DLATCHlay2_1/NAND3lay_0/A 0
+C140 Countlay_2/XORlay_1/B Countlay_2/DLATCHlay2_1/NAND3lay_0/Y 0.02899f
+C141 XNORlay_5/out n5 0
+C142 XNORlay_1/a_110_2000# VDD 0.00628f
+C143 Countlay_4/XORlay_1/B Countlay_5/XORlay_1/B 0.01457f
+C144 XNORlay_5/out XNORlay_7/A 0
+C145 XNORlay_7/inverter_1/B XNORlay_7/out 0.00181f
+C146 inverter_3/B Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0.00233f
+C147 XNORlay_7/A Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C148 XNORlay_1/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C149 XNORlay_0/A Countlay_1/XORlay_1/inverter_0/B 0
+C150 Countlay_1/DLATCHlay2_1/NAND3lay_0/A XNORlay_5/out 0
+C151 XNORlay_4/out Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0
+C152 Countlay2_0/XORlay_0/B In 0.00275f
+C153 XNORlay_5/out Countlay_1/XORlay_1/out 0
+C154 XNORlay_1/out n1 0.00397f
+C155 XNORlay_7/A Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C156 XNORlay_2/inverter_0/B XNORlay_2/A 0.00982f
+C157 inverter_3/B Countlay_2/DLATCHlay2_1/NAND2lay_1/a_110_n10# 0
+C158 In Countlay_6/XORlay_1/out 0
+C159 XNORlay_2/out XNORlay_6/inverter_1/B 0
+C160 XNORlay_0/out n0 0
+C161 n0 XNORlay_6/A 0.01743f
+C162 XNORlay_6/out XNORlay_7/inverter_0/B 0
+C163 Countlay_4/XORlay_1/inverter_0/B VDD 0.01318f
+C164 Countlay_4/DLATCHlay2_1/NAND2lay_0/A VDD 0.00259f
+C165 XNORlay_2/inverter_0/B XNORlay_3/a_110_2000# 0
+C166 Countlay2_0/XORlay_0/out XNORlay_5/out 0
+C167 Countlay_6/DLATCHlay2_1/NAND2lay_1/B XNORlay_0/A 0.02832f
+C168 Countlay2_0/XORlay_0/out Countlay2_0/DLATCHlay2_0/NAND2lay_0/A -0
+C169 XNORlay_6/inverter_0/B XNORlay_5/out 0.00138f
+C170 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y VDD 0.08971f
+C171 XNORlay_5/out XNORlay_2/A 0.00107f
+C172 Countlay_3/XORlay_1/a_800_30# Countlay_4/XORlay_1/inverter_0/B 0
+C173 Countlay_2/DLATCHlay2_1/a_3880_1000# Countlay_6/XORlay_1/B 0
+C174 inverter_3/B XNORlay_0/inverter_0/B 0.0015f
+C175 Countlay2_0/XORlay_0/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C176 XNORlay_3/inverter_1/B XNORlay_2/A 0
+C177 Countlay_1/XORlay_1/B XNORlay_0/A 0
+C178 XNORlay_6/inverter_0/B XNORlay_7/out 0
+C179 XNORlay_5/a_110_2000# Countlay_5/inverter_1/A 0
+C180 In Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.00136f
+C181 XNORlay_0/a_1110_960# XNORlay_7/A 0
+C182 Countlay_4/XORlay_1/B Countlay_3/XORlay_1/inverter_0/B 0
+C183 Countlay_6/XORlay_1/B n4 0
+C184 Countlay_1/DLATCHlay2_1/NMOS_2/a_120_0# inverter_3/B 0
+C185 XNORlay_4/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C186 Countlay_2/XORlay_1/B XNORlay_4/inverter_1/B 0
+C187 inverter_3/B XNORlay_2/inverter_0/B 0.00146f
+C188 Countlay_2/DLATCHlay2_1/NAND2lay_0/A XNORlay_2/A 0
+C189 n5 XNORlay_3/A 0.02085f
+C190 Countlay_3/XORlay_1/out Countlay_4/XORlay_1/inverter_1/B 0
+C191 Countlay_6/XORlay_1/B Countlay_2/XORlay_1/inverter_0/B 0
+C192 Countlay_2/DLATCHlay2_1/NAND3lay_0/A XNORlay_2/A 0
+C193 XNORlay_4/out Countlay_0/inverter_1/A 0
+C194 In XNORlay_5/inverter_0/B 0
+C195 Countlay_5/DLATCHlay2_1/NAND2lay_1/B Countlay_5/XORlay_1/out -0
+C196 XNORlay_4/out XNORlay_5/inverter_0/B 0
+C197 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y Countlay_5/XORlay_1/out 0
+C198 XNORlay_0/out XNORlay_7/inverter_0/B 0
+C199 XNORlay_1/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C200 XNORlay_7/inverter_0/B XNORlay_6/A 0.00136f
+C201 NAND8lay_0/a_840_n200# XNORlay_6/out 0.00209f
+C202 inverter_0/A XNORlay_7/out 0.09039f
+C203 Countlay_1/DLATCHlay2_1/NAND3lay_0/A Countlay_6/DLATCHlay2_1/NAND3lay_0/Y 0
+C204 Countlay2_0/XORlay_0/B Countlay_6/XORlay_1/B 0.01586f
+C205 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay_1/XORlay_1/out 0
+C206 XNORlay_5/out XNORlay_4/inverter_0/B 0
+C207 XNORlay_7/A Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C208 XNORlay_3/out XNORlay_7/inverter_1/B 0
+C209 inverter_3/B XNORlay_5/out 0.82337f
+C210 inverter_3/B XNORlay_3/inverter_1/B 0.00103f
+C211 Countlay_2/inverter_1/A XNORlay_4/a_110_2000# 0
+C212 Countlay_3/DLATCHlay2_1/NAND3lay_0/A XNORlay_5/A 0
+C213 Countlay_5/XORlay_1/B XNORlay_4/inverter_0/B 0
+C214 inverter_3/B Countlay_5/XORlay_1/B 0.57988f
+C215 XNORlay_3/out n5 0.00298f
+C216 XNORlay_0/A Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C217 inverter_3/B Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0.3841f
+C218 Countlay_4/DLATCHlay2_1/a_3880_1000# In 0.00314f
+C219 XNORlay_7/A XNORlay_3/out 0
+C220 Countlay_1/inverter_1/A XNORlay_2/a_110_2000# 0
+C221 inverter_3/B Countlay_1/DLATCHlay2_1/NAND2lay_1/a_110_n10# 0
+C222 inverter_3/B XNORlay_7/out 0.02099f
+C223 Countlay_3/DLATCHlay2_1/NAND2lay_0/A Countlay_4/DLATCHlay2_1/NAND3lay_0/A 0
+C224 Countlay_6/DLATCHlay2_1/a_3880_1000# XNORlay_0/A 0
+C225 inverter_3/B Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0.16054f
+C226 Countlay_2/DLATCHlay2_1/NAND3lay_0/a_350_90# inverter_3/B 0
+C227 Countlay_2/XORlay_1/B XNORlay_4/a_1110_960# 0
+C228 Countlay_2/DLATCHlay2_1/NAND2lay_0/A inverter_3/B 0.3302f
+C229 Countlay_2/XORlay_1/B VDD 0.0694f
+C230 Countlay2_0/XORlay_0/B Countlay2_0/XORlay_0/inverter_0/B 0
+C231 Countlay_1/DLATCHlay2_1/NAND3lay_0/A XNORlay_3/out 0
+C232 inverter_3/B XNORlay_7/a_110_960# 0
+C233 Countlay_2/DLATCHlay2_1/NAND3lay_0/A inverter_3/B 0
+C234 XNORlay_2/A XNORlay_3/A 0.00447f
+C235 XNORlay_3/out Countlay_1/XORlay_1/out 0
+C236 inverter_3/B n1 0.61784f
+C237 XNORlay_1/inverter_1/B XNORlay_6/A 0
+C238 Countlay_3/XORlay_1/inverter_1/B Countlay_5/XORlay_1/B 0
+C239 XNORlay_4/A XNORlay_5/A 0.00313f
+C240 XNORlay_0/out XNORlay_6/out 0
+C241 Countlay_5/DLATCHlay2_1/a_3880_1000# XNORlay_5/out 0
+C242 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y Countlay_4/DLATCHlay2_1/NAND2lay_1/B 0
+C243 XNORlay_3/inverter_0/B XNORlay_5/out 0
+C244 XNORlay_0/A XNORlay_1/A 0.00459f
+C245 Countlay2_0/XORlay_0/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C246 NAND8lay_0/a_600_n200# VDD 0
+C247 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y In 0.00241f
+C248 Countlay_1/XORlay_1/B n2 0.00754f
+C249 XNORlay_4/inverter_1/B XNORlay_5/a_110_2000# 0
+C250 Countlay2_0/XORlay_0/out XNORlay_3/out 0
+C251 n2 XNORlay_2/out 0.00333f
+C252 Countlay_1/DLATCHlay2_1/NAND3lay_0/a_110_90# VDD 0
+C253 inverter_3/B Countlay2_0/DLATCHlay2_0/NAND3lay_0/A 0
+C254 Countlay_2/DLATCHlay2_1/a_3880_1000# Countlay_5/DLATCHlay2_1/NAND2lay_0/A 0
+C255 XNORlay_6/inverter_0/B XNORlay_3/out 0
+C256 XNORlay_2/a_110_2000# XNORlay_2/inverter_1/B -0
+C257 Countlay_3/DLATCHlay2_1/NAND2lay_1/B XNORlay_4/A 0.02787f
+C258 Countlay2_0/XORlay_0/inverter_1/B Countlay2_0/XORlay_0/a_100_990# -0
+C259 Countlay_3/DLATCHlay2_1/NAND3lay_0/A Countlay_4/XORlay_1/out 0
+C260 Countlay_0/XORlay_1/inverter_1/B VDD 0.01242f
+C261 Countlay_1/XORlay_1/B Countlay_1/XORlay_1/inverter_1/B 0.0107f
+C262 inverter_3/B XNORlay_3/A 0.80185f
+C263 Countlay_1/XORlay_1/inverter_1/B XNORlay_2/out 0.07348f
+C264 Countlay_6/XORlay_1/inverter_0/B Countlay_1/XORlay_1/inverter_0/B 0.00192f
+C265 Countlay2_0/XORlay_0/B n6 0.01945f
+C266 XNORlay_3/out XNORlay_3/a_110_2000# 0.00344f
+C267 Countlay_4/XORlay_1/inverter_1/B VDD 0.01303f
+C268 n3 VDD 0.02069f
+C269 Countlay_6/DLATCHlay2_1/NAND2lay_0/A VDD 0.00259f
+C270 inverter_3/B Countlay_6/DLATCHlay2_1/NAND3lay_0/Y 0.00999f
+C271 XNORlay_7/a_110_2000# XNORlay_7/out 0.0148f
+C272 inverter_3/B Countlay_6/DLATCHlay2_1/NAND2lay_0/a_110_n10# 0.00954f
+C273 Countlay_3/DLATCHlay2_1/NAND2lay_0/a_110_n10# XNORlay_5/A 0.00303f
+C274 XNORlay_4/A Countlay_4/XORlay_1/out 0.0017f
+C275 In XNORlay_0/inverter_0/B 0
+C276 XNORlay_3/out inverter_0/A 0
+C277 XNORlay_5/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C278 XNORlay_5/a_110_2000# VDD 0.00782f
+C279 n2 Countlay_1/NAND2lay_1/a_110_n10# 0
+C280 XNORlay_5/out XNORlay_0/inverter_1/B 0
+C281 inverter_3/B Countlay_0/DLATCHlay2_1/a_3880_1000# 0.0033f
+C282 Countlay_2/NAND2lay_1/a_110_n10# VDD 0
+C283 In XNORlay_2/inverter_0/B 0
+C284 XNORlay_0/out XNORlay_6/A 0
+C285 NAND8lay_0/a_600_n200# n0 0
+C286 Countlay_5/XORlay_1/out VDD 0.06081f
+C287 XNORlay_5/out Countlay_2/XORlay_1/out 0
+C288 inverter_3/B XNORlay_3/out 0.07225f
+C289 XNORlay_4/out XNORlay_2/inverter_0/B 0
+C290 Countlay_0/XORlay_1/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y -0
+C291 Countlay_5/DLATCHlay2_1/a_3880_1000# XNORlay_3/A 0
+C292 XNORlay_3/inverter_0/B XNORlay_3/A 0.00941f
+C293 Countlay_5/XORlay_1/B Countlay_2/XORlay_1/out 0
+C294 XNORlay_6/a_110_960# n7 0
+C295 Countlay2_0/DLATCHlay2_0/a_3880_1000# XNORlay_5/out 0
+C296 Countlay_3/DLATCHlay2_1/NAND2lay_0/A VDD 0.00519f
+C297 Countlay2_0/XORlay_0/inverter_1/B XNORlay_5/out 0
+C298 Out inverter_3/A 0.01246f
+C299 n1 Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.00104f
+C300 XNORlay_0/inverter_1/B n1 0
+C301 Countlay_3/XORlay_1/B Countlay_3/DLATCHlay2_1/NAND3lay_0/Y 0.2343f
+C302 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_2/out 0
+C303 Countlay_1/DLATCHlay2_1/NAND2lay_1/B n1 0
+C304 XNORlay_7/A XNORlay_7/inverter_1/B 0.03085f
+C305 n2 XNORlay_1/A 0
+C306 XNORlay_5/out XNORlay_2/inverter_1/B 0
+C307 XNORlay_5/out In 7.09032f
+C308 inverter_3/A VDD 0.08788f
+C309 Countlay_2/XORlay_1/inverter_1/B Countlay_2/XORlay_1/a_100_990# -0
+C310 In XNORlay_3/inverter_1/B 0
+C311 Countlay_5/XORlay_1/B In 0.12836f
+C312 Countlay2_0/XORlay_0/B XNORlay_0/A 2.72434f
+C313 In Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0.05662f
+C314 Countlay_6/XORlay_1/out XNORlay_0/A 0.00426f
+C315 XNORlay_6/inverter_1/B Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.03038f
+C316 XNORlay_3/inverter_0/B XNORlay_3/out 0.00111f
+C317 XNORlay_7/A XNORlay_0/a_110_2000# 0
+C318 In Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0.05632f
+C319 Countlay_2/DLATCHlay2_1/NAND2lay_0/A In 0.04843f
+C320 Countlay_6/DLATCHlay2_1/NAND2lay_0/A Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0.00138f
+C321 Countlay_3/inverter_1/A VDD 0.01233f
+C322 Countlay_1/XORlay_1/inverter_1/B XNORlay_1/A 0.14718f
+C323 In n1 0
+C324 XNORlay_4/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C325 Countlay_2/DLATCHlay2_1/NAND3lay_0/A In 0
+C326 Countlay_3/DLATCHlay2_1/a_3880_1000# VDD 0.00183f
+C327 Countlay_2/DLATCHlay2_1/NAND2lay_0/A XNORlay_4/out 0
+C328 Countlay_2/DLATCHlay2_1/NAND3lay_0/A XNORlay_4/out 0
+C329 XNORlay_4/out n1 0
+C330 Countlay_2/DLATCHlay2_1/NAND2lay_1/B XNORlay_2/A 0.02866f
+C331 XNORlay_6/inverter_0/B XNORlay_1/out 0
+C332 XNORlay_3/A Countlay_2/XORlay_1/out 0
+C333 XNORlay_6/inverter_0/B XNORlay_7/inverter_1/B 0
+C334 Countlay_6/DLATCHlay2_1/NAND3lay_0/A VDD 0.0021f
+C335 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.00143f
+C336 Countlay2_0/DLATCHlay2_0/NAND3lay_0/A In 0
+C337 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_0/inverter_1/B 0.0313f
+C338 Countlay_6/XORlay_1/B XNORlay_2/inverter_0/B 0
+C339 NAND8lay_0/a_1320_n200# XNORlay_3/out 0.00598f
+C340 Countlay_2/XORlay_1/B Countlay_3/XORlay_1/B 0.00462f
+C341 Countlay2_0/XORlay_0/inverter_0/B XNORlay_0/inverter_0/B 0
+C342 inverter_3/B Countlay_0/DLATCHlay2_1/NMOS_0/a_120_0# 0
+C343 Countlay_1/XORlay_1/inverter_0/B VDD 0.01126f
+C344 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B VDD -0
+C345 Countlay_3/XORlay_1/out XNORlay_5/A 0.00124f
+C346 XNORlay_3/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C347 In XNORlay_3/A 0.0047f
+C348 XNORlay_0/inverter_1/B XNORlay_3/out 0
+C349 XNORlay_6/a_110_960# Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C350 XNORlay_5/A Countlay_4/DLATCHlay2_1/NAND3lay_0/A 0
+C351 XNORlay_2/out Countlay_0/XORlay_1/inverter_0/B 0
+C352 Countlay_5/XORlay_1/a_100_990# VDD 0.01857f
+C353 Countlay2_0/DLATCHlay2_0/a_3880_1000# XNORlay_3/out 0
+C354 NAND8lay_0/a_600_n200# XNORlay_6/out 0.0046f
+C355 XNORlay_1/out inverter_0/A 0.54975f
+C356 Countlay_1/DLATCHlay2_1/NMOS_1/a_360_0# VDD 0
+C357 Countlay2_0/XORlay_0/inverter_1/B XNORlay_3/out 0
+C358 Countlay_3/DLATCHlay2_1/NAND2lay_1/B Countlay_3/XORlay_1/out -0
+C359 XNORlay_5/out Countlay_6/XORlay_1/B 0.44309f
+C360 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y In 0.00239f
+C361 Countlay_5/XORlay_1/B Countlay_6/XORlay_1/B 0.01386f
+C362 Countlay_6/XORlay_1/B XNORlay_3/inverter_1/B 0.46318f
+C363 inverter_3/B XNORlay_1/out 0.00208f
+C364 inverter_3/B XNORlay_7/inverter_1/B 0.00238f
+C365 Countlay_6/DLATCHlay2_1/NAND2lay_1/B VDD 0.00524f
+C366 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y n7 0.00339f
+C367 inverter_3/B n5 0.95397f
+C368 inverter_3/B XNORlay_7/A 1.0019f
+C369 Countlay_2/DLATCHlay2_1/NAND2lay_0/A Countlay_6/XORlay_1/B 0
+C370 Countlay_1/XORlay_1/B XNORlay_1/inverter_0/B 0.00197f
+C371 Countlay_1/XORlay_1/B VDD 0.07507f
+C372 Countlay_4/DLATCHlay2_1/a_3880_1000# XNORlay_4/A 0
+C373 Countlay_1/DLATCHlay2_1/NAND3lay_0/a_350_90# inverter_3/B 0
+C374 XNORlay_5/out Countlay2_0/XORlay_0/inverter_0/B 0
+C375 XNORlay_1/inverter_0/B XNORlay_2/out 0
+C376 XNORlay_4/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C377 Countlay_5/inverter_1/A n4 0
+C378 Countlay_2/DLATCHlay2_1/NAND3lay_0/A Countlay_6/XORlay_1/B 0
+C379 In XNORlay_3/out 0.04601f
+C380 XNORlay_2/out VDD 0.18516f
+C381 Countlay_6/DLATCHlay2_1/NAND3lay_0/A Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C382 Countlay_3/DLATCHlay2_1/NAND3lay_0/A Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C383 Countlay_1/DLATCHlay2_1/NAND3lay_0/A inverter_3/B 0
+C384 inverter_3/B Countlay_1/XORlay_1/out 0.00146f
+C385 inverter_3/B Countlay_1/DLATCHlay2_1/NMOS_2/a_360_0# 0.01402f
+C386 Countlay_2/XORlay_1/inverter_1/B XNORlay_5/out 0
+C387 Countlay_1/XORlay_1/inverter_1/B Countlay2_0/XORlay_0/B 0
+C388 Countlay_3/XORlay_1/B Countlay_4/XORlay_1/inverter_1/B 0.00169f
+C389 Countlay_3/XORlay_1/inverter_1/B Countlay_4/XORlay_1/B 0.00109f
+C390 Countlay_3/XORlay_1/out Countlay_4/XORlay_1/out 0
+C391 Countlay_2/XORlay_1/B Countlay_5/XORlay_1/inverter_1/B 0.0023f
+C392 Countlay_2/XORlay_1/inverter_1/B Countlay_5/XORlay_1/B 0.00145f
+C393 XNORlay_3/a_110_2000# XNORlay_2/A 0
+C394 Countlay_3/XORlay_1/B n3 0.01831f
+C395 XNORlay_4/A Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C396 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y Countlay_5/XORlay_1/out -0
+C397 inverter_3/B Countlay2_0/XORlay_0/out 0.07874f
+C398 XNORlay_4/a_110_2000# XNORlay_4/out 0.00356f
+C399 Countlay_1/XORlay_1/B Countlay_6/inverter_1/A 0
+C400 XNORlay_5/out Countlay_0/XORlay_1/out 0
+C401 Countlay_3/DLATCHlay2_1/NAND2lay_0/A Countlay_3/XORlay_1/B 0
+C402 inverter_3/B XNORlay_2/A 0.80583f
+C403 Countlay_1/DLATCHlay2_1/NMOS_0/a_360_0# VDD 0
+C404 inverter_3/B Countlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10# 0.00984f
+C405 Countlay_0/XORlay_1/out Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C406 Countlay_1/DLATCHlay2_1/a_3880_1000# VDD 0.00252f
+C407 Countlay_6/XORlay_1/B XNORlay_3/A 2.54102f
+C408 Countlay_1/NAND2lay_1/a_110_n10# VDD 0
+C409 Countlay_6/XORlay_1/B XNORlay_3/a_1110_960# 0
+C410 Countlay_6/DLATCHlay2_1/a_3880_1000# VDD 0
+C411 XNORlay_5/out n6 0
+C412 Countlay_2/XORlay_1/a_100_30# VDD 0
+C413 Countlay2_0/XORlay_0/B Countlay_6/XORlay_1/inverter_0/B 0.01141f
+C414 XNORlay_0/out Countlay_0/XORlay_1/inverter_1/B 0
+C415 Countlay_1/XORlay_1/B Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C416 XNORlay_2/out n0 0
+C417 Countlay_0/XORlay_1/inverter_1/B XNORlay_6/A 0.20782f
+C418 XNORlay_2/out Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C419 XNORlay_5/A VDD 0.1248f
+C420 n6 n1 0.00175f
+C421 XNORlay_0/A XNORlay_0/inverter_0/B 0.00945f
+C422 Countlay_5/DLATCHlay2_1/NAND2lay_0/A XNORlay_5/out 0
+C423 Countlay_2/DLATCHlay2_1/NAND2lay_1/B Countlay_2/XORlay_1/out -0
+C424 Countlay_5/DLATCHlay2_1/a_3880_1000# XNORlay_2/A 0
+C425 Countlay_2/XORlay_1/inverter_1/B XNORlay_3/A 0
+C426 inverter_3/B inverter_0/A 0.00874f
+C427 XNORlay_1/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C428 XNORlay_1/inverter_0/B XNORlay_1/A 0.00978f
+C429 XNORlay_5/out XNORlay_6/inverter_1/B 0.00287f
+C430 XNORlay_5/out Countlay_5/DLATCHlay2_1/NAND3lay_0/A 0
+C431 XNORlay_1/A VDD 0.12277f
+C432 XNORlay_5/inverter_1/B n3 0
+C433 Countlay_6/XORlay_1/B XNORlay_3/out 0.2236f
+C434 Countlay_3/DLATCHlay2_1/a_3880_1000# Countlay_3/XORlay_1/B 0.00124f
+C435 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C436 XNORlay_6/inverter_1/B XNORlay_7/out 0
+C437 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B XNORlay_7/inverter_0/B 0
+C438 Countlay_1/DLATCHlay2_1/NAND2lay_1/B XNORlay_1/out 0
+C439 Countlay_2/DLATCHlay2_1/NAND2lay_0/A Countlay_5/DLATCHlay2_1/NAND2lay_0/A 0.00116f
+C440 inverter_3/B XNORlay_4/inverter_0/B 0.00134f
+C441 Countlay_3/DLATCHlay2_1/NAND2lay_1/B VDD 0.00322f
+C442 Countlay_2/DLATCHlay2_1/NAND2lay_0/A Countlay_5/DLATCHlay2_1/NAND3lay_0/A 0
+C443 Countlay_5/XORlay_1/inverter_0/B Countlay_2/XORlay_1/inverter_0/B 0.00162f
+C444 Countlay_1/XORlay_1/B Countlay_6/XORlay_1/inverter_1/B 0.0027f
+C445 inverter_2/A Out 0.04236f
+C446 Countlay_2/inverter_1/A XNORlay_4/out 0.01032f
+C447 Countlay_1/XORlay_1/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y -0
+C448 Countlay_0/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C449 Countlay_3/DLATCHlay2_1/NAND3lay_0/A Countlay_5/XORlay_1/B 0
+C450 Countlay_5/inverter_1/A XNORlay_5/inverter_0/B 0
+C451 Countlay_5/NAND2lay_1/a_110_n10# n4 0
+C452 Countlay2_0/XORlay_0/inverter_0/B XNORlay_3/out 0
+C453 Countlay2_0/XORlay_0/inverter_1/B XNORlay_7/A -0
+C454 Countlay_1/DLATCHlay2_1/NAND2lay_1/B Countlay_1/XORlay_1/out -0
+C455 Countlay2_0/XORlay_0/inverter_1/B XNORlay_0/a_110_2000# 0.00384f
+C456 inverter_2/A VDD 0.20819f
+C457 In XNORlay_1/out 0
+C458 XNORlay_5/out XNORlay_0/A 0.00269f
+C459 XNORlay_0/A XNORlay_3/inverter_1/B 0
+C460 In n5 0.00104f
+C461 Countlay_6/inverter_1/A XNORlay_1/A 0.00129f
+C462 n7 VDD 0.03117f
+C463 n2 Countlay_2/DLATCHlay2_1/NAND2lay_1/a_110_n10# 0
+C464 XNORlay_4/out XNORlay_1/out 0.00164f
+C465 Countlay_4/XORlay_1/out VDD 0.06019f
+C466 inverter_3/B Countlay_5/DLATCHlay2_1/a_3880_1000# 0.09099f
+C467 In XNORlay_7/A 0.16096f
+C468 XNORlay_4/A Countlay_5/XORlay_1/B 0
+C469 XNORlay_3/inverter_0/B inverter_3/B 0.00144f
+C470 XNORlay_0/out inverter_3/A 0
+C471 inverter_3/B Countlay_0/DLATCHlay2_1/NMOS_0/a_360_0# 0
+C472 Countlay_1/DLATCHlay2_1/NAND3lay_0/A In 0
+C473 Countlay_2/DLATCHlay2_1/a_3880_1000# VDD 0.00254f
+C474 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y n6 0
+C475 XNORlay_0/A n1 0
+C476 In Countlay_1/XORlay_1/out 0
+C477 Countlay_2/DLATCHlay2_1/NMOS_2/a_120_0# VDD 0
+C478 Countlay2_0/DLATCHlay2_0/a_3880_1000# Countlay2_0/XORlay_0/out -0
+C479 Countlay_1/DLATCHlay2_1/NAND3lay_0/A XNORlay_4/out 0
+C480 XNORlay_4/out Countlay_1/XORlay_1/out 0
+C481 XNORlay_4/a_1110_960# n4 0
+C482 n4 VDD 0.02749f
+C483 Countlay_5/DLATCHlay2_1/NAND2lay_0/A XNORlay_3/A 0
+C484 XNORlay_5/out XNORlay_6/a_110_960# 0
+C485 XNORlay_2/A Countlay_2/XORlay_1/out 1.82749f
+C486 XNORlay_1/A Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C487 XNORlay_3/out Countlay_0/XORlay_1/out 0
+C488 Countlay_5/DLATCHlay2_1/NAND3lay_0/A XNORlay_3/A 0
+C489 Countlay2_0/XORlay_0/B Countlay_0/XORlay_1/inverter_0/B 0
+C490 Countlay_2/XORlay_1/inverter_0/B VDD 0.0142f
+C491 Countlay_1/XORlay_1/B XNORlay_1/inverter_1/B 0.48096f
+C492 Countlay_4/XORlay_1/a_100_990# Countlay_5/XORlay_1/B 0.16083f
+C493 n6 XNORlay_3/out 0
+C494 XNORlay_1/inverter_1/B XNORlay_2/out 0
+C495 XNORlay_5/A Countlay_4/DLATCHlay2_1/NAND2lay_1/B 0.0285f
+C496 Countlay2_0/XORlay_0/out In 0.06473f
+C497 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y n3 0
+C498 XNORlay_6/a_110_2000# VDD 0.01349f
+C499 Countlay_1/DLATCHlay2_1/NMOS_1/a_120_0# Countlay_6/DLATCHlay2_1/NAND3lay_0/Y 0
+C500 Countlay_0/DLATCHlay2_1/NAND3lay_0/A VDD 0.00204f
+C501 In XNORlay_2/A 0.00344f
+C502 XNORlay_2/inverter_1/B XNORlay_2/A 0.00131f
+C503 XNORlay_6/inverter_0/B XNORlay_4/out 0
+C504 XNORlay_2/out XNORlay_6/out 0.01087f
+C505 inverter_2/A n0 0
+C506 Countlay2_0/XORlay_0/B XNORlay_1/inverter_0/B 0
+C507 Countlay2_0/XORlay_0/B VDD 0.10496f
+C508 Countlay_3/DLATCHlay2_1/NAND2lay_0/A Countlay_4/DLATCHlay2_1/NAND2lay_0/A 0
+C509 XNORlay_4/out XNORlay_2/A 0.12544f
+C510 Countlay_6/XORlay_1/out VDD 0.06364f
+C511 inverter_3/B Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.00614f
+C512 n0 n7 0
+C513 XNORlay_3/out XNORlay_6/inverter_1/B 0
+C514 inverter_3/B XNORlay_0/inverter_1/B 0.00111f
+C515 XNORlay_4/A Countlay_3/XORlay_1/inverter_0/B 0
+C516 XNORlay_0/A XNORlay_3/a_1110_960# 0
+C517 XNORlay_4/inverter_1/B XNORlay_5/inverter_0/B 0.00124f
+C518 inverter_3/B Countlay_2/XORlay_1/out 0.00146f
+C519 Countlay_3/XORlay_1/out Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C520 XNORlay_2/inverter_1/B XNORlay_3/a_110_2000# 0
+C521 Countlay2_0/DLATCHlay2_0/a_3880_1000# inverter_3/B 0.10237f
+C522 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B XNORlay_6/A 0
+C523 Countlay2_0/XORlay_0/inverter_1/B inverter_3/B 0
+C524 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_0/A 0.32431f
+C525 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_2/a_110_960# 0
+C526 XNORlay_5/out n2 0
+C527 Countlay_6/XORlay_1/B n5 0.01661f
+C528 n6 XNORlay_1/a_1110_960# 0
+C529 n2 XNORlay_3/inverter_1/B 0
+C530 Countlay_3/XORlay_1/inverter_1/B Countlay_3/XORlay_1/a_100_990# -0
+C531 Countlay_4/XORlay_1/out Countlay_4/DLATCHlay2_1/NAND2lay_1/B -0
+C532 XNORlay_4/out inverter_0/A 0.08903f
+C533 Countlay_6/DLATCHlay2_1/NAND2lay_1/B XNORlay_0/out 0
+C534 XNORlay_6/a_1110_960# VDD 0
+C535 inverter_3/B XNORlay_2/inverter_1/B 0.00102f
+C536 inverter_3/B In 27.77955f
+C537 Countlay_0/DLATCHlay2_1/NAND3lay_0/Y VDD 0.07858f
+C538 Countlay_3/DLATCHlay2_1/a_3880_1000# Countlay_4/DLATCHlay2_1/NAND2lay_0/A 0
+C539 XNORlay_0/A XNORlay_3/out 2.6214f
+C540 In XNORlay_4/inverter_0/B 0
+C541 XNORlay_3/a_110_960# Countlay_5/DLATCHlay2_1/NAND2lay_1/B 0
+C542 XNORlay_4/out XNORlay_4/inverter_0/B 0.00202f
+C543 inverter_3/B XNORlay_4/out 0.00317f
+C544 Countlay_1/XORlay_1/inverter_1/B XNORlay_5/out 0
+C545 Countlay_0/inverter_1/A VDD 0.01078f
+C546 Countlay_4/DLATCHlay2_1/NAND2lay_1/B n4 0.00147f
+C547 Countlay_2/XORlay_1/B n3 0.0053f
+C548 XNORlay_1/inverter_1/B XNORlay_1/A 0
+C549 Countlay_1/XORlay_1/B XNORlay_6/A 0
+C550 Countlay_3/XORlay_1/B XNORlay_5/A 0.01744f
+C551 XNORlay_2/out XNORlay_6/A 0.0029f
+C552 Countlay2_0/XORlay_0/B Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C553 XNORlay_1/out NAND8lay_0/a_120_n200# 0
+C554 XNORlay_5/inverter_0/B VDD 0.00736f
+C555 Countlay_6/XORlay_1/out Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C556 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_2/inverter_0/B 0
+C557 Countlay_2/XORlay_1/B Countlay_5/XORlay_1/out 0
+C558 XNORlay_5/out Countlay_5/inverter_1/A 0.00501f
+C559 Countlay_5/DLATCHlay2_1/a_3880_1000# In 0.00205f
+C560 Countlay_6/XORlay_1/B XNORlay_2/A 0
+C561 Countlay_5/XORlay_1/B Countlay_5/inverter_1/A 0.02152f
+C562 XNORlay_3/inverter_0/B XNORlay_2/inverter_1/B 0.0017f
+C563 XNORlay_5/out Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0
+C564 XNORlay_3/inverter_0/B In 0
+C565 XNORlay_1/out Countlay_0/XORlay_1/out 0
+C566 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Countlay2_0/DLATCHlay2_0/NAND2lay_0/A -0
+C567 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y XNORlay_7/out 0
+C568 XNORlay_7/A Countlay_0/XORlay_1/out 0
+C569 Countlay_4/DLATCHlay2_1/a_3880_1000# VDD -0
+C570 Countlay_1/XORlay_1/B XNORlay_1/a_110_2000# 0.35536f
+C571 Countlay_1/XORlay_1/a_100_30# VDD 0
+C572 n2 XNORlay_3/A 0
+C573 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C574 Countlay_6/XORlay_1/inverter_1/B Countlay2_0/XORlay_0/B 0.50873f
+C575 XNORlay_5/out Countlay_6/XORlay_1/inverter_0/B 0
+C576 Countlay_2/DLATCHlay2_1/NMOS_2/a_360_0# inverter_3/B 0.01415f
+C577 Countlay_6/XORlay_1/B XNORlay_3/a_110_2000# 0.13641f
+C578 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_5/out 0
+C579 n6 XNORlay_7/A 0.00359f
+C580 n0 Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C581 Countlay_2/XORlay_1/a_100_990# VDD 0.01912f
+C582 Countlay_2/XORlay_1/inverter_1/B XNORlay_2/A 0.17434f
+C583 Countlay_3/XORlay_1/a_100_30# Countlay_4/XORlay_1/inverter_1/B 0
+C584 Countlay_3/XORlay_1/out Countlay_5/XORlay_1/B 0
+C585 Countlay_2/XORlay_1/a_100_30# Countlay_5/XORlay_1/inverter_1/B 0
+C586 Countlay_3/NAND2lay_1/a_110_n10# Countlay_4/XORlay_1/B 0
+C587 Countlay_3/XORlay_1/B Countlay_4/XORlay_1/out 0
+C588 n6 XNORlay_0/a_110_2000# -0
+C589 Countlay_2/DLATCHlay2_1/a_3880_1000# Countlay_5/DLATCHlay2_1/NAND3lay_0/Y 0
+C590 XNORlay_1/out XNORlay_6/inverter_1/B 0.24659f
+C591 Countlay_4/DLATCHlay2_1/NAND3lay_0/A Countlay_5/XORlay_1/B 0
+C592 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y VDD 0.08339f
+C593 XNORlay_5/inverter_1/B XNORlay_5/A 0
+C594 inverter_3/B Countlay_6/XORlay_1/B 0.57369f
+C595 Countlay2_0/XORlay_0/out Countlay_0/XORlay_1/out 0
+C596 n2 XNORlay_3/out 0
+C597 Countlay_1/inverter_1/A XNORlay_2/inverter_1/B 0
+C598 inverter_2/A NAND8lay_0/a_840_n200# 0
+C599 Countlay_2/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C600 In Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.00178f
+C601 Countlay_1/inverter_1/A XNORlay_4/out 0
+C602 XNORlay_2/a_110_2000# VDD 0.00489f
+C603 Countlay2_0/XORlay_0/out n6 0
+C604 In XNORlay_0/inverter_1/B 0
+C605 n3 Countlay_2/NAND2lay_1/a_110_n10# 0
+C606 XNORlay_4/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C607 Countlay_5/inverter_1/A XNORlay_3/A -0
+C608 In Countlay_2/XORlay_1/out 0
+C609 inverter_3/B Countlay2_0/XORlay_0/inverter_0/B 0.10143f
+C610 Countlay2_0/DLATCHlay2_0/a_3880_1000# In 0.02956f
+C611 XNORlay_4/out Countlay_2/XORlay_1/out 0
+C612 Countlay_0/XORlay_1/a_100_990# VDD 0.01853f
+C613 Countlay_1/XORlay_1/inverter_1/B XNORlay_3/out 0
+C614 Countlay2_0/XORlay_0/B XNORlay_1/inverter_1/B 0
+C615 Countlay_4/DLATCHlay2_1/NAND2lay_1/B XNORlay_5/inverter_0/B 0
+C616 Countlay2_0/XORlay_0/inverter_1/B In 0
+C617 Countlay_2/XORlay_1/inverter_1/B inverter_3/B 0
+C618 Countlay_5/DLATCHlay2_1/NAND2lay_1/B XNORlay_3/A 0.02854f
+C619 XNORlay_0/A XNORlay_1/out 0
+C620 XNORlay_6/a_110_2000# XNORlay_6/out 0
+C621 Countlay_5/DLATCHlay2_1/a_3880_1000# Countlay_6/XORlay_1/B 0.00127f
+C622 Countlay_5/XORlay_1/inverter_0/B XNORlay_5/out 0
+C623 Countlay2_0/XORlay_0/a_100_990# VDD 0.01986f
+C624 XNORlay_0/A n5 0
+C625 XNORlay_3/inverter_0/B Countlay_6/XORlay_1/B 0
+C626 XNORlay_4/A Countlay_4/XORlay_1/B 0.00941f
+C627 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/A 0
+C628 XNORlay_4/inverter_1/B Countlay_5/XORlay_1/B 0
+C629 inverter_3/B Countlay2_0/DLATCHlay2_0/NMOS_2/a_360_0# 0.01415f
+C630 XNORlay_0/inverter_0/B VDD 0.00568f
+C631 inverter_2/A XNORlay_0/out 0.00146f
+C632 Countlay_5/DLATCHlay2_1/NAND2lay_0/A XNORlay_2/A 0
+C633 In XNORlay_2/inverter_1/B 0
+C634 Countlay_1/DLATCHlay2_1/NMOS_2/a_120_0# VDD 0
+C635 Countlay_1/DLATCHlay2_1/NAND3lay_0/A XNORlay_0/A 0
+C636 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C637 XNORlay_0/out n7 0.00312f
+C638 XNORlay_0/A Countlay_1/XORlay_1/out 0
+C639 XNORlay_4/out XNORlay_2/inverter_1/B 0
+C640 In XNORlay_4/out 0
+C641 Countlay_2/XORlay_1/B Countlay_5/XORlay_1/a_100_990# 0
+C642 XNORlay_2/inverter_0/B VDD 0.00462f
+C643 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y XNORlay_3/out 0
+C644 XNORlay_5/out Countlay_0/XORlay_1/inverter_0/B 0
+C645 inverter_3/B Countlay_0/XORlay_1/out 0.00145f
+C646 Countlay_4/XORlay_1/inverter_0/B XNORlay_5/A 0
+C647 Countlay_5/DLATCHlay2_1/NAND2lay_1/B XNORlay_3/out 0
+C648 Countlay_4/DLATCHlay2_1/NAND2lay_0/A XNORlay_5/A 0
+C649 inverter_3/B n6 0.85964f
+C650 Countlay_6/XORlay_1/inverter_0/B XNORlay_3/out 0
+C651 Countlay_5/XORlay_1/inverter_1/B Countlay_2/XORlay_1/inverter_0/B 0
+C652 Out XNORlay_7/out 0.02823f
+C653 XNORlay_1/inverter_1/B Countlay_0/inverter_1/A 0
+C654 Countlay_1/XORlay_1/B Countlay_2/XORlay_1/B 0.00462f
+C655 Countlay_2/XORlay_1/B XNORlay_2/out 0.21856f
+C656 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y XNORlay_5/A 0.0014f
+C657 XNORlay_6/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C658 XNORlay_5/out XNORlay_1/inverter_0/B 0
+C659 XNORlay_5/out VDD 0.16624f
+C660 XNORlay_3/inverter_1/B VDD 0.00225f
+C661 Countlay2_0/XORlay_0/B Countlay_6/XORlay_1/a_100_990# 0.10271f
+C662 Countlay2_0/DLATCHlay2_0/NAND2lay_0/A VDD 0.00283f
+C663 Countlay_5/XORlay_1/B VDD 0.36226f
+C664 inverter_3/B Countlay_5/DLATCHlay2_1/NAND2lay_0/A 0.40545f
+C665 XNORlay_7/out VDD 0.19076f
+C666 inverter_3/B Countlay_5/DLATCHlay2_1/NAND3lay_0/A 0
+C667 XNORlay_0/out Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0
+C668 Countlay_1/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C669 Countlay_6/XORlay_1/B Countlay_2/XORlay_1/out 0
+C670 Countlay_5/XORlay_1/inverter_0/B XNORlay_3/A 0
+C671 Countlay_0/DLATCHlay2_1/NAND2lay_0/A VDD 0.00395f
+C672 Countlay_0/DLATCHlay2_1/NAND3lay_0/A XNORlay_6/A 0
+C673 Countlay_2/DLATCHlay2_1/NAND3lay_0/a_350_90# VDD 0
+C674 Countlay2_0/XORlay_0/B XNORlay_0/out 0.38975f
+C675 Countlay_2/DLATCHlay2_1/NAND2lay_0/A VDD 0.00585f
+C676 Countlay_2/DLATCHlay2_1/NAND2lay_1/B n2 0.00104f
+C677 Countlay_2/DLATCHlay2_1/NAND3lay_0/A VDD 0.00245f
+C678 n1 VDD 0.03127f
+C679 Countlay_6/DLATCHlay2_1/NAND2lay_1/B XNORlay_0/a_110_960# 0
+C680 Countlay2_0/XORlay_0/B XNORlay_6/A 0
+C681 Countlay_3/DLATCHlay2_1/NAND3lay_0/A inverter_3/B 0
+C682 Countlay2_0/XORlay_0/inverter_0/B XNORlay_0/inverter_1/B 0
+C683 n2 n5 0.00186f
+C684 XNORlay_2/out Countlay_0/XORlay_1/inverter_1/B 0
+C685 Countlay_6/XORlay_1/B XNORlay_2/inverter_1/B 0
+C686 XNORlay_5/out Countlay_6/inverter_1/A 0
+C687 In Countlay_6/XORlay_1/B 0.00378f
+C688 Countlay_6/inverter_1/A XNORlay_3/inverter_1/B 0
+C689 Countlay2_0/DLATCHlay2_0/NAND3lay_0/A VDD 0.00234f
+C690 inverter_3/B XNORlay_0/A 0.80675f
+C691 Countlay_6/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C692 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y Countlay_4/XORlay_1/out 0
+C693 XNORlay_4/A XNORlay_4/inverter_0/B 0.00938f
+C694 inverter_3/B XNORlay_4/A 0.79283f
+C695 XNORlay_0/out XNORlay_6/a_1110_960# 0
+C696 Countlay_1/DLATCHlay2_1/NMOS_0/a_120_0# VDD 0
+C697 In Countlay2_0/XORlay_0/inverter_0/B 0
+C698 XNORlay_0/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C699 XNORlay_5/out n0 0.46251f
+C700 XNORlay_5/out Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C701 Countlay_3/XORlay_1/inverter_0/B VDD 0.01476f
+C702 XNORlay_6/A Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.93937f
+C703 XNORlay_3/A VDD 0.12657f
+C704 n0 XNORlay_7/out 0.00174f
+C705 Countlay_2/XORlay_1/inverter_1/B In 0
+C706 Countlay_0/inverter_1/A XNORlay_6/A -0
+C707 Countlay_2/XORlay_1/B XNORlay_1/A 0
+C708 XNORlay_3/out Countlay_0/XORlay_1/inverter_0/B 0
+C709 Countlay_2/DLATCHlay2_1/NAND2lay_0/a_110_n10# inverter_3/B 0.00684f
+C710 Countlay_2/XORlay_1/inverter_1/B XNORlay_4/out 0.06997f
+C711 Countlay_3/XORlay_1/inverter_1/B XNORlay_4/A 0.12828f
+C712 Countlay_3/DLATCHlay2_1/NMOS_1/a_120_0# Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C713 NAND8lay_0/a_360_n200# XNORlay_1/out 0
+C714 Countlay_4/inverter_1/A Countlay_5/XORlay_1/B -0
+C715 Out XNORlay_3/out 0
+C716 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y VDD 0.08498f
+C717 n2 XNORlay_2/A 0.02343f
+C718 XNORlay_5/out Countlay_4/DLATCHlay2_1/NAND2lay_1/B 0
+C719 XNORlay_7/A Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0
+C720 Countlay2_0/XORlay_0/inverter_1/B n6 0
+C721 XNORlay_5/out Countlay_6/XORlay_1/inverter_1/B 0
+C722 Countlay_0/DLATCHlay2_1/a_3880_1000# VDD 0
+C723 Countlay_5/DLATCHlay2_1/NAND2lay_1/B n5 0.00114f
+C724 XNORlay_6/inverter_0/B Countlay_0/DLATCHlay2_1/NAND2lay_1/B 0
+C725 XNORlay_1/inverter_0/B XNORlay_3/out 0
+C726 XNORlay_3/out VDD 0.16647f
+C727 Countlay_6/DLATCHlay2_1/NAND2lay_0/A Countlay_1/DLATCHlay2_1/NMOS_0/a_360_0# 0
+C728 Countlay_4/XORlay_1/a_100_990# Countlay_3/XORlay_1/inverter_1/B 0
+C729 Countlay_6/DLATCHlay2_1/NAND2lay_0/A Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C730 XNORlay_1/inverter_1/B XNORlay_0/inverter_0/B 0.00159f
+C731 Out NAND8lay_0/a_1080_n200# 0
+C732 XNORlay_1/a_110_2000# Countlay_0/inverter_1/A 0
+C733 XNORlay_4/out Countlay_0/XORlay_1/out 0
+C734 Countlay_3/XORlay_1/out Countlay_4/XORlay_1/B 0
+C735 Countlay_0/XORlay_1/a_100_30# VDD 0
+C736 Countlay_6/inverter_1/A XNORlay_3/a_1110_960# 0
+C737 In n6 0
+C738 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/a_110_960# 0
+C739 Countlay_2/DLATCHlay2_1/a_3880_1000# Countlay_2/XORlay_1/B 0
+C740 XNORlay_5/A Countlay_4/XORlay_1/inverter_1/B 0.05878f
+C741 XNORlay_5/out XNORlay_7/inverter_0/B 0
+C742 NAND8lay_0/a_1080_n200# VDD 0
+C743 XNORlay_5/A n3 0
+C744 Countlay2_0/XORlay_0/out Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y -0.00337f
+C745 XNORlay_4/a_110_2000# VDD 0.00335f
+C746 Countlay_5/inverter_1/A XNORlay_2/A 0.0013f
+C747 inverter_3/B n2 0.74124f
+C748 XNORlay_7/inverter_0/B XNORlay_7/out -0
+C749 Countlay_5/DLATCHlay2_1/NAND2lay_0/A In 0.04793f
+C750 XNORlay_5/a_110_960# Countlay_4/DLATCHlay2_1/NAND2lay_1/B 0
+C751 Countlay_5/DLATCHlay2_1/NAND3lay_0/A In 0
+C752 XNORlay_0/A Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C753 Countlay_2/XORlay_1/B Countlay_2/XORlay_1/inverter_0/B 0
+C754 XNORlay_5/inverter_1/B Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0.03024f
+C755 Countlay_6/DLATCHlay2_1/NAND2lay_0/A XNORlay_1/A 0
+C756 Countlay_2/inverter_1/A XNORlay_4/inverter_1/B 0
+C757 XNORlay_0/A XNORlay_0/inverter_1/B 0
+C758 XNORlay_4/out XNORlay_6/inverter_1/B 0
+C759 Countlay_6/inverter_1/A XNORlay_3/out 0.00572f
+C760 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C761 XNORlay_4/A Countlay_3/XORlay_1/a_100_990# 0.02318f
+C762 Countlay_2/DLATCHlay2_1/NMOS_0/a_120_0# VDD 0
+C763 Countlay_3/DLATCHlay2_1/NAND2lay_1/B n3 0.00219f
+C764 Countlay_3/DLATCHlay2_1/NAND2lay_0/A XNORlay_5/A 0.043f
+C765 Countlay_2/XORlay_1/inverter_1/B Countlay_6/XORlay_1/B 0
+C766 XNORlay_5/out XNORlay_1/inverter_1/B 0
+C767 Countlay_3/DLATCHlay2_1/NAND3lay_0/A In 0
+C768 Countlay_1/XORlay_1/inverter_1/B inverter_3/B 0
+C769 XNORlay_1/a_1110_960# VDD 0
+C770 In Countlay_0/DLATCHlay2_1/NAND3lay_0/a_110_90# 0
+C771 XNORlay_3/out n0 0.00132f
+C772 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_2/A 0.60431f
+C773 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_5/out 0
+C774 Countlay_1/XORlay_1/B Countlay_1/XORlay_1/inverter_0/B 0.01209f
+C775 XNORlay_3/out Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C776 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/inverter_1/B 0.03102f
+C777 XNORlay_2/out Countlay_1/XORlay_1/inverter_0/B 0
+C778 Countlay_0/XORlay_1/a_100_990# XNORlay_6/A 0.07718f
+C779 XNORlay_5/out XNORlay_6/out 0.02768f
+C780 XNORlay_3/inverter_0/B n2 0
+C781 Countlay_3/XORlay_1/B Countlay_5/XORlay_1/B 0.04379f
+C782 Countlay_2/DLATCHlay2_1/NAND2lay_0/A Countlay_5/DLATCHlay2_1/NAND3lay_0/Y 0
+C783 XNORlay_6/out XNORlay_7/out 0
+C784 Countlay2_0/XORlay_0/a_100_990# XNORlay_0/out 0
+C785 In XNORlay_0/A 0.00464f
+C786 Countlay_2/DLATCHlay2_1/NAND3lay_0/A Countlay_5/DLATCHlay2_1/NAND3lay_0/Y 0
+C787 inverter_3/B Countlay_5/inverter_1/A 0
+C788 XNORlay_4/A In 0.00291f
+C789 XNORlay_0/out XNORlay_0/inverter_0/B 0.00154f
+C790 inverter_3/B Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0.0729f
+C791 NAND8lay_0/a_1080_n200# n0 0
+C792 XNORlay_4/A XNORlay_4/out 0
+C793 Countlay_1/XORlay_1/a_800_30# VDD 0
+C794 XNORlay_1/out Countlay_0/XORlay_1/inverter_0/B 0
+C795 Countlay_4/DLATCHlay2_1/a_3880_1000# Countlay_3/DLATCHlay2_1/NAND3lay_0/Y 0.00141f
+C796 Countlay_2/inverter_1/A XNORlay_4/a_1110_960# 0
+C797 Countlay_2/inverter_1/A VDD 0.0123f
+C798 Countlay_3/DLATCHlay2_1/a_3880_1000# XNORlay_5/A 0
+C799 Countlay_6/XORlay_1/inverter_1/B XNORlay_3/out 0
+C800 XNORlay_7/A Countlay_0/XORlay_1/inverter_0/B 0
+C801 n4 n3 0.00135f
+C802 Countlay2_0/XORlay_0/inverter_0/B Countlay_0/XORlay_1/out 0
+C803 inverter_3/B Countlay_6/XORlay_1/inverter_0/B 0.18543f
+C804 n1 Countlay_0/NAND2lay_1/a_110_n10# 0
+C805 Countlay_1/XORlay_1/inverter_1/B Countlay_1/XORlay_1/a_100_990# -0
+C806 inverter_3/B Countlay_0/DLATCHlay2_1/NAND3lay_0/a_350_90# 0
+C807 Countlay_3/DLATCHlay2_1/NAND2lay_0/A Countlay_4/XORlay_1/out 0
+C808 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y inverter_3/B 0.00621f
+C809 Countlay_1/XORlay_1/B XNORlay_2/out 0.33586f
+C810 Countlay_2/DLATCHlay2_1/NAND2lay_1/B VDD 0.00532f
+C811 Countlay_3/XORlay_1/out inverter_3/B 0
+C812 Countlay_2/DLATCHlay2_1/a_3880_1000# Countlay_5/XORlay_1/out 0
+C813 XNORlay_5/a_110_2000# n4 0
+C814 Countlay2_0/XORlay_0/inverter_0/B n6 0
+C815 XNORlay_1/inverter_0/B XNORlay_1/out 0.00147f
+C816 Countlay_5/DLATCHlay2_1/NAND2lay_0/A Countlay_6/XORlay_1/B 0
+C817 XNORlay_7/inverter_1/B VDD 0.00428f
+C818 XNORlay_1/out VDD 0.4522f
+C819 Countlay_4/XORlay_1/B VDD 0.85135f
+C820 Countlay_1/inverter_1/A n2 0.00119f
+C821 Countlay_5/DLATCHlay2_1/NAND3lay_0/A Countlay_6/XORlay_1/B 0
+C822 n5 VDD 0.03236f
+C823 inverter_2/A inverter_3/A 0.1061f
+C824 inverter_3/B Countlay_4/DLATCHlay2_1/NAND3lay_0/A 0
+C825 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C826 Countlay_2/XORlay_1/inverter_0/B Countlay_5/XORlay_1/out 0
+C827 XNORlay_7/A VDD 0.16714f
+C828 inverter_3/B Countlay_3/DLATCHlay2_1/NMOS_2/a_120_0# 0
+C829 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/A 0.4037f
+C830 Countlay_1/DLATCHlay2_1/NAND3lay_0/a_350_90# VDD 0
+C831 inverter_3/A n7 0
+C832 XNORlay_3/out XNORlay_7/inverter_0/B 0
+C833 Countlay_3/XORlay_1/B Countlay_3/XORlay_1/inverter_0/B 0.0064f
+C834 XNORlay_5/inverter_1/B XNORlay_5/out 0
+C835 XNORlay_5/out Countlay_5/XORlay_1/inverter_1/B 0
+C836 XNORlay_5/out XNORlay_0/out 0.00124f
+C837 Countlay_1/DLATCHlay2_1/NAND3lay_0/A VDD 0.00236f
+C838 XNORlay_3/inverter_0/B Countlay_5/DLATCHlay2_1/NAND2lay_1/B 0
+C839 XNORlay_0/out Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C840 XNORlay_5/inverter_1/B Countlay_5/XORlay_1/B 0.38649f
+C841 XNORlay_1/inverter_0/B XNORlay_0/a_110_2000# 0
+C842 Countlay2_0/XORlay_0/out Countlay_0/XORlay_1/inverter_0/B 0
+C843 XNORlay_5/out XNORlay_6/A 0.17251f
+C844 Countlay_1/XORlay_1/out VDD 0.03912f
+C845 Countlay_6/DLATCHlay2_1/NAND2lay_0/A Countlay2_0/XORlay_0/B 0
+C846 XNORlay_0/a_110_2000# VDD 0.00667f
+C847 XNORlay_0/out XNORlay_7/out 0.69625f
+C848 Countlay_1/DLATCHlay2_1/NMOS_2/a_360_0# VDD 0
+C849 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y Countlay_5/DLATCHlay2_1/a_3880_1000# 0.00152f
+C850 XNORlay_0/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C851 XNORlay_1/A Countlay_1/XORlay_1/inverter_0/B 0
+C852 Countlay_0/DLATCHlay2_1/NAND2lay_0/A XNORlay_6/A 0
+C853 Countlay_5/XORlay_1/B XNORlay_5/a_1110_960# 0
+C854 n1 XNORlay_0/out 0
+C855 Countlay_3/DLATCHlay2_1/a_3880_1000# Countlay_4/XORlay_1/out 0
+C856 n1 XNORlay_6/A 0.00111f
+C857 Countlay_1/XORlay_1/B Countlay_1/DLATCHlay2_1/a_3880_1000# 0.00134f
+C858 XNORlay_1/inverter_1/B XNORlay_3/out 0
+C859 XNORlay_2/out Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C860 Countlay_6/XORlay_1/B XNORlay_0/A 0.00178f
+C861 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/out 0
+C862 In n2 0
+C863 Countlay2_0/XORlay_0/out VDD 0.0544f
+C864 Countlay_6/inverter_1/A n5 0.00116f
+C865 Countlay_5/XORlay_1/inverter_0/B inverter_3/B 0.19157f
+C866 Countlay2_0/XORlay_0/out Countlay_0/DLATCHlay2_1/NMOS_1/a_360_0# 0
+C867 XNORlay_6/inverter_0/B VDD 0.01095f
+C868 n2 XNORlay_4/out 0
+C869 XNORlay_4/inverter_1/B inverter_3/B 0
+C870 XNORlay_3/out XNORlay_6/out 0
+C871 Countlay_2/XORlay_1/B Countlay_2/XORlay_1/a_100_990# 0.03253f
+C872 XNORlay_2/A VDD 0.14031f
+C873 XNORlay_1/out n0 0.00688f
+C874 Countlay2_0/DLATCHlay2_0/NAND3lay_0/A XNORlay_0/out 0
+C875 n0 XNORlay_7/inverter_1/B 0
+C876 XNORlay_7/A n0 0
+C877 Countlay_1/XORlay_1/inverter_1/B In 0
+C878 Countlay_2/DLATCHlay2_1/NAND3lay_0/a_110_90# VDD 0
+C879 Countlay_1/XORlay_1/B XNORlay_1/A 2.53433f
+C880 Out inverter_0/A 0.08982f
+C881 Countlay_1/DLATCHlay2_1/NAND2lay_0/a_110_n10# inverter_3/B 0.00681f
+C882 Countlay_1/XORlay_1/inverter_1/B XNORlay_4/out 0
+C883 XNORlay_2/out XNORlay_1/A 2.70901f
+C884 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B n7 0
+C885 Countlay2_0/DLATCHlay2_0/a_3880_1000# Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y -0
+C886 inverter_3/B Countlay_0/XORlay_1/inverter_0/B 0.08256f
+C887 XNORlay_3/a_110_2000# VDD 0.00889f
+C888 XNORlay_5/inverter_1/B XNORlay_3/A 0
+C889 Countlay_4/XORlay_1/B Countlay_4/inverter_1/A 0.01321f
+C890 XNORlay_5/inverter_0/B n3 0
+C891 Countlay_5/XORlay_1/inverter_1/B XNORlay_3/A 0.06134f
+C892 Countlay_3/XORlay_1/B XNORlay_4/a_110_2000# 0.2744f
+C893 Out inverter_3/B 0.0063f
+C894 Countlay_4/XORlay_1/inverter_0/B Countlay_5/XORlay_1/B 0.01647f
+C895 Countlay_2/XORlay_1/B XNORlay_2/a_110_2000# 0.28006f
+C896 Countlay_4/DLATCHlay2_1/NAND2lay_0/A Countlay_5/XORlay_1/B 0
+C897 Countlay_6/DLATCHlay2_1/a_3880_1000# Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C898 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y Countlay_2/XORlay_1/out -0
+C899 XNORlay_5/a_1110_960# XNORlay_3/A 0
+C900 inverter_0/A VDD 0.52016f
+C901 In Countlay_5/inverter_1/A 0
+C902 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_0/out 0
+C903 In Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0.05916f
+C904 inverter_3/B XNORlay_1/inverter_0/B 0
+C905 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y Countlay_5/XORlay_1/B 0
+C906 XNORlay_4/inverter_0/B VDD 0.00445f
+C907 inverter_3/B VDD 0.55178f
+C908 Countlay2_0/XORlay_0/B Countlay_6/DLATCHlay2_1/NAND3lay_0/A 0
+C909 XNORlay_0/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C910 inverter_3/B Countlay_4/DLATCHlay2_1/NMOS_2/a_360_0# 0.01415f
+C911 Countlay_0/DLATCHlay2_1/a_3880_1000# XNORlay_6/A 0.0016f
+C912 n6 XNORlay_0/A 0.02076f
+C913 In Countlay_6/XORlay_1/inverter_0/B 0.00114f
+C914 XNORlay_3/out XNORlay_0/out 4.98884f
+C915 XNORlay_1/A Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C916 XNORlay_3/out XNORlay_6/A 0.0015f
+C917 Countlay_6/inverter_1/A XNORlay_3/a_110_2000# 0
+C918 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y In 0.00155f
+C919 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_2/inverter_1/B 0.03152f
+C920 Countlay_6/DLATCHlay2_1/a_3880_1000# XNORlay_1/A 0
+C921 Countlay2_0/XORlay_0/B Countlay_1/XORlay_1/inverter_0/B 0
+C922 Countlay_3/XORlay_1/out In 0
+C923 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y XNORlay_4/out 0
+C924 n2 Countlay_6/XORlay_1/B 0
+C925 Countlay_3/XORlay_1/inverter_1/B VDD 0.01248f
+C926 Countlay_2/XORlay_1/B XNORlay_2/inverter_0/B 0.00171f
+C927 Out NAND8lay_0/a_1560_n200# 0
+C928 XNORlay_7/A XNORlay_7/inverter_0/B 0.00694f
+C929 Countlay_4/DLATCHlay2_1/NAND3lay_0/A In 0
+C930 Countlay_5/DLATCHlay2_1/a_3880_1000# VDD -0
+C931 XNORlay_3/inverter_0/B VDD 0.00835f
+C932 Countlay_4/XORlay_1/inverter_0/B Countlay_3/XORlay_1/inverter_0/B 0.00122f
+C933 inverter_3/B Countlay_6/inverter_1/A 0
+C934 Countlay_1/XORlay_1/a_100_990# VDD 0.01692f
+C935 Countlay_1/XORlay_1/inverter_1/B Countlay_6/XORlay_1/B 0.00173f
+C936 XNORlay_1/inverter_1/B XNORlay_1/out 0
+C937 NAND8lay_0/a_1560_n200# VDD 0
+C938 XNORlay_6/a_110_2000# XNORlay_2/out 0
+C939 Countlay_3/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_4/DLATCHlay2_1/NAND2lay_0/A 0
+C940 Countlay_6/DLATCHlay2_1/NAND2lay_1/B Countlay_6/XORlay_1/out -0
+C941 Countlay_3/DLATCHlay2_1/NAND3lay_0/A XNORlay_4/A 0
+C942 Out NAND8lay_0/a_1320_n200# 0
+C943 XNORlay_2/out Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0
+C944 Countlay_2/XORlay_1/B XNORlay_5/out 0.00107f
+C945 Countlay_1/XORlay_1/B Countlay2_0/XORlay_0/B 0
+C946 inverter_3/B Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0.31462f
+C947 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y n5 0
+C948 Countlay_3/DLATCHlay2_1/NAND2lay_0/A Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C949 Countlay_2/XORlay_1/B Countlay_5/XORlay_1/B 0.00102f
+C950 Countlay_3/XORlay_1/B Countlay_4/XORlay_1/B 0.02179f
+C951 XNORlay_1/out XNORlay_6/out 0.04225f
+C952 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C953 XNORlay_1/a_1110_960# XNORlay_6/A 0
+C954 XNORlay_1/inverter_1/B XNORlay_0/a_110_2000# 0
+C955 Countlay_4/DLATCHlay2_1/a_3880_1000# Countlay_3/DLATCHlay2_1/a_3880_1000# 0
+C956 XNORlay_6/inverter_0/B XNORlay_7/inverter_0/B 0
+C957 XNORlay_7/a_110_2000# VDD 0.01195f
+C958 Countlay_2/DLATCHlay2_1/NAND2lay_0/A Countlay_2/XORlay_1/B 0
+C959 Countlay_5/XORlay_1/inverter_0/B In 0
+C960 NAND8lay_0/a_1320_n200# VDD 0
+C961 Countlay_2/DLATCHlay2_1/NAND3lay_0/A Countlay_2/XORlay_1/B 0
+C962 XNORlay_5/A Countlay_4/XORlay_1/out 0.00409f
+C963 XNORlay_4/inverter_1/B In 0
+C964 inverter_3/B Countlay_3/DLATCHlay2_1/NMOS_2/a_360_0# 0.01415f
+C965 XNORlay_4/inverter_1/B XNORlay_4/out 0
+C966 Countlay_1/inverter_1/A VDD 0.00483f
+C967 XNORlay_1/inverter_0/B Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C968 Countlay_1/DLATCHlay2_1/NAND3lay_0/Y VDD 0.08526f
+C969 XNORlay_1/inverter_0/B XNORlay_0/inverter_1/B 0.00203f
+C970 XNORlay_0/inverter_1/B VDD 0.00214f
+C971 inverter_3/B Countlay_6/XORlay_1/inverter_1/B 0.00144f
+C972 Countlay_3/XORlay_1/a_100_990# VDD 0.01824f
+C973 XNORlay_5/A n4 0.02641f
+C974 inverter_3/B XNORlay_7/a_1110_960# 0
+C975 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y Countlay_6/XORlay_1/B 0
+C976 Countlay_1/DLATCHlay2_1/NAND2lay_1/B XNORlay_1/inverter_0/B 0
+C977 Countlay_2/XORlay_1/out VDD 0.06115f
+C978 In Countlay_0/XORlay_1/inverter_0/B 0
+C979 Countlay_1/DLATCHlay2_1/NAND2lay_1/B VDD 0.00486f
+C980 Countlay_0/DLATCHlay2_1/NAND2lay_1/B Countlay_0/XORlay_1/out -0
+C981 Countlay2_0/DLATCHlay2_0/a_3880_1000# VDD 0
+C982 Countlay_3/DLATCHlay2_1/a_3880_1000# Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C983 XNORlay_5/out Countlay_0/XORlay_1/inverter_1/B 0
+C984 XNORlay_4/out Countlay_0/XORlay_1/inverter_0/B 0
+C985 Countlay2_0/XORlay_0/B Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C986 Countlay2_0/XORlay_0/inverter_1/B VDD 0.01586f
+C987 XNORlay_2/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0
+C988 Countlay_4/XORlay_1/a_100_990# XNORlay_4/A 0
+C989 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_2/A 0
+C990 Countlay_1/XORlay_1/B Countlay_0/inverter_1/A 0
+C991 Countlay_6/DLATCHlay2_1/a_3880_1000# Countlay2_0/XORlay_0/B 0.0011f
+C992 Countlay_6/XORlay_1/out Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C993 XNORlay_2/out Countlay_0/inverter_1/A 0
+C994 Countlay_3/XORlay_1/B XNORlay_2/A 0
+C995 inverter_2/A n7 0
+C996 inverter_3/B XNORlay_7/inverter_0/B 0.00183f
+C997 Countlay_2/XORlay_1/B XNORlay_3/A 0
+C998 In XNORlay_1/inverter_0/B 0
+C999 XNORlay_5/out n3 0
+C1000 XNORlay_0/out XNORlay_7/inverter_1/B 0.08253f
+C1001 XNORlay_2/inverter_1/B VDD 0.00303f
+C1002 In VDD 0.05328f
+C1003 XNORlay_5/out Countlay_6/DLATCHlay2_1/NAND2lay_0/A 0
+C1004 Countlay_4/XORlay_1/inverter_1/B Countlay_5/XORlay_1/B 0.4849f
+C1005 XNORlay_1/out XNORlay_6/A 2.43794f
+C1006 Countlay_5/XORlay_1/B n3 0
+C1007 n0 XNORlay_7/a_110_2000# 0
+C1008 XNORlay_4/out XNORlay_1/inverter_0/B 0
+C1009 XNORlay_7/A XNORlay_0/out 0.74425f
+C1010 XNORlay_4/out VDD 0.15998f
+C1011 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Countlay_0/XORlay_1/out 0
+C1012 XNORlay_7/A XNORlay_6/A 0
+C1013 XNORlay_5/a_110_2000# XNORlay_5/out 0.00378f
+C1014 XNORlay_6/inverter_0/B NAND8lay_0/a_840_n200# 0
+C1015 Countlay2_0/XORlay_0/B XNORlay_1/A 0
+C1016 XNORlay_5/a_110_2000# Countlay_5/XORlay_1/B 0.34072f
+C1017 Countlay_6/XORlay_1/out XNORlay_1/A 0.00114f
+C1018 XNORlay_0/a_110_2000# XNORlay_0/out 0.00374f
+C1019 XNORlay_5/out Countlay_5/XORlay_1/out 0
+C1020 inverter_3/B XNORlay_1/inverter_1/B 0
+C1021 Countlay_3/DLATCHlay2_1/NAND2lay_0/A Countlay_5/XORlay_1/B 0
+C1022 Countlay_1/XORlay_1/B XNORlay_2/a_1110_960# 0
+C1023 inverter_0/A XNORlay_6/out 0.00374f
+C1024 Countlay_5/XORlay_1/inverter_0/B Countlay_6/XORlay_1/B 0.01937f
+C1025 Countlay_2/DLATCHlay2_1/NAND2lay_0/A Countlay_5/XORlay_1/out 0
+C1026 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y inverter_3/B 0.00989f
+C1027 Countlay_2/DLATCHlay2_1/NAND3lay_0/A Countlay_5/XORlay_1/out 0
+C1028 Countlay_3/XORlay_1/B inverter_3/B 0.00176f
+C1029 Countlay_3/XORlay_1/B XNORlay_4/inverter_0/B 0.00236f
+C1030 XNORlay_1/a_110_2000# XNORlay_1/out 0.00379f
+C1031 In Countlay_6/inverter_1/A 0
+C1032 Countlay2_0/XORlay_0/out XNORlay_0/out 0
+C1033 inverter_3/B Countlay_5/DLATCHlay2_1/NMOS_2/a_360_0# 0.01415f
+C1034 XNORlay_5/out inverter_3/A 0
+C1035 Countlay2_0/XORlay_0/out XNORlay_6/A 0
+C1036 XNORlay_6/inverter_0/B XNORlay_0/out 0
+C1037 XNORlay_6/inverter_0/B XNORlay_6/A 0.0088f
+C1038 Countlay_5/XORlay_1/inverter_1/B XNORlay_2/A 0
+C1039 Countlay_1/XORlay_1/inverter_1/B XNORlay_0/A 0
+C1040 Countlay_2/DLATCHlay2_1/NMOS_2/a_360_0# VDD 0
+C1041 inverter_3/A XNORlay_7/out 0.01025f
+C1042 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_0/a_110_960# 0
+C1043 Countlay_4/XORlay_1/inverter_1/B Countlay_3/XORlay_1/inverter_0/B 0
+C1044 Countlay_2/XORlay_1/B XNORlay_4/a_110_2000# 0
+C1045 In Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0.04743f
+C1046 Countlay_3/XORlay_1/B Countlay_3/XORlay_1/inverter_1/B 0.00935f
+C1047 XNORlay_4/out n0 0.00347f
+C1048 XNORlay_5/A XNORlay_5/inverter_0/B 0.00966f
+C1049 XNORlay_4/out Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C1050 Countlay_1/XORlay_1/B XNORlay_2/a_110_2000# 0
+C1051 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y XNORlay_3/inverter_0/B 0
+C1052 XNORlay_2/a_110_2000# XNORlay_2/out 0.00309f
+C1053 Countlay_3/DLATCHlay2_1/a_3880_1000# Countlay_5/XORlay_1/B 0
+C1054 Countlay2_0/XORlay_0/inverter_0/B Countlay_0/XORlay_1/inverter_0/B 0
+C1055 XNORlay_6/a_110_960# Countlay_0/DLATCHlay2_1/NAND2lay_1/B 0
+C1056 XNORlay_3/out Countlay_0/XORlay_1/inverter_1/B 0
+C1057 Countlay_6/XORlay_1/B VDD 0.38001f
+C1058 XNORlay_3/A Countlay_5/XORlay_1/out 0.00443f
+C1059 XNORlay_5/out Countlay_6/DLATCHlay2_1/NAND3lay_0/A 0
+C1060 XNORlay_0/out inverter_0/A 0
+C1061 Countlay_6/DLATCHlay2_1/NAND2lay_1/B XNORlay_0/inverter_0/B 0
+C1062 Countlay_4/DLATCHlay2_1/a_3880_1000# XNORlay_5/A 0
+C1063 Countlay_2/DLATCHlay2_1/NMOS_0/a_360_0# Countlay_5/DLATCHlay2_1/NAND2lay_0/A 0
+C1064 Countlay_6/XORlay_1/inverter_1/B In 0
+C1065 Countlay_6/XORlay_1/inverter_0/B XNORlay_0/A 0
+C1066 inverter_3/B XNORlay_0/out 0.21297f
+C1067 Countlay_6/DLATCHlay2_1/NAND2lay_0/A XNORlay_3/out 0
+C1068 Countlay2_0/XORlay_0/inverter_0/B VDD 0.0169f
+C1069 XNORlay_5/inverter_1/B inverter_3/B 0
+C1070 XNORlay_5/inverter_1/B XNORlay_4/inverter_0/B 0.00154f
+C1071 inverter_3/B Countlay_5/XORlay_1/inverter_1/B 0.00145f
+C1072 inverter_3/B XNORlay_6/A 0.00978f
+C1073 XNORlay_5/out Countlay_1/XORlay_1/inverter_0/B 0
+C1074 XNORlay_2/a_1110_960# XNORlay_1/A 0
+C1075 Countlay_2/XORlay_1/inverter_1/B VDD 0.01306f
+C1076 Countlay2_0/XORlay_0/B Countlay_6/XORlay_1/out 1.26884f
+C1077 Countlay_3/XORlay_1/out XNORlay_4/A 0.00446f
+C1078 XNORlay_1/inverter_1/B Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.03188f
+C1079 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B XNORlay_7/out 0
+C1080 XNORlay_2/inverter_0/B XNORlay_2/out 0.00131f
+C1081 NAND8lay_0/a_120_n200# VDD 0.00219f
+C1082 Countlay_2/XORlay_1/B Countlay_2/inverter_1/A -0
+C1083 Countlay_6/inverter_1/A Countlay_6/XORlay_1/B 0.02892f
+C1084 XNORlay_5/A Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0.36124f
+C1085 XNORlay_5/inverter_1/B XNORlay_4/a_110_960# 0
+C1086 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y Countlay_2/XORlay_1/out 0
+C1087 Countlay_3/XORlay_1/B Countlay_3/XORlay_1/a_100_990# 0.06449f
+C1088 XNORlay_5/out Countlay_0/DLATCHlay2_1/NMOS_2/a_360_0# 0.00604f
+C1089 Countlay_6/NAND2lay_1/a_110_n10# n5 0
+C1090 inverter_3/B Countlay_6/DLATCHlay2_1/NMOS_2/a_360_0# 0.01415f
+C1091 Countlay_0/XORlay_1/out VDD 0.05813f
+C1092 Countlay_2/DLATCHlay2_1/NMOS_1/a_360_0# VDD 0
+C1093 Countlay_1/XORlay_1/B XNORlay_5/out 0.001f
+C1094 XNORlay_3/out inverter_3/A 0
+C1095 n6 VDD 0.02137f
+C1096 NAND8lay_0/a_1560_n200# XNORlay_0/out 0.00853f
+C1097 In XNORlay_1/inverter_1/B 0
+C1098 XNORlay_1/inverter_1/B XNORlay_4/out 0
+C1099 inverter_3/B Countlay_0/DLATCHlay2_1/NAND2lay_0/a_110_n10# 0.00668f
+C1100 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y In 0.00196f
+C1101 XNORlay_2/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0
+C1102 Countlay_1/XORlay_1/B n1 0.02238f
+C1103 Countlay_3/XORlay_1/B In 0
+C1104 Countlay_3/NAND2lay_1/a_110_n10# VDD 0.00347f
+C1105 XNORlay_2/out n1 0
+C1106 Countlay_4/DLATCHlay2_1/NAND2lay_0/A inverter_3/B -0.0044f
+C1107 Countlay_3/XORlay_1/B XNORlay_4/out 0.21366f
+C1108 XNORlay_4/inverter_1/B XNORlay_4/A 0
+C1109 NAND8lay_0/a_600_n200# XNORlay_1/out 0
+C1110 XNORlay_4/out XNORlay_6/out 0.00899f
+C1111 XNORlay_0/out XNORlay_7/a_110_2000# 0.04874f
+C1112 Countlay_5/DLATCHlay2_1/NAND2lay_0/A VDD 0.0026f
+C1113 XNORlay_7/a_110_2000# XNORlay_6/A 0
+C1114 XNORlay_6/inverter_1/B VDD 0.00404f
+C1115 Countlay_5/DLATCHlay2_1/NAND3lay_0/A VDD 0.00211f
+C1116 Countlay_4/XORlay_1/out Countlay_4/DLATCHlay2_1/NAND3lay_0/Y -0
+C1117 inverter_3/B Countlay_3/DLATCHlay2_1/NAND3lay_0/Y 0.00191f
+C1118 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y XNORlay_4/inverter_0/B 0
+C1119 Countlay_1/DLATCHlay2_1/NMOS_1/a_120_0# VDD 0
+C1120 Countlay_5/XORlay_1/a_100_990# XNORlay_3/A 0
+C1121 Countlay_5/DLATCHlay2_1/NAND2lay_1/a_110_n10# VDD -0
+C1122 Countlay_2/inverter_1/A n3 0
+C1123 Countlay_6/DLATCHlay2_1/NAND3lay_0/A XNORlay_3/out 0
+C1124 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y n2 0
+C1125 XNORlay_5/out Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C1126 Countlay_3/DLATCHlay2_1/NAND3lay_0/A VDD 0.00229f
+C1127 XNORlay_1/out Countlay_0/XORlay_1/inverter_1/B 0.13052f
+C1128 XNORlay_0/inverter_1/B XNORlay_0/out 0
+C1129 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y n4 0
+C1130 Countlay_6/DLATCHlay2_1/a_3880_1000# XNORlay_5/out 0
+C1131 Countlay_5/XORlay_1/inverter_1/B Countlay_2/XORlay_1/out 0
+C1132 XNORlay_7/A Countlay_0/XORlay_1/inverter_1/B 0
+C1133 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C1134 Countlay_2/XORlay_1/B XNORlay_2/A 2.68059f
+C1135 Countlay2_0/DLATCHlay2_0/a_3880_1000# XNORlay_0/out 0
+C1136 XNORlay_3/out Countlay_1/XORlay_1/inverter_0/B 0
+C1137 XNORlay_1/a_110_960# Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C1138 Countlay2_0/XORlay_0/inverter_1/B XNORlay_0/out 0.02238f
+C1139 Countlay2_0/DLATCHlay2_0/a_3880_1000# XNORlay_6/A 0
+C1140 XNORlay_0/inverter_1/B XNORlay_1/a_110_960# 0
+C1141 Countlay2_0/XORlay_0/inverter_1/B XNORlay_6/A 0
+C1142 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y XNORlay_4/a_110_960# 0
+C1143 XNORlay_2/out XNORlay_3/A 0
+C1144 XNORlay_0/A XNORlay_1/inverter_0/B 0
+C1145 Countlay_1/DLATCHlay2_1/NAND2lay_1/B XNORlay_1/a_110_960# 0
+C1146 XNORlay_5/A XNORlay_5/out 0
+C1147 XNORlay_0/A VDD 0.1219f
+C1148 XNORlay_5/A Countlay_5/XORlay_1/B 2.15192f
+C1149 XNORlay_4/A VDD 0.148f
+C1150 Countlay_2/DLATCHlay2_1/NAND2lay_1/B Countlay_5/XORlay_1/out 0
+C1151 XNORlay_5/out XNORlay_1/A 0.00128f
+C1152 In XNORlay_0/out 0.07034f
+C1153 XNORlay_5/inverter_1/B In 0
+C1154 Countlay_5/XORlay_1/inverter_1/B In 0
+C1155 In XNORlay_6/A 0.00186f
+C1156 Countlay2_0/DLATCHlay2_0/NAND2lay_1/a_110_n10# VDD -0
+C1157 inverter_3/B Countlay_5/DLATCHlay2_1/NAND2lay_0/a_110_n10# 0.00954f
+C1158 Countlay2_0/XORlay_0/out Countlay_0/XORlay_1/inverter_1/B 0
+C1159 XNORlay_4/out XNORlay_6/A 0.00163f
+C1160 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y Countlay_6/XORlay_1/B 0.30951f
+C1161 n1 XNORlay_1/A 0.02178f
+C1162 XNORlay_2/out Countlay_0/DLATCHlay2_1/a_3880_1000# 0
+C1163 Countlay_1/XORlay_1/B XNORlay_3/out 0
+C1164 Countlay_4/XORlay_1/a_100_990# VDD 0.0191f
+C1165 Countlay_2/XORlay_1/B inverter_3/B 0.51875f
+C1166 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y Countlay_5/DLATCHlay2_1/NAND2lay_1/B 0
+C1167 inverter_2/A XNORlay_5/out 0
+C1168 XNORlay_5/out n7 0
+C1169 inverter_2/A XNORlay_7/out 0.17505f
+C1170 n3 XNORlay_2/A 0
+C1171 Countlay2_0/XORlay_0/a_100_990# Countlay2_0/XORlay_0/B 0.03834f
+C1172 Countlay_4/XORlay_1/out Countlay_5/XORlay_1/B 1.8794f
+C1173 Countlay_2/XORlay_1/inverter_1/B Countlay_3/XORlay_1/B 0.00155f
+C1174 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C1175 Countlay2_0/XORlay_0/B XNORlay_0/inverter_0/B 0
+C1176 n7 XNORlay_7/out 0.00745f
+C1177 XNORlay_5/A Countlay_3/XORlay_1/inverter_0/B 0.02547f
+C1178 XNORlay_0/A Countlay_1/DLATCHlay2_1/NAND2lay_0/A 0
+C1179 Countlay_2/DLATCHlay2_1/a_3880_1000# XNORlay_5/out 0
+C1180 Countlay_3/inverter_1/A Countlay_4/XORlay_1/B 0.02329f
+C1181 XNORlay_5/out n4 0.00393f
+C1182 XNORlay_2/A Countlay_5/XORlay_1/out 0.0015f
+C1183 NAND8lay_0/a_120_n200# XNORlay_6/out 0.00472f
+C1184 Countlay_5/XORlay_1/B n4 0.03163f
+C1185 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y XNORlay_5/inverter_0/B 0
+C1186 XNORlay_5/out Countlay_2/XORlay_1/inverter_0/B 0
+C1187 XNORlay_3/out Countlay_1/DLATCHlay2_1/a_3880_1000# 0
+C1188 inverter_3/B Countlay_0/XORlay_1/inverter_1/B 0
+C1189 XNORlay_4/A Countlay_4/inverter_1/A 0.00102f
+C1190 Countlay_5/XORlay_1/B Countlay_2/XORlay_1/inverter_0/B 0
+C1191 Countlay_6/DLATCHlay2_1/a_3880_1000# XNORlay_3/out 0
+C1192 Countlay_4/DLATCHlay2_1/NAND2lay_0/A In 0.11227f
+C1193 n2 VDD 0.0221f
+C1194 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y XNORlay_1/A 0
+C1195 Countlay_5/XORlay_1/inverter_1/B Countlay_6/XORlay_1/B 0.42818f
+C1196 Countlay_6/XORlay_1/inverter_1/B XNORlay_0/A 0.05734f
+C1197 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y In 0.00187f
+C1198 XNORlay_5/out Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0
+C1199 inverter_3/B n3 0.87751f
+C1200 inverter_3/B Countlay_6/DLATCHlay2_1/NAND2lay_0/A 0.4054f
+C1201 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y XNORlay_4/out 0
+C1202 Countlay_0/DLATCHlay2_1/NAND2lay_1/B VDD 0.00446f
+C1203 XNORlay_5/out Countlay2_0/XORlay_0/B 0
+C1204 Countlay_1/XORlay_1/inverter_1/B VDD 0.01215f
+C1205 XNORlay_5/out Countlay_6/XORlay_1/out 0
+C1206 XNORlay_3/out XNORlay_1/A 0
+C1207 Countlay2_0/XORlay_0/inverter_0/B XNORlay_0/out 0.0061f
+C1208 XNORlay_5/a_110_2000# XNORlay_4/inverter_0/B 0
+C1209 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B XNORlay_7/A 0
+C1210 Countlay_4/XORlay_1/out Countlay_3/XORlay_1/inverter_0/B 0
+C1211 inverter_3/B Countlay_5/XORlay_1/out 0.00212f
+C1212 Countlay_1/inverter_1/A Countlay_2/XORlay_1/B 0
+C1213 Countlay2_0/XORlay_0/B n1 0
+C1214 Countlay_3/DLATCHlay2_1/NAND2lay_0/A inverter_3/B -0.00446f
+C1215 Countlay_2/DLATCHlay2_1/a_3880_1000# XNORlay_3/A 0
+C1216 Countlay_2/XORlay_1/B Countlay_2/XORlay_1/out 0.0013f
+C1217 n4 XNORlay_3/A 0.00109f
+C1218 Countlay_5/inverter_1/A VDD 0.00639f
+C1219 NAND8lay_0/a_360_n200# VDD 0.00127f
+C1220 Countlay_2/DLATCHlay2_1/NAND2lay_1/B XNORlay_2/out 0
+C1221 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y VDD 0.06767f
+C1222 inverter_3/A inverter_0/A 0.00623f
+C1223 Countlay_3/DLATCHlay2_1/NAND3lay_0/A Countlay_3/XORlay_1/B 0
+C1224 Countlay2_0/XORlay_0/a_100_30# n6 0
+C1225 Countlay_2/XORlay_1/inverter_0/B XNORlay_3/A 0
+C1226 Countlay_1/XORlay_1/B XNORlay_1/out 0.22063f
+C1227 XNORlay_5/out XNORlay_6/a_1110_960# 0
+C1228 inverter_2/A XNORlay_3/out 0.00138f
+C1229 inverter_3/B inverter_3/A 0.0797f
+C1230 Countlay_5/DLATCHlay2_1/NAND2lay_1/B VDD 0.00498f
+C1231 XNORlay_5/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.00159f
+C1232 XNORlay_1/out XNORlay_2/out 5.54689f
+C1233 Countlay_6/XORlay_1/inverter_0/B VDD 0.01343f
+C1234 XNORlay_0/out Countlay_0/XORlay_1/out 0
+C1235 XNORlay_3/out n7 0
+C1236 XNORlay_7/out XNORlay_6/a_1110_960# 0
+C1237 Countlay_0/XORlay_1/out XNORlay_6/A 1.33825f
+C1238 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y VDD 0.09382f
+C1239 n0 Countlay_0/DLATCHlay2_1/NAND2lay_1/B 0
+C1240 Countlay_2/XORlay_1/B In 0.00276f
+C1241 Countlay_2/XORlay_1/B XNORlay_2/inverter_1/B 0.17769f
+C1242 Countlay_1/DLATCHlay2_1/NAND3lay_0/A Countlay_1/XORlay_1/B 0
+C1243 Countlay2_0/XORlay_0/B XNORlay_0/a_1110_960# 0
+C1244 n6 XNORlay_0/out 0.00405f
+C1245 Countlay_3/XORlay_1/out VDD 0.06227f
+C1246 Countlay_1/DLATCHlay2_1/NAND3lay_0/A XNORlay_2/out 0
+C1247 Countlay_1/XORlay_1/B Countlay_1/XORlay_1/out 1.34607f
+C1248 XNORlay_2/out Countlay_1/XORlay_1/out 0
+C1249 XNORlay_5/out XNORlay_5/inverter_0/B 0.00146f
+C1250 Countlay_3/DLATCHlay2_1/a_3880_1000# inverter_3/B 0.09053f
+C1251 Countlay_2/XORlay_1/B XNORlay_4/out 3.71724f
+C1252 Countlay_3/XORlay_1/B XNORlay_4/A 2.52061f
+C1253 inverter_2/A NAND8lay_0/a_1080_n200# 0
+C1254 Countlay_5/XORlay_1/B XNORlay_5/inverter_0/B 0.00236f
+C1255 n1 Countlay_0/inverter_1/A 0
+C1256 Countlay_4/DLATCHlay2_1/NAND3lay_0/A VDD 0.0021f
+C1257 Countlay_5/XORlay_1/a_100_990# XNORlay_2/A 0
+C1258 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay2_0/XORlay_0/B 0.35325f
+C1259 Countlay_2/DLATCHlay2_1/NMOS_0/a_360_0# VDD 0
+C1260 XNORlay_0/out XNORlay_6/inverter_1/B 0
+C1261 inverter_3/B Countlay_6/DLATCHlay2_1/NAND3lay_0/A 0
+C1262 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Countlay_6/XORlay_1/out -0
+C1263 XNORlay_6/inverter_1/B XNORlay_6/A 0
+C1264 Countlay_4/XORlay_1/a_100_990# Countlay_3/XORlay_1/B 0
+C1265 XNORlay_6/inverter_0/B XNORlay_2/out 0
+C1266 XNORlay_3/out Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0
+C1267 Countlay_4/DLATCHlay2_1/a_3880_1000# Countlay_5/XORlay_1/B 0.0012f
+C1268 XNORlay_2/out XNORlay_2/A 0
+C1269 inverter_3/B Countlay_1/XORlay_1/inverter_0/B 0.08568f
+C1270 Countlay2_0/XORlay_0/B XNORlay_3/out 0.48195f
+C1271 In Countlay_0/XORlay_1/inverter_1/B 0
+C1272 Countlay_6/XORlay_1/out XNORlay_3/out 0
+C1273 XNORlay_4/out Countlay_0/XORlay_1/inverter_1/B 0
+C1274 XNORlay_5/A Countlay_4/XORlay_1/B 0
+C1275 Countlay_2/XORlay_1/out Countlay_5/XORlay_1/out 0
+C1276 Countlay_5/XORlay_1/inverter_0/B VDD 0.01317f
+C1277 XNORlay_4/inverter_1/B VDD 0.0027f
+C1278 inverter_3/A XNORlay_7/a_110_2000# 0
+C1279 XNORlay_1/out XNORlay_1/A 0
+C1280 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y XNORlay_5/out 0
+C1281 XNORlay_0/A XNORlay_0/out 0
+C1282 Countlay_6/DLATCHlay2_1/NAND2lay_0/A In 0.04901f
+C1283 In n3 0.00101f
+C1284 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y Countlay_5/XORlay_1/B 0.26438f
+C1285 XNORlay_5/inverter_1/B XNORlay_4/A 0
+C1286 XNORlay_4/out n3 0.00464f
+C1287 XNORlay_2/out inverter_0/A 0.11207f
+C1288 Countlay_1/DLATCHlay2_1/NAND3lay_0/A XNORlay_1/A 0
+C1289 Countlay_2/XORlay_1/B Countlay_6/XORlay_1/B 0
+C1290 XNORlay_1/A Countlay_1/XORlay_1/out 0.00391f
+C1291 Countlay_0/XORlay_1/inverter_0/B VDD 0.01331f
+C1292 XNORlay_0/a_110_2000# XNORlay_1/A 0
+C1293 Countlay_1/XORlay_1/B inverter_3/B 0.50959f
+C1294 XNORlay_2/a_110_960# XNORlay_3/inverter_1/B 0
+C1295 XNORlay_3/out XNORlay_6/a_1110_960# 0
+C1296 In Countlay_5/XORlay_1/out 0
+C1297 XNORlay_3/out Countlay_0/DLATCHlay2_1/NAND3lay_0/Y 0.00103f
+C1298 inverter_3/B XNORlay_2/out 0.00254f
+C1299 Out VDD 0.06299f
+C1300 Countlay_3/DLATCHlay2_1/NAND2lay_0/A In 0.0789f
+C1301 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y XNORlay_7/inverter_0/B 0
+C1302 XNORlay_1/inverter_0/B VDD 0.00545f
+C1303 XNORlay_6/out Countlay_0/DLATCHlay2_1/NAND2lay_1/B 0
+C1304 Countlay_2/XORlay_1/B Countlay_2/XORlay_1/inverter_1/B 0.00891f
+C1305 XNORlay_5/a_110_960# Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0
+C1306 XNORlay_5/out XNORlay_0/inverter_0/B 0
+C1307 XNORlay_7/A n7 0.01723f
+C1308 XNORlay_5/out XNORlay_2/inverter_0/B 0
+C1309 XNORlay_3/inverter_0/B XNORlay_2/out 0
+C1310 XNORlay_2/inverter_0/B XNORlay_3/inverter_1/B 0.00215f
+C1311 n1 XNORlay_0/inverter_0/B 0
+C1312 Countlay_1/XORlay_1/B Countlay_1/XORlay_1/a_100_990# 0.07881f
+C1313 inverter_3/B Countlay_1/DLATCHlay2_1/a_3880_1000# 0.08808f
+C1314 Countlay_3/DLATCHlay2_1/a_3880_1000# In 0.00294f
+C1315 Countlay_6/DLATCHlay2_1/a_3880_1000# inverter_3/B 0.091f
+C1316 Countlay_4/DLATCHlay2_1/NAND2lay_0/A XNORlay_4/A 0
+C1317 NAND8lay_0/a_360_n200# XNORlay_6/out 0.0046f
+C1318 Countlay_3/DLATCHlay2_1/NAND3lay_0/a_350_90# inverter_3/B 0
+C1319 XNORlay_6/a_110_2000# XNORlay_1/out 0.09887f
+C1320 Countlay_6/inverter_1/A VDD 0.00665f
+C1321 XNORlay_1/out Countlay_0/DLATCHlay2_1/NAND3lay_0/A 0
+C1322 inverter_3/B XNORlay_5/A 0.7998f
+C1323 XNORlay_4/A Countlay_3/DLATCHlay2_1/NAND3lay_0/Y 0.36247f
+C1324 XNORlay_5/A XNORlay_4/inverter_0/B 0
+C1325 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y Countlay_2/DLATCHlay2_1/NAND3lay_0/Y 0.00124f
+C1326 XNORlay_6/inverter_0/B n7 0.00143f
+C1327 In Countlay_6/DLATCHlay2_1/NAND3lay_0/A 0
+C1328 XNORlay_5/out Countlay_5/XORlay_1/B 0.19026f
+C1329 XNORlay_5/out XNORlay_3/inverter_1/B 0
+C1330 Countlay_2/DLATCHlay2_1/NMOS_1/a_120_0# VDD 0
+C1331 XNORlay_5/out Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C1332 Countlay_1/XORlay_1/inverter_1/B Countlay_6/XORlay_1/a_100_990# 0
+C1333 Countlay2_0/XORlay_0/B n5 0
+C1334 XNORlay_5/out XNORlay_7/out 0
+C1335 Countlay_6/DLATCHlay2_1/NAND2lay_1/B Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C1336 Countlay2_0/XORlay_0/B XNORlay_7/A 0.42269f
+C1337 Countlay_3/XORlay_1/out Countlay_3/XORlay_1/B 1.3585f
+C1338 inverter_3/B XNORlay_1/A 0.79596f
+C1339 n0 VDD 0.03618f
+C1340 Countlay_6/XORlay_1/B Countlay_5/XORlay_1/out 1.50253f
+C1341 XNORlay_5/out Countlay_0/DLATCHlay2_1/NAND2lay_0/A 0.00177f
+C1342 Countlay_1/DLATCHlay2_1/NAND2lay_0/A VDD 0.00568f
+C1343 In Countlay_1/XORlay_1/inverter_0/B 0
+C1344 Countlay_2/DLATCHlay2_1/NAND2lay_0/A XNORlay_5/out 0
+C1345 Countlay_2/DLATCHlay2_1/a_3880_1000# XNORlay_2/A 0
+C1346 XNORlay_5/out n1 0
+C1347 Countlay_1/inverter_1/A XNORlay_2/out 0.01111f
+C1348 Countlay_0/DLATCHlay2_1/NAND2lay_1/B XNORlay_6/A 0.02915f
+C1349 Countlay_2/DLATCHlay2_1/NAND3lay_0/A XNORlay_5/out 0
+C1350 Countlay_1/DLATCHlay2_1/NAND3lay_0/A Countlay2_0/XORlay_0/B 0
+C1351 Countlay_1/XORlay_1/B Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0.33887f
+C1352 Countlay2_0/XORlay_0/B Countlay_1/XORlay_1/out 0
+C1353 Countlay_3/DLATCHlay2_1/NAND2lay_1/B XNORlay_4/inverter_0/B 0
+C1354 XNORlay_4/out Countlay_1/XORlay_1/inverter_0/B 0
+C1355 Countlay2_0/DLATCHlay2_0/a_3880_1000# Countlay_0/DLATCHlay2_1/NMOS_2/a_360_0# 0
+C1356 Countlay_1/DLATCHlay2_1/NAND3lay_0/A Countlay_6/XORlay_1/out 0
+C1357 Countlay2_0/XORlay_0/B XNORlay_0/a_110_2000# 0.12824f
+C1358 XNORlay_2/out Countlay_1/DLATCHlay2_1/NAND3lay_0/Y 0
+C1359 Countlay_6/XORlay_1/out Countlay_1/XORlay_1/out 0
+C1360 Countlay_3/XORlay_1/inverter_1/B XNORlay_5/A 0
+C1361 Countlay_2/XORlay_1/inverter_0/B XNORlay_2/A 0.01246f
+C1362 Countlay_4/inverter_1/A VDD 0.00545f
+C1363 XNORlay_2/inverter_0/B XNORlay_3/A 0
+C1364 Out GND -0.04407f
+C1365 XNORlay_2/a_1110_960# GND 0.00452f
+C1366 XNORlay_2/a_110_960# GND 0
+C1367 XNORlay_2/a_110_2000# GND 0
+C1368 XNORlay_2/inverter_1/B GND -0.10217f
+C1369 XNORlay_2/inverter_0/B GND -0.09811f
+C1370 n2 GND -0.52566f
+C1371 XNORlay_1/a_1110_960# GND 0.00128f
+C1372 XNORlay_1/a_110_960# GND 0
+C1373 XNORlay_1/a_110_2000# GND 0
+C1374 XNORlay_1/inverter_1/B GND -0.10584f
+C1375 XNORlay_1/inverter_0/B GND -0.09836f
+C1376 n1 GND -0.5155f
+C1377 XNORlay_0/out GND 0.95418f
+C1378 XNORlay_0/a_1110_960# GND 0.00503f
+C1379 XNORlay_0/a_110_960# GND 0
+C1380 XNORlay_0/a_110_2000# GND 0.00454f
+C1381 XNORlay_0/inverter_1/B GND -0.09609f
+C1382 XNORlay_0/inverter_0/B GND -0.09177f
+C1383 n6 GND -0.51314f
+C1384 XNORlay_3/out GND 0.98103f
+C1385 XNORlay_5/out GND 1.82164f
+C1386 XNORlay_4/out GND 1.56693f
+C1387 XNORlay_2/out GND 0.54261f
+C1388 XNORlay_1/out GND 0.58478f
+C1389 NAND8lay_0/a_1560_n200# GND 0
+C1390 NAND8lay_0/a_1320_n200# GND 0
+C1391 NAND8lay_0/a_1080_n200# GND 0
+C1392 NAND8lay_0/a_840_n200# GND 0.00431f
+C1393 NAND8lay_0/a_600_n200# GND 0
+C1394 NAND8lay_0/a_360_n200# GND 0
+C1395 Countlay_6/inverter_1/A GND -0.22267f
+C1396 Countlay_6/NAND2lay_1/a_110_n10# GND 0.00739f
+C1397 Countlay_6/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00287f
+C1398 Countlay_6/DLATCHlay2_1/NAND3lay_0/Y GND -2.07517f
+C1399 Countlay_6/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND -0
+C1400 Countlay_6/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1401 Countlay_6/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1402 Countlay_6/XORlay_1/out GND -1.9396f
+C1403 Countlay_6/DLATCHlay2_1/NAND3lay_0/A GND -0.40295f
+C1404 Countlay_6/DLATCHlay2_1/NAND2lay_1/B GND -0.6433f
+C1405 Countlay_6/DLATCHlay2_1/NAND2lay_0/A GND -1.18844f
+C1406 Countlay_6/DLATCHlay2_1/a_3880_1000# GND -1.38416f
+C1407 Countlay_6/XORlay_1/a_800_30# GND 0
+C1408 Countlay_6/XORlay_1/a_100_30# GND 0
+C1409 Countlay_6/XORlay_1/a_100_990# GND -0.00265f
+C1410 Countlay_6/XORlay_1/inverter_1/B GND -0.19875f
+C1411 XNORlay_0/A GND -0.36841f
+C1412 Countlay_6/XORlay_1/inverter_0/B GND -0.12174f
+C1413 Countlay_6/XORlay_1/B GND 0.25236f
+C1414 Countlay2_0/DLATCHlay2_0/NAND2lay_1/a_110_n10# GND 0.00286f
+C1415 Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y GND -2.11658f
+C1416 Countlay2_0/DLATCHlay2_0/NMOS_2/a_360_0# GND 0
+C1417 Countlay2_0/DLATCHlay2_0/NMOS_2/a_120_0# GND 0
+C1418 XNORlay_7/A GND -4.91133f
+C1419 Countlay2_0/XORlay_0/out GND -1.66737f
+C1420 Countlay2_0/DLATCHlay2_0/NAND3lay_0/A GND -0.40299f
+C1421 Countlay2_0/DLATCHlay2_0/NAND2lay_1/B GND -0.64388f
+C1422 Countlay2_0/DLATCHlay2_0/NAND2lay_0/A GND -1.18866f
+C1423 Countlay2_0/DLATCHlay2_0/a_3880_1000# GND -1.38354f
+C1424 Countlay2_0/XORlay_0/a_100_30# GND 0
+C1425 Countlay2_0/XORlay_0/a_100_990# GND -0.00294f
+C1426 Countlay2_0/XORlay_0/inverter_1/B GND -0.19834f
+C1427 Countlay2_0/XORlay_0/inverter_0/B GND -0.12103f
+C1428 Countlay2_0/XORlay_0/B GND 0.72643f
+C1429 Countlay_5/inverter_1/A GND -0.23966f
+C1430 Countlay_5/NAND2lay_1/a_110_n10# GND 0.0065f
+C1431 Countlay_5/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00274f
+C1432 Countlay_5/DLATCHlay2_1/NAND3lay_0/Y GND -2.0755f
+C1433 Countlay_5/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND 0
+C1434 Countlay_5/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1435 Countlay_5/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1436 Countlay_5/XORlay_1/out GND -1.93951f
+C1437 In GND 3.7453f
+C1438 Countlay_5/DLATCHlay2_1/NAND3lay_0/A GND -0.40291f
+C1439 Countlay_5/DLATCHlay2_1/NAND2lay_1/B GND -0.64463f
+C1440 Countlay_5/DLATCHlay2_1/NAND2lay_0/A GND -1.18847f
+C1441 Countlay_5/DLATCHlay2_1/a_3880_1000# GND -1.3842f
+C1442 Countlay_5/XORlay_1/a_800_30# GND 0
+C1443 Countlay_5/XORlay_1/a_100_30# GND 0
+C1444 Countlay_5/XORlay_1/a_100_990# GND -0.00262f
+C1445 Countlay_5/XORlay_1/inverter_1/B GND -0.19872f
+C1446 XNORlay_3/A GND -0.17735f
+C1447 Countlay_5/XORlay_1/inverter_0/B GND -0.12171f
+C1448 Countlay_5/XORlay_1/B GND 0.27449f
+C1449 Countlay_4/inverter_1/A GND -0.22545f
+C1450 Countlay_4/NAND2lay_1/a_110_n10# GND 0.00653f
+C1451 Countlay_4/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.0025f
+C1452 Countlay_4/DLATCHlay2_1/NAND3lay_0/Y GND -2.06049f
+C1453 Countlay_4/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND 0
+C1454 Countlay_4/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1455 Countlay_4/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1456 Countlay_4/XORlay_1/out GND -1.93993f
+C1457 Countlay_4/DLATCHlay2_1/NAND3lay_0/A GND -0.40292f
+C1458 inverter_3/B GND -0.26055f
+C1459 Countlay_4/DLATCHlay2_1/NAND2lay_1/B GND -0.66507f
+C1460 Countlay_4/DLATCHlay2_1/NAND2lay_0/A GND -1.18846f
+C1461 Countlay_4/DLATCHlay2_1/a_3880_1000# GND -1.38534f
+C1462 Countlay_4/XORlay_1/a_800_30# GND 0
+C1463 Countlay_4/XORlay_1/a_100_30# GND 0
+C1464 Countlay_4/XORlay_1/a_100_990# GND -0.0028f
+C1465 Countlay_4/XORlay_1/inverter_1/B GND -0.19885f
+C1466 XNORlay_5/A GND 0.16401f
+C1467 Countlay_4/XORlay_1/inverter_0/B GND -0.12098f
+C1468 Countlay_4/XORlay_1/B GND 1.80265f
+C1469 Countlay_3/inverter_1/A GND -0.22459f
+C1470 Countlay_3/NAND2lay_1/a_110_n10# GND 0.00658f
+C1471 Countlay_3/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00252f
+C1472 Countlay_3/DLATCHlay2_1/NAND3lay_0/Y GND -2.07538f
+C1473 Countlay_3/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND 0
+C1474 Countlay_3/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1475 Countlay_3/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1476 XNORlay_4/A GND 0.44735f
+C1477 Countlay_3/XORlay_1/out GND -1.94268f
+C1478 Countlay_3/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C1479 Countlay_3/DLATCHlay2_1/NAND2lay_1/B GND -0.66401f
+C1480 Countlay_3/DLATCHlay2_1/NAND2lay_0/A GND -1.18871f
+C1481 Countlay_3/DLATCHlay2_1/a_3880_1000# GND -1.38527f
+C1482 Countlay_3/XORlay_1/a_800_30# GND 0
+C1483 Countlay_3/XORlay_1/a_100_30# GND 0
+C1484 Countlay_3/XORlay_1/a_100_990# GND -0.00313f
+C1485 Countlay_3/XORlay_1/inverter_1/B GND -0.19949f
+C1486 Countlay_3/XORlay_1/inverter_0/B GND -0.12205f
+C1487 Countlay_3/XORlay_1/B GND 0.65803f
+C1488 Countlay_2/inverter_1/A GND -0.23874f
+C1489 Countlay_2/NAND2lay_1/a_110_n10# GND 0.00694f
+C1490 Countlay_2/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00248f
+C1491 Countlay_2/DLATCHlay2_1/NAND3lay_0/Y GND -2.07367f
+C1492 Countlay_2/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND 0
+C1493 Countlay_2/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1494 Countlay_2/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1495 XNORlay_2/A GND -0.4534f
+C1496 Countlay_2/XORlay_1/out GND -1.94269f
+C1497 Countlay_2/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C1498 Countlay_2/DLATCHlay2_1/NAND2lay_1/B GND -0.67357f
+C1499 Countlay_2/DLATCHlay2_1/NAND2lay_0/A GND -1.18874f
+C1500 Countlay_2/DLATCHlay2_1/a_3880_1000# GND -1.38629f
+C1501 Countlay_2/XORlay_1/a_800_30# GND 0
+C1502 Countlay_2/XORlay_1/a_100_30# GND 0
+C1503 Countlay_2/XORlay_1/a_100_990# GND -0.00313f
+C1504 Countlay_2/XORlay_1/inverter_1/B GND -0.19953f
+C1505 Countlay_2/XORlay_1/inverter_0/B GND -0.12202f
+C1506 Countlay_2/XORlay_1/B GND 0.25895f
+C1507 Countlay_1/inverter_1/A GND -0.22662f
+C1508 Countlay_1/NAND2lay_1/a_110_n10# GND 0.00733f
+C1509 Countlay_1/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00273f
+C1510 Countlay_1/DLATCHlay2_1/NAND3lay_0/Y GND -2.06826f
+C1511 Countlay_1/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND -0
+C1512 Countlay_1/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1513 Countlay_1/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1514 XNORlay_1/A GND 0.02229f
+C1515 Countlay_1/XORlay_1/out GND -1.94269f
+C1516 Countlay_1/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C1517 Countlay_1/DLATCHlay2_1/NAND2lay_1/B GND -0.64389f
+C1518 Countlay_1/DLATCHlay2_1/NAND2lay_0/A GND -1.18865f
+C1519 Countlay_1/DLATCHlay2_1/a_3880_1000# GND -1.38364f
+C1520 Countlay_1/XORlay_1/a_800_30# GND 0
+C1521 Countlay_1/XORlay_1/a_100_30# GND 0
+C1522 Countlay_1/XORlay_1/a_100_990# GND -0.00313f
+C1523 Countlay_1/XORlay_1/inverter_1/B GND -0.19953f
+C1524 VDD GND -28.12737f
+C1525 Countlay_1/XORlay_1/inverter_0/B GND -0.12207f
+C1526 Countlay_1/XORlay_1/B GND 0.28921f
+C1527 Countlay_0/inverter_1/A GND -0.26196f
+C1528 Countlay_0/NAND2lay_1/a_110_n10# GND 0.00633f
+C1529 Countlay_0/DLATCHlay2_1/NAND2lay_1/a_110_n10# GND 0.00262f
+C1530 Countlay_0/DLATCHlay2_1/NAND3lay_0/Y GND -2.07183f
+C1531 Countlay_0/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND -0
+C1532 Countlay_0/DLATCHlay2_1/NMOS_2/a_360_0# GND 0
+C1533 Countlay_0/DLATCHlay2_1/NMOS_2/a_120_0# GND 0
+C1534 XNORlay_6/A GND -0.35309f
+C1535 Countlay_0/XORlay_1/out GND -1.94272f
+C1536 Countlay_0/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C1537 Countlay_0/DLATCHlay2_1/NAND2lay_1/B GND -0.6565f
+C1538 Countlay_0/DLATCHlay2_1/NAND2lay_0/A GND -1.18867f
+C1539 Countlay_0/DLATCHlay2_1/a_3880_1000# GND -1.38396f
+C1540 Countlay_0/XORlay_1/a_800_30# GND 0
+C1541 Countlay_0/XORlay_1/a_100_30# GND 0
+C1542 Countlay_0/XORlay_1/a_100_990# GND -0.00313f
+C1543 Countlay_0/XORlay_1/inverter_1/B GND -0.1996f
+C1544 Countlay_0/XORlay_1/inverter_0/B GND -0.12217f
+C1545 XNORlay_7/out GND 0.44467f
+C1546 XNORlay_7/a_1110_960# GND 0.00499f
+C1547 XNORlay_7/a_110_960# GND 0
+C1548 XNORlay_7/a_110_2000# GND 0.00184f
+C1549 XNORlay_7/inverter_1/B GND -0.10064f
+C1550 XNORlay_7/inverter_0/B GND -0.09676f
+C1551 n7 GND -0.49329f
+C1552 inverter_3/A GND 0.01121f
+C1553 XNORlay_6/out GND 0.12798f
+C1554 XNORlay_6/a_1110_960# GND 0.00575f
+C1555 XNORlay_6/a_110_960# GND 0
+C1556 XNORlay_6/a_110_2000# GND 0.00141f
+C1557 XNORlay_6/inverter_1/B GND -0.09669f
+C1558 XNORlay_6/inverter_0/B GND -0.09373f
+C1559 n0 GND -0.25947f
+C1560 inverter_2/A GND 0.15032f
+C1561 XNORlay_5/a_1110_960# GND 0.00356f
+C1562 XNORlay_5/a_110_960# GND 0
+C1563 XNORlay_5/a_110_2000# GND 0
+C1564 XNORlay_5/inverter_1/B GND -0.10294f
+C1565 XNORlay_5/inverter_0/B GND -0.09798f
+C1566 n4 GND -0.53467f
+C1567 inverter_0/A GND 0.59823f
+C1568 XNORlay_4/a_1110_960# GND 0.00494f
+C1569 XNORlay_4/a_110_960# GND 0
+C1570 XNORlay_4/a_110_2000# GND 0
+C1571 XNORlay_4/inverter_1/B GND -0.10178f
+C1572 XNORlay_4/inverter_0/B GND -0.098f
+C1573 n3 GND -0.53859f
+C1574 XNORlay_3/a_1110_960# GND 0.00481f
+C1575 XNORlay_3/a_110_960# GND 0
+C1576 XNORlay_3/a_110_2000# GND 0.00131f
+C1577 XNORlay_3/inverter_1/B GND -0.10082f
+C1578 XNORlay_3/inverter_0/B GND -0.09762f
+C1579 n5 GND -0.55302f
+.ends
+
+.subckt Res1k top bot GND
+X0 top bot GND sky130_fd_pr__res_xhigh_po w=1 l=0.51
+C0 top bot 0.05204f
+C1 bot GND 0.53253f
+C2 top GND 0.51085f
+.ends
+
+.subckt DPLLlay2 VDD GND Data Vcon VCO Out FD n0 n1 n2 n3 n4 n5 n6 n7
+XCaplay1_61 Vcon GND GND Caplay1
+XCaplay1_72 Vcon GND GND Caplay1
+XCaplay1_50 Vcon GND GND Caplay1
+XCaplay1_83 Vcon GND GND Caplay1
+XCaplay1_94 Vcon GND GND Caplay1
+XCaplay1_120 Vcon GND GND Caplay1
+XCaplay1_197 Vcon GND GND Caplay1
+XCaplay1_186 Vcon GND GND Caplay1
+XCaplay1_175 Vcon GND GND Caplay1
+XCaplay1_164 Vcon GND GND Caplay1
+XCaplay1_153 Vcon GND GND Caplay1
+XCaplay1_142 Vcon GND GND Caplay1
+XCaplay1_131 Vcon GND GND Caplay1
+XCaplay1_51 Vcon GND GND Caplay1
+XCaplay1_62 Vcon GND GND Caplay1
+XCaplay1_73 Vcon GND GND Caplay1
+XCaplay1_84 Vcon GND GND Caplay1
+XCaplay1_95 Vcon GND GND Caplay1
+XCaplay1_40 Vcon GND GND Caplay1
+XCaplay1_110 Vcon GND GND Caplay1
+XCaplay1_132 Vcon GND GND Caplay1
+XCaplay1_187 Vcon GND GND Caplay1
+XCaplay1_176 Vcon GND GND Caplay1
+XCaplay1_198 Vcon GND GND Caplay1
+XCaplay1_165 Vcon GND GND Caplay1
+XCaplay1_154 Vcon GND GND Caplay1
+XCaplay1_143 Vcon GND GND Caplay1
+XCaplay1_121 Vcon GND GND Caplay1
+XCaplay1_52 Vcon GND GND Caplay1
+XCaplay1_63 Vcon GND GND Caplay1
+XCaplay1_74 Vcon GND GND Caplay1
+XCaplay1_85 Vcon GND GND Caplay1
+XCaplay1_30 Vcon GND GND Caplay1
+XCaplay1_96 Vcon GND GND Caplay1
+XCaplay1_41 Vcon GND GND Caplay1
+XCaplay1_122 Vcon GND GND Caplay1
+XCaplay1_100 Vcon GND GND Caplay1
+XCaplay1_188 Vcon GND GND Caplay1
+XCaplay1_177 Vcon GND GND Caplay1
+XCaplay1_199 Vcon GND GND Caplay1
+XCaplay1_166 Vcon GND GND Caplay1
+XCaplay1_155 Vcon GND GND Caplay1
+XCaplay1_144 Vcon GND GND Caplay1
+XCaplay1_133 Vcon GND GND Caplay1
+XCaplay1_111 Vcon GND GND Caplay1
+XPFDlay2_0 FD Res1k_0/top PFDlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10# PFDlay2_0/DLATCHlay2_1/NMOS_2/a_120_0#
++ PFDlay2_0/DLATCHlay2_1/NAND2lay_0/a_110_n10# PFDlay2_0/DLATCHlay2_1/NMOS_0/a_360_0#
++ PFDlay2_0/NAND2lay_0/a_110_n10# PFDlay2_0/DLATCHlay2_1/NAND2lay_1/a_110_n10# PFDlay2_0/DLATCHlay2_1/NAND3lay_0/A
++ PFDlay2_0/DLATCHlay2_1/NMOS_0/a_120_0# PFDlay2_0/DLATCHlay2_1/NAND3lay_0/a_110_90#
++ PFDlay2_0/DLATCHlay2_1/NMOS_1/a_360_0# PFDlay2_0/DLATCHlay2_0/NAND3lay_0/A PFDlay2_0/inverter_0/B
++ PFDlay2_0/DLATCHlay2_1/NMOS_1/a_120_0# PFDlay2_0/DLATCHlay2_1/NAND3lay_0/a_350_90#
++ PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y Data PFDlay2_0/DLATCHlay2_0/NAND2lay_1/B PFDlay2_0/DLATCHlay2_0/NAND2lay_0/A
++ PFDlay2_0/DLATCHlay2_1/NMOS_2/a_360_0# VDD PFDlay2_0/NAND2lay_0/C PFDlay2_0/DLATCHlay2_0/NAND3lay_0/Y
++ PFDlay2_0/inverter_0/A PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A PFDlay2_0/DLATCHlay2_1/a_3880_1000#
++ PFDlay2_0/DLATCHlay2_1/NAND2lay_1/B GND PFDlay2_0/DLATCHlay2_0/a_3880_1000# PFDlay2_0/NAND2lay_0/A
++ PFDlay2
+XCaplay1_53 Vcon GND GND Caplay1
+XCaplay1_64 Vcon GND GND Caplay1
+XCaplay1_75 Vcon GND GND Caplay1
+XCaplay1_20 Vcon GND GND Caplay1
+XCaplay1_86 Vcon GND GND Caplay1
+XCaplay1_31 Vcon GND GND Caplay1
+XCaplay1_97 Vcon GND GND Caplay1
+XCaplay1_42 Vcon GND GND Caplay1
+XCaplay1_101 Vcon GND GND Caplay1
+XCaplay1_134 Vcon GND GND Caplay1
+XCaplay1_189 Vcon GND GND Caplay1
+XCaplay1_167 Vcon GND GND Caplay1
+XCaplay1_178 Vcon GND GND Caplay1
+XCaplay1_156 Vcon GND GND Caplay1
+XCaplay1_145 Vcon GND GND Caplay1
+XCaplay1_123 Vcon GND GND Caplay1
+XCaplay1_112 Vcon GND GND Caplay1
+XCaplay1_32 Vcon GND GND Caplay1
+XCaplay1_54 Vcon GND GND Caplay1
+XCaplay1_65 Vcon GND GND Caplay1
+XCaplay1_10 Vcon GND GND Caplay1
+XCaplay1_76 Vcon GND GND Caplay1
+XCaplay1_21 Vcon GND GND Caplay1
+XCaplay1_87 Vcon GND GND Caplay1
+XCaplay1_98 Vcon GND GND Caplay1
+XCaplay1_43 Vcon GND GND Caplay1
+XCaplay1_113 Vcon GND GND Caplay1
+XCaplay1_124 Vcon GND GND Caplay1
+XCaplay1_102 Vcon GND GND Caplay1
+XCaplay1_168 Vcon GND GND Caplay1
+XCaplay1_179 Vcon GND GND Caplay1
+XCaplay1_157 Vcon GND GND Caplay1
+XCaplay1_146 Vcon GND GND Caplay1
+XCaplay1_135 Vcon GND GND Caplay1
+XCaplay1_55 Vcon GND GND Caplay1
+XCaplay1_66 Vcon GND GND Caplay1
+XCaplay1_11 Vcon GND GND Caplay1
+XCaplay1_77 Vcon GND GND Caplay1
+XCaplay1_22 Vcon GND GND Caplay1
+XCaplay1_88 Vcon GND GND Caplay1
+XCaplay1_33 Vcon GND GND Caplay1
+XCaplay1_99 Vcon GND GND Caplay1
+Xbufferlay_0 VCO VDD GND Out bufferlay_0/a_n6232_n13130# bufferlay
+XCaplay1_44 Vcon GND GND Caplay1
+XCaplay1_103 Vcon GND GND Caplay1
+XCaplay1_114 Vcon GND GND Caplay1
+XCaplay1_136 Vcon GND GND Caplay1
+XCaplay1_169 Vcon GND GND Caplay1
+XCaplay1_158 Vcon GND GND Caplay1
+XCaplay1_147 Vcon GND GND Caplay1
+XCaplay1_125 Vcon GND GND Caplay1
+XCaplay1_56 Vcon GND GND Caplay1
+XCaplay1_67 Vcon GND GND Caplay1
+XCaplay1_12 Vcon GND GND Caplay1
+XCaplay1_78 Vcon GND GND Caplay1
+XCaplay1_23 Vcon GND GND Caplay1
+XCaplay1_89 Vcon GND GND Caplay1
+XCaplay1_34 Vcon GND GND Caplay1
+XCaplay1_45 Vcon GND GND Caplay1
+XCaplay1_126 Vcon GND GND Caplay1
+XCaplay1_159 Vcon GND GND Caplay1
+XCaplay1_148 Vcon GND GND Caplay1
+XCaplay1_137 Vcon GND GND Caplay1
+XCaplay1_115 Vcon GND GND Caplay1
+XCaplay1_104 Vcon GND GND Caplay1
+XCaplay1_0 Vcon GND GND Caplay1
+XCaplay1_57 Vcon GND GND Caplay1
+XCaplay1_68 Vcon GND GND Caplay1
+XCaplay1_13 Vcon GND GND Caplay1
+XCaplay1_79 Vcon GND GND Caplay1
+XCaplay1_24 Vcon GND GND Caplay1
+XCaplay1_35 Vcon GND GND Caplay1
+XCaplay1_46 Vcon GND GND Caplay1
+XCaplay1_105 Vcon GND GND Caplay1
+XCaplay1_116 Vcon GND GND Caplay1
+XCaplay1_138 Vcon GND GND Caplay1
+XCaplay1_149 Vcon GND GND Caplay1
+XCaplay1_127 Vcon GND GND Caplay1
+XCaplay1_58 Vcon GND GND Caplay1
+XCaplay1_1 Vcon GND GND Caplay1
+XCaplay1_69 Vcon GND GND Caplay1
+XCaplay1_14 Vcon GND GND Caplay1
+XCaplay1_25 Vcon GND GND Caplay1
+XCaplay1_36 Vcon GND GND Caplay1
+XCaplay1_47 Vcon GND GND Caplay1
+XCaplay1_128 Vcon GND GND Caplay1
+XCaplay1_139 Vcon GND GND Caplay1
+XCaplay1_117 Vcon GND GND Caplay1
+XCaplay1_106 Vcon GND GND Caplay1
+XCaplay1_2 Vcon GND GND Caplay1
+XCaplay1_59 Vcon GND GND Caplay1
+XCaplay1_15 Vcon GND GND Caplay1
+XCaplay1_26 Vcon GND GND Caplay1
+XCaplay1_37 Vcon GND GND Caplay1
+XCaplay1_48 Vcon GND GND Caplay1
+XCaplay1_107 Vcon GND GND Caplay1
+XCaplay1_118 Vcon GND GND Caplay1
+XCaplay1_129 Vcon GND GND Caplay1
+XCaplay1_3 Vcon GND GND Caplay1
+XCaplay1_16 Vcon GND GND Caplay1
+XCaplay1_27 Vcon GND GND Caplay1
+XCaplay1_38 Vcon GND GND Caplay1
+XCaplay1_49 Vcon GND GND Caplay1
+XCaplay1_119 Vcon GND GND Caplay1
+XCaplay1_108 Vcon GND GND Caplay1
+XCaplay1_4 Vcon GND GND Caplay1
+XCaplay1_17 Vcon GND GND Caplay1
+XCaplay1_39 Vcon GND GND Caplay1
+XCaplay1_28 Vcon GND GND Caplay1
+XCaplay1_109 Vcon GND GND Caplay1
+XCaplay1_5 Vcon GND GND Caplay1
+XCaplay1_18 Vcon GND GND Caplay1
+XCaplay1_29 Vcon GND GND Caplay1
+XCaplay1_6 Vcon GND GND Caplay1
+XCaplay1_19 Vcon GND GND Caplay1
+XCaplay1_7 Vcon GND GND Caplay1
+XCaplay1_240 Vcon GND GND Caplay1
+XCaplay1_8 Vcon GND GND Caplay1
+XVCOlay12_0 Vcon VDD GND VCO VCOlay12_0/a_1780_n60# VCOlay12_0/a_4580_n60# VCOlay12_0/a_2600_n60#
++ VCOlay12_0/a_5880_490# VCOlay12_0/a_5400_n60# VCOlay12_0/a_480_n60# VCOlay12_0/a_1780_490#
++ VCOlay12_0/a_0_n60# VCOlay12_0/a_3280_n60# VCOlay12_0/a_1300_n60# VCOlay12_0/a_4580_490#
++ VCOlay12_0/a_4100_n60# VCOlay12_0/a_480_490# VCOlay12_0/a_3280_490# VCOlay12_0/a_5880_n60#
++ VCOlay12
+XCaplay1_241 Vcon GND GND Caplay1
+XCaplay1_230 Vcon GND GND Caplay1
+XCaplay1_9 Vcon GND GND Caplay1
+XCaplay1_220 Vcon GND GND Caplay1
+XCaplay1_242 Vcon GND GND Caplay1
+XCaplay1_231 Vcon GND GND Caplay1
+XCaplay1_221 Vcon GND GND Caplay1
+XCaplay1_210 Vcon GND GND Caplay1
+XCaplay1_232 Vcon GND GND Caplay1
+XCaplay1_243 Vcon GND GND Caplay1
+XCaplay1_222 Vcon GND GND Caplay1
+XCaplay1_211 Vcon GND GND Caplay1
+XCaplay1_200 Vcon GND GND Caplay1
+XCaplay1_233 Vcon GND GND Caplay1
+XCaplay1_244 Vcon GND GND Caplay1
+XFDlay2_0 Out n1 n2 n3 n4 n5 n6 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_1/a_120_0#
++ FDlay2_0/Countlay_4/XORlay_1/inverter_0/B FDlay2_0/XNORlay_5/inverter_0/B FDlay2_0/NAND8lay_0/a_1560_n200#
++ FDlay2_0/NAND8lay_0/a_840_n200# FDlay2_0/XNORlay_0/inverter_0/B FDlay2_0/Countlay2_0/XORlay_0/a_800_30#
++ FDlay2_0/XNORlay_7/a_1110_960# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10#
++ FDlay2_0/Countlay_1/XORlay_1/inverter_1/B FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_2/a_360_0#
++ FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_1/a_110_n10# FDlay2_0/Countlay_5/XORlay_1/inverter_0/B
++ FDlay2_0/Countlay_6/DLATCHlay2_1/NAND2lay_1/B FDlay2_0/Countlay_5/DLATCHlay2_1/NAND3lay_0/A
++ FDlay2_0/inverter_2/A FDlay2_0/NAND8lay_0/a_1320_n200# FDlay2_0/NAND8lay_0/a_600_n200#
++ FDlay2_0/Countlay_6/XORlay_1/inverter_1/B FDlay2_0/Countlay_4/DLATCHlay2_1/NAND2lay_0/A
++ FD FDlay2_0/Countlay_4/NAND2lay_1/a_110_n10# FDlay2_0/XNORlay_7/out FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_2/a_120_0#
++ FDlay2_0/Countlay_0/XORlay_1/inverter_1/B FDlay2_0/Countlay_0/XORlay_1/out FDlay2_0/XNORlay_3/out
++ FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_110_90# FDlay2_0/XNORlay_5/out FDlay2_0/NAND8lay_0/a_1080_n200#
++ FDlay2_0/NAND8lay_0/a_360_n200# FDlay2_0/Countlay_3/XORlay_1/out FDlay2_0/XNORlay_7/a_110_960#
++ FDlay2_0/Countlay_5/DLATCHlay2_1/NAND2lay_0/A FDlay2_0/Countlay_6/XORlay_1/inverter_0/B
++ FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_1/B FDlay2_0/Countlay_5/XORlay_1/inverter_1/B
++ FDlay2_0/XNORlay_3/inverter_0/B FDlay2_0/XNORlay_1/out FDlay2_0/XNORlay_0/inverter_1/B
++ FDlay2_0/Countlay2_0/XORlay_0/B FDlay2_0/XNORlay_6/a_110_2000# FDlay2_0/Countlay_4/XORlay_1/out
++ FDlay2_0/Countlay2_0/XORlay_0/out FDlay2_0/XNORlay_7/a_110_2000# FDlay2_0/XNORlay_2/A
++ FDlay2_0/XNORlay_2/inverter_1/B FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/A FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_0/a_360_0#
++ FDlay2_0/Countlay_4/XORlay_1/B FDlay2_0/XNORlay_5/A FDlay2_0/Countlay2_0/XORlay_0/inverter_1/B
++ FDlay2_0/XNORlay_5/inverter_1/B FDlay2_0/Countlay_4/XORlay_1/inverter_1/B FDlay2_0/XNORlay_7/inverter_0/B
++ FDlay2_0/XNORlay_7/inverter_1/B FDlay2_0/Countlay_5/XORlay_1/B FDlay2_0/XNORlay_4/out
++ FDlay2_0/Countlay_5/XORlay_1/out FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_350_90#
++ FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_0/a_120_0# FDlay2_0/inverter_0/A FDlay2_0/Countlay_4/DLATCHlay2_1/NAND3lay_0/Y
++ FDlay2_0/XNORlay_3/A FDlay2_0/XNORlay_1/A FDlay2_0/Countlay_6/XORlay_1/B FDlay2_0/Countlay_2/XORlay_1/B
++ FDlay2_0/XNORlay_2/out FDlay2_0/XNORlay_4/inverter_1/B FDlay2_0/Countlay_4/inverter_1/A
++ FDlay2_0/inverter_3/A FDlay2_0/XNORlay_6/out FDlay2_0/XNORlay_7/A FDlay2_0/XNORlay_4/A
++ FDlay2_0/Countlay_3/XORlay_1/inverter_1/B FDlay2_0/Countlay_1/XORlay_1/out FDlay2_0/Countlay2_0/XORlay_0/a_100_30#
++ FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# FDlay2_0/XNORlay_6/inverter_0/B n0
++ FDlay2_0/Countlay2_0/XORlay_0/inverter_0/B FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_1/a_360_0#
++ FDlay2_0/Countlay_6/DLATCHlay2_1/NAND2lay_0/A FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/A
++ n7 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/Y FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y
++ FDlay2_0/Countlay_2/XORlay_1/out FDlay2_0/Countlay_4/DLATCHlay2_1/a_3880_1000# FDlay2_0/Countlay_4/DLATCHlay2_1/NAND2lay_0/a_110_n10#
++ VDD FDlay2_0/XNORlay_0/a_1110_960# FDlay2_0/XNORlay_0/A FDlay2_0/Countlay_6/DLATCHlay2_1/a_3880_1000#
++ FDlay2_0/Countlay_1/XORlay_1/B FDlay2_0/XNORlay_0/out FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A
++ FDlay2_0/Countlay_4/DLATCHlay2_1/NAND3lay_0/A FDlay2_0/inverter_3/B FDlay2_0/Countlay_6/XORlay_1/out
++ FDlay2_0/Countlay_5/DLATCHlay2_1/NAND3lay_0/Y FDlay2_0/Countlay_2/XORlay_1/inverter_1/B
++ FDlay2_0/Countlay_5/DLATCHlay2_1/a_3880_1000# FDlay2_0/XNORlay_3/inverter_1/B FDlay2_0/Countlay_3/XORlay_1/B
++ GND FDlay2_0/XNORlay_6/A FDlay2
+XCaplay1_223 Vcon GND GND Caplay1
+XCaplay1_212 Vcon GND GND Caplay1
+XCaplay1_201 Vcon GND GND Caplay1
+XCaplay1_245 Vcon GND GND Caplay1
+XCaplay1_234 Vcon GND GND Caplay1
+XCaplay1_213 Vcon GND GND Caplay1
+XCaplay1_202 Vcon GND GND Caplay1
+XCaplay1_224 Vcon GND GND Caplay1
+XCaplay1_246 Vcon GND GND Caplay1
+XCaplay1_235 Vcon GND GND Caplay1
+XCaplay1_214 Vcon GND GND Caplay1
+XCaplay1_203 Vcon GND GND Caplay1
+XCaplay1_225 Vcon GND GND Caplay1
+XCaplay1_247 Vcon GND GND Caplay1
+XCaplay1_236 Vcon GND GND Caplay1
+XCaplay1_215 Vcon GND GND Caplay1
+XCaplay1_204 Vcon GND GND Caplay1
+XCaplay1_248 Vcon GND GND Caplay1
+XCaplay1_237 Vcon GND GND Caplay1
+XCaplay1_226 Vcon GND GND Caplay1
+XCaplay1_216 Vcon GND GND Caplay1
+XCaplay1_205 Vcon GND GND Caplay1
+XCaplay1_249 Vcon GND GND Caplay1
+XCaplay1_238 Vcon GND GND Caplay1
+XCaplay1_227 Vcon GND GND Caplay1
+XCaplay1_206 Vcon GND GND Caplay1
+XCaplay1_217 Vcon GND GND Caplay1
+XCaplay1_228 Vcon GND GND Caplay1
+XCaplay1_239 Vcon GND GND Caplay1
+XCaplay1_218 Vcon GND GND Caplay1
+XCaplay1_207 Vcon GND GND Caplay1
+XCaplay1_229 Vcon GND GND Caplay1
+XRes1k_0 Res1k_0/top Vcon GND Res1k
+XCaplay1_219 Vcon GND GND Caplay1
+XCaplay1_208 Vcon GND GND Caplay1
+XCaplay1_209 Vcon GND GND Caplay1
+XCaplay1_190 Vcon GND GND Caplay1
+XCaplay1_180 Vcon GND GND Caplay1
+XCaplay1_191 Vcon GND GND Caplay1
+XCaplay1_192 Vcon GND GND Caplay1
+XCaplay1_181 Vcon GND GND Caplay1
+XCaplay1_170 Vcon GND GND Caplay1
+XCaplay1_90 Vcon GND GND Caplay1
+XCaplay1_193 Vcon GND GND Caplay1
+XCaplay1_182 Vcon GND GND Caplay1
+XCaplay1_171 Vcon GND GND Caplay1
+XCaplay1_160 Vcon GND GND Caplay1
+XCaplay1_80 Vcon GND GND Caplay1
+XCaplay1_91 Vcon GND GND Caplay1
+XCaplay1_172 Vcon GND GND Caplay1
+XCaplay1_194 Vcon GND GND Caplay1
+XCaplay1_183 Vcon GND GND Caplay1
+XCaplay1_161 Vcon GND GND Caplay1
+XCaplay1_150 Vcon GND GND Caplay1
+XCaplay1_70 Vcon GND GND Caplay1
+XCaplay1_81 Vcon GND GND Caplay1
+XCaplay1_92 Vcon GND GND Caplay1
+XCaplay1_173 Vcon GND GND Caplay1
+XCaplay1_162 Vcon GND GND Caplay1
+XCaplay1_195 Vcon GND GND Caplay1
+XCaplay1_184 Vcon GND GND Caplay1
+XCaplay1_151 Vcon GND GND Caplay1
+XCaplay1_140 Vcon GND GND Caplay1
+XCaplay1_60 Vcon GND GND Caplay1
+XCaplay1_71 Vcon GND GND Caplay1
+XCaplay1_82 Vcon GND GND Caplay1
+XCaplay1_93 Vcon GND GND Caplay1
+XCaplay1_130 Vcon GND GND Caplay1
+XCaplay1_196 Vcon GND GND Caplay1
+XCaplay1_185 Vcon GND GND Caplay1
+XCaplay1_163 Vcon GND GND Caplay1
+XCaplay1_174 Vcon GND GND Caplay1
+XCaplay1_152 Vcon GND GND Caplay1
+XCaplay1_141 Vcon GND GND Caplay1
+C0 FDlay2_0/XNORlay_7/A Vcon 0
+C1 Vcon PFDlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10# 0
+C2 PFDlay2_0/DLATCHlay2_0/NAND3lay_0/A Data 0
+C3 VCOlay12_0/a_1300_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0.00222f
+C4 PFDlay2_0/NAND2lay_0/C FD 1.10424f
+C5 VCOlay12_0/a_0_n60# Vcon 0.04422f
+C6 FDlay2_0/XNORlay_0/inverter_1/B bufferlay_0/a_n6232_n13130# 0
+C7 FDlay2_0/XNORlay_3/A Out 0.00181f
+C8 Vcon FDlay2_0/XNORlay_7/out 0
+C9 Out FDlay2_0/Countlay_4/XORlay_1/out 0.00161f
+C10 VDD Data 0.0192f
+C11 n5 Out 0
+C12 n5 VDD 0
+C13 Vcon FDlay2_0/XNORlay_6/out 0
+C14 FDlay2_0/inverter_0/A FD 0.16375f
+C15 FDlay2_0/XNORlay_5/out VDD -0
+C16 FDlay2_0/Countlay_5/XORlay_1/B Out 0.00168f
+C17 Out FDlay2_0/Countlay_4/DLATCHlay2_1/NAND3lay_0/Y 0.0041f
+C18 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A Vcon 0.00186f
+C19 FDlay2_0/XNORlay_7/A VDD -0
+C20 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_2/a_120_0# Vcon 0
+C21 PFDlay2_0/DLATCHlay2_1/NMOS_0/a_120_0# VDD 0.00299f
+C22 FDlay2_0/Countlay_6/DLATCHlay2_1/a_3880_1000# Out 0.00114f
+C23 FDlay2_0/XNORlay_2/A FDlay2_0/inverter_3/B -0
+C24 VCOlay12_0/a_1300_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0.00158f
+C25 VCO bufferlay_0/a_n6232_n13130# 0.01874f
+C26 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y PFDlay2_0/inverter_0/A 0.00193f
+C27 VCOlay12_0/a_0_n60# VDD 0.02704f
+C28 VCOlay12_0/a_1300_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_0/a_120_0# 0
+C29 FDlay2_0/XNORlay_7/out VDD 0.00814f
+C30 PFDlay2_0/NAND2lay_0/C FDlay2_0/XNORlay_7/A 0
+C31 VCO FDlay2_0/XNORlay_0/a_1110_960# 0
+C32 FDlay2_0/XNORlay_5/A n4 0.00427f
+C33 FD PFDlay2_0/DLATCHlay2_1/NAND3lay_0/A 0
+C34 Vcon FDlay2_0/XNORlay_2/out 0
+C35 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/Y VDD 0.00208f
+C36 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/Y Out 0.00122f
+C37 VCOlay12_0/a_0_n60# Res1k_0/top 0
+C38 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y n7 0
+C39 VCOlay12_0/a_5400_n60# FDlay2_0/Countlay2_0/XORlay_0/B 0.00205f
+C40 VCOlay12_0/a_2600_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C41 PFDlay2_0/NAND2lay_0/C FDlay2_0/XNORlay_7/out 0
+C42 VCOlay12_0/a_1300_n60# Vcon 0.00724f
+C43 Vcon PFDlay2_0/inverter_0/A 0.01223f
+C44 PFDlay2_0/DLATCHlay2_1/NMOS_0/a_360_0# VDD 0.00299f
+C45 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A VDD 0
+C46 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Vcon 0
+C47 FDlay2_0/XNORlay_3/inverter_0/B Out 0
+C48 Out FDlay2_0/Countlay_4/XORlay_1/inverter_0/B 0.06046f
+C49 FDlay2_0/XNORlay_5/A VDD -0
+C50 Out FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/A 0
+C51 FDlay2_0/XNORlay_5/A Out 0.00775f
+C52 FDlay2_0/inverter_3/B FD 0.69163f
+C53 VCO n6 0.00163f
+C54 FDlay2_0/XNORlay_3/inverter_1/B Out 0
+C55 VCOlay12_0/a_2600_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_110_90# 0
+C56 FDlay2_0/XNORlay_0/inverter_0/B VDD 0.00264f
+C57 FDlay2_0/XNORlay_3/A FDlay2_0/inverter_3/B -0
+C58 VDD FDlay2_0/XNORlay_2/out -0
+C59 FDlay2_0/XNORlay_0/inverter_0/B Out 0
+C60 FDlay2_0/Countlay_4/XORlay_1/B VDD -0
+C61 FDlay2_0/Countlay_4/XORlay_1/B Out 0.25304f
+C62 VCO FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_1/a_120_0# 0
+C63 FDlay2_0/Countlay2_0/XORlay_0/inverter_1/B Vcon 0
+C64 FDlay2_0/XNORlay_5/out FDlay2_0/XNORlay_6/A -0
+C65 VCOlay12_0/a_1300_n60# Out 0.00179f
+C66 n5 FDlay2_0/inverter_3/B 0.00191f
+C67 PFDlay2_0/inverter_0/A VDD 0.00304f
+C68 FDlay2_0/XNORlay_7/a_110_960# VDD 0
+C69 FDlay2_0/XNORlay_7/inverter_1/B VDD 0.00252f
+C70 VCOlay12_0/a_4100_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C71 Res1k_0/top PFDlay2_0/inverter_0/A 0.00509f
+C72 n7 VDD 0.00911f
+C73 Vcon PFDlay2_0/DLATCHlay2_0/NAND3lay_0/A 0.01083f
+C74 VCOlay12_0/a_2600_n60# Vcon 0.0281f
+C75 FDlay2_0/XNORlay_7/A FDlay2_0/inverter_3/B -0
+C76 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y Res1k_0/top 0
+C77 PFDlay2_0/NAND2lay_0/C FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0
+C78 Vcon FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/A 0
+C79 PFDlay2_0/NAND2lay_0/C FDlay2_0/XNORlay_7/inverter_1/B 0
+C80 Out Vcon 0.00714f
+C81 Vcon VDD 0.87224f
+C82 n0 VDD 0
+C83 PFDlay2_0/NAND2lay_0/C n7 0.00109f
+C84 n6 FDlay2_0/XNORlay_0/A 0.00409f
+C85 n3 VDD 0
+C86 VCOlay12_0/a_5400_n60# FDlay2_0/XNORlay_7/A 0.00153f
+C87 FDlay2_0/Countlay2_0/XORlay_0/inverter_1/B Out 0
+C88 FDlay2_0/Countlay_5/DLATCHlay2_1/a_3880_1000# Out 0
+C89 Out FDlay2_0/XNORlay_5/inverter_1/B 0
+C90 n6 bufferlay_0/a_n6232_n13130# 0
+C91 Res1k_0/top Vcon 0.25742f
+C92 n4 VDD 0
+C93 PFDlay2_0/NAND2lay_0/C Vcon 0
+C94 FDlay2_0/Countlay_5/XORlay_1/out Out 0
+C95 Out n4 0
+C96 FDlay2_0/XNORlay_7/A PFDlay2_0/DLATCHlay2_1/NAND2lay_1/a_110_n10# 0
+C97 VCOlay12_0/a_5880_490# VCO 0
+C98 VCOlay12_0/a_4100_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0.00138f
+C99 VCOlay12_0/a_2600_n60# Out 0.00284f
+C100 FDlay2_0/XNORlay_5/A FDlay2_0/inverter_3/B -0
+C101 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND3lay_0/Y Out 0
+C102 FDlay2_0/Countlay2_0/XORlay_0/inverter_0/B Vcon 0
+C103 Vcon FDlay2_0/inverter_0/A 0.11215f
+C104 VCO FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# 0
+C105 FDlay2_0/XNORlay_7/a_1110_960# VDD 0.00202f
+C106 PFDlay2_0/DLATCHlay2_1/NMOS_1/a_360_0# VDD 0.00299f
+C107 Out VDD 0.15525f
+C108 VCOlay12_0/a_4100_n60# Vcon 0.00636f
+C109 PFDlay2_0/DLATCHlay2_1/NMOS_1/a_120_0# VDD 0.00299f
+C110 PFDlay2_0/NAND2lay_0/a_110_n10# FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0
+C111 Res1k_0/top VDD 0.22694f
+C112 PFDlay2_0/NAND2lay_0/C VDD 0.15447f
+C113 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y FD 0
+C114 VCOlay12_0/a_1300_n60# FDlay2_0/inverter_3/B 0
+C115 n2 VDD 0
+C116 PFDlay2_0/inverter_0/A FDlay2_0/inverter_3/B 0
+C117 Vcon PFDlay2_0/DLATCHlay2_1/NAND3lay_0/A 0.0069f
+C118 PFDlay2_0/NAND2lay_0/C Res1k_0/top 0.0738f
+C119 FDlay2_0/XNORlay_7/inverter_1/B FDlay2_0/inverter_3/B 0
+C120 FDlay2_0/inverter_0/A VDD 0.2215f
+C121 PFDlay2_0/DLATCHlay2_1/a_3880_1000# FDlay2_0/inverter_3/A 0
+C122 n7 FDlay2_0/inverter_3/B 0
+C123 n0 FDlay2_0/XNORlay_6/A 0.00599f
+C124 FDlay2_0/Countlay_5/XORlay_1/inverter_0/B Out 0
+C125 FDlay2_0/Countlay_4/DLATCHlay2_1/a_3880_1000# Out 0
+C126 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10# Vcon 0
+C127 Vcon FDlay2_0/XNORlay_3/out 0
+C128 VCOlay12_0/a_4100_n60# Out 0
+C129 PFDlay2_0/NAND2lay_0/C FDlay2_0/inverter_0/A 0
+C130 Vcon FDlay2_0/inverter_3/B 0.01739f
+C131 n3 FDlay2_0/inverter_3/B 0.00175f
+C132 FDlay2_0/Countlay2_0/XORlay_0/inverter_1/B FDlay2_0/inverter_3/B 0
+C133 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND2lay_0/A Out 0
+C134 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND3lay_0/A Out 0
+C135 FDlay2_0/XNORlay_7/A PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y 0.00443f
+C136 VDD PFDlay2_0/DLATCHlay2_1/NAND3lay_0/A 0.01195f
+C137 Out FDlay2_0/Countlay_6/XORlay_1/out 0
+C138 n4 FDlay2_0/inverter_3/B 0.00115f
+C139 VCOlay12_0/a_5400_n60# Vcon 0.03424f
+C140 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y FDlay2_0/XNORlay_7/out 0
+C141 PFDlay2_0/DLATCHlay2_1/a_3880_1000# FD 0.00109f
+C142 PFDlay2_0/DLATCHlay2_0/a_3880_1000# Data 0
+C143 PFDlay2_0/DLATCHlay2_0/NAND2lay_0/A Data 0
+C144 VCOlay12_0/a_2600_n60# FDlay2_0/inverter_3/B 0
+C145 Vcon FDlay2_0/XNORlay_1/out 0
+C146 VDD FDlay2_0/XNORlay_3/out -0
+C147 VCOlay12_0/a_1300_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_0/a_360_0# 0
+C148 FDlay2_0/XNORlay_7/inverter_0/B VDD 0
+C149 VDD FDlay2_0/inverter_3/B 0.11411f
+C150 Out FDlay2_0/inverter_3/B 0.01026f
+C151 FDlay2_0/XNORlay_7/inverter_1/B PFDlay2_0/DLATCHlay2_1/NMOS_2/a_360_0# 0
+C152 VCOlay12_0/a_0_n60# VCO -0
+C153 FDlay2_0/inverter_0/A PFDlay2_0/DLATCHlay2_1/NAND3lay_0/A 0
+C154 Res1k_0/top FDlay2_0/inverter_3/B 0.01009f
+C155 PFDlay2_0/NAND2lay_0/C FDlay2_0/XNORlay_7/inverter_0/B 0
+C156 PFDlay2_0/NAND2lay_0/C FDlay2_0/inverter_3/B 0.8124f
+C157 VCOlay12_0/a_5400_n60# Out 0
+C158 VCOlay12_0/a_5400_n60# VDD 0.00173f
+C159 n2 FDlay2_0/inverter_3/B 0.00389f
+C160 VCOlay12_0/a_5400_n60# FDlay2_0/Countlay2_0/XORlay_0/a_100_30# 0
+C161 FDlay2_0/XNORlay_1/A n1 0.00449f
+C162 VCO FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A 0
+C163 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND2lay_0/A Out 0.0749f
+C164 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A FDlay2_0/inverter_3/A 0
+C165 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND3lay_0/A Out 0
+C166 PFDlay2_0/DLATCHlay2_1/a_3880_1000# FDlay2_0/XNORlay_7/out 0
+C167 VCOlay12_0/a_4100_n60# FDlay2_0/inverter_3/B 0
+C168 PFDlay2_0/DLATCHlay2_1/a_3880_1000# FDlay2_0/XNORlay_7/a_110_2000# 0
+C169 VCOlay12_0/a_5400_n60# FDlay2_0/Countlay2_0/XORlay_0/inverter_0/B 0
+C170 FDlay2_0/inverter_3/B n1 0.00333f
+C171 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y n7 0
+C172 FDlay2_0/XNORlay_1/A FDlay2_0/inverter_3/B -0
+C173 n3 FDlay2_0/XNORlay_4/A 0.00332f
+C174 VDD FDlay2_0/Countlay_6/DLATCHlay2_1/NAND2lay_1/B 0
+C175 Vcon PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y 0.01812f
+C176 VCOlay12_0/a_480_490# VDD 0
+C177 PFDlay2_0/NAND2lay_0/A FDlay2_0/XNORlay_7/A 0.00105f
+C178 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A FD 0.08696f
+C179 Vcon FDlay2_0/Countlay2_0/XORlay_0/out 0
+C180 VDD FDlay2_0/NAND8lay_0/a_1560_n200# -0
+C181 FDlay2_0/XNORlay_7/inverter_0/B FDlay2_0/inverter_3/B -0
+C182 PFDlay2_0/NAND2lay_0/A FDlay2_0/XNORlay_7/out 0
+C183 VDD FDlay2_0/NAND8lay_0/a_1320_n200# -0
+C184 Vcon PFDlay2_0/inverter_0/B 0.00523f
+C185 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/a_350_90# VDD 0.00265f
+C186 VCO Vcon 0.60937f
+C187 VDD FDlay2_0/XNORlay_0/inverter_1/B 0
+C188 VCOlay12_0/a_5400_n60# FDlay2_0/inverter_3/B 0
+C189 Out FDlay2_0/Countlay_6/XORlay_1/inverter_1/B 0
+C190 PFDlay2_0/DLATCHlay2_0/a_3880_1000# Vcon 0.00939f
+C191 Vcon PFDlay2_0/DLATCHlay2_0/NAND2lay_0/A 0.01317f
+C192 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y VDD 0.03411f
+C193 PFDlay2_0/DLATCHlay2_1/NAND2lay_1/B FDlay2_0/XNORlay_7/A 0
+C194 PFDlay2_0/DLATCHlay2_1/NAND2lay_1/a_110_n10# FDlay2_0/XNORlay_7/inverter_0/B 0
+C195 PFDlay2_0/DLATCHlay2_1/a_3880_1000# n7 0.00213f
+C196 Res1k_0/top PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y 0.00112f
+C197 VDD PFDlay2_0/inverter_0/B 0.00845f
+C198 VCO Out 0.00276f
+C199 VCO VDD 0.16448f
+C200 Out FDlay2_0/Countlay_6/XORlay_1/B 0
+C201 FDlay2_0/inverter_3/A FD 0.00126f
+C202 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y FDlay2_0/inverter_0/A 0
+C203 PFDlay2_0/NAND2lay_0/A PFDlay2_0/inverter_0/A 0
+C204 PFDlay2_0/DLATCHlay2_0/NAND2lay_0/A VDD -0
+C205 FDlay2_0/Countlay_5/XORlay_1/inverter_1/B Out 0
+C206 Vcon bufferlay_0/a_n6232_n13130# 0.00606f
+C207 PFDlay2_0/NAND2lay_0/A FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0
+C208 FDlay2_0/inverter_2/A FD 0
+C209 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_350_90# Vcon 0
+C210 PFDlay2_0/NAND2lay_0/A FDlay2_0/XNORlay_7/inverter_1/B 0.00255f
+C211 PFDlay2_0/NAND2lay_0/A n7 0
+C212 PFDlay2_0/DLATCHlay2_1/a_3880_1000# FDlay2_0/XNORlay_7/a_1110_960# 0
+C213 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/a_110_n10# Vcon 0
+C214 PFDlay2_0/DLATCHlay2_1/NMOS_2/a_120_0# n7 0
+C215 VCO FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_1/a_360_0# 0
+C216 PFDlay2_0/DLATCHlay2_1/a_3880_1000# VDD 0.02472f
+C217 PFDlay2_0/NAND2lay_0/A Vcon 0
+C218 Out FDlay2_0/Countlay_6/DLATCHlay2_1/NAND2lay_0/A 0.00121f
+C219 VDD FDlay2_0/XNORlay_0/A 0.04769f
+C220 Out FDlay2_0/XNORlay_0/A 0.00158f
+C221 PFDlay2_0/DLATCHlay2_0/NAND3lay_0/Y Data 0.32308f
+C222 FDlay2_0/XNORlay_4/A FDlay2_0/inverter_3/B -0
+C223 VCOlay12_0/a_0_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# 0
+C224 VDD bufferlay_0/a_n6232_n13130# 0.02305f
+C225 Out bufferlay_0/a_n6232_n13130# 0.05151f
+C226 PFDlay2_0/DLATCHlay2_1/NAND2lay_1/B FDlay2_0/XNORlay_7/inverter_1/B 0
+C227 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y FDlay2_0/XNORlay_7/inverter_0/B 0
+C228 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y FDlay2_0/inverter_3/B 0
+C229 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/a_110_n10# VDD 0.00442f
+C230 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A n7 0
+C231 PFDlay2_0/DLATCHlay2_0/NAND2lay_1/B Vcon 0.0057f
+C232 PFDlay2_0/NAND2lay_0/A VDD 0.0046f
+C233 FDlay2_0/Countlay_4/XORlay_1/inverter_1/B Out 0
+C234 n5 FDlay2_0/XNORlay_3/A 0.00422f
+C235 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A Vcon 0.00779f
+C236 VCO FDlay2_0/inverter_3/B 0.00249f
+C237 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/a_110_90# VDD 0.00265f
+C238 VCOlay12_0/a_5400_n60# FDlay2_0/Countlay2_0/XORlay_0/out 0
+C239 PFDlay2_0/NAND2lay_0/A Res1k_0/top 0.00718f
+C240 Out n6 0
+C241 VDD n6 0.00486f
+C242 VCOlay12_0/a_5400_n60# VCO 0
+C243 VCOlay12_0/a_1300_n60# FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# 0
+C244 PFDlay2_0/DLATCHlay2_0/NAND2lay_1/B VDD 0
+C245 PFDlay2_0/DLATCHlay2_1/a_3880_1000# FDlay2_0/inverter_3/B 0
+C246 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A VDD 0.23426f
+C247 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND2lay_0/a_110_n10# Out 0.00559f
+C248 PFDlay2_0/DLATCHlay2_1/NAND2lay_1/B Res1k_0/top 0
+C249 FDlay2_0/inverter_3/B FDlay2_0/XNORlay_0/A -0
+C250 PFDlay2_0/NAND2lay_0/C PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A -0.00521f
+C251 FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# Vcon 0
+C252 FDlay2_0/inverter_3/B bufferlay_0/a_n6232_n13130# 0
+C253 VCOlay12_0/a_5400_n60# bufferlay_0/a_n6232_n13130# 0
+C254 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A FDlay2_0/inverter_0/A 0.01724f
+C255 PFDlay2_0/NAND2lay_0/A FDlay2_0/XNORlay_7/inverter_0/B 0
+C256 PFDlay2_0/NAND2lay_0/A FDlay2_0/inverter_3/B 0.00114f
+C257 Vcon PFDlay2_0/DLATCHlay2_0/NAND3lay_0/Y 0.26987f
+C258 Vcon FDlay2_0/XNORlay_0/out 0
+C259 n7 FD 0.00158f
+C260 FDlay2_0/XNORlay_4/out Vcon 0.27055f
+C261 FDlay2_0/NAND8lay_0/a_1080_n200# VDD -0
+C262 Out FDlay2_0/Countlay_6/XORlay_1/inverter_0/B 0
+C263 FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# VDD 0
+C264 FDlay2_0/inverter_3/A VDD 0.0046f
+C265 FDlay2_0/XNORlay_2/A VDD 0
+C266 FDlay2_0/inverter_3/B n6 0.00196f
+C267 FDlay2_0/inverter_2/A VDD 0
+C268 PFDlay2_0/NAND2lay_0/C FDlay2_0/inverter_3/A 0
+C269 FDlay2_0/XNORlay_7/A PFDlay2_0/inverter_0/A 0
+C270 FDlay2_0/XNORlay_5/inverter_0/B Out 0
+C271 PFDlay2_0/DLATCHlay2_1/NAND2lay_1/B FDlay2_0/XNORlay_7/inverter_0/B 0
+C272 PFDlay2_0/DLATCHlay2_0/NAND3lay_0/Y VDD 0
+C273 Vcon Data 0.11077f
+C274 n2 FDlay2_0/XNORlay_2/A 0.00762f
+C275 VCO FDlay2_0/Countlay2_0/XORlay_0/out 0.00158f
+C276 VDD FDlay2_0/XNORlay_0/out 0.00277f
+C277 FDlay2_0/XNORlay_7/A n7 0.00104f
+C278 FDlay2_0/XNORlay_4/out VDD 0
+C279 FDlay2_0/XNORlay_5/out Vcon 0
+C280 FDlay2_0/XNORlay_5/out n0 0.00236f
+C281 VDD FD 0.87441f
+C282 VCOlay12_0/a_480_n60# VDD 0
+C283 Res1k_0/top GND 0.69213f
+C284 FDlay2_0/XNORlay_2/inverter_1/B GND -0.10686f
+C285 FDlay2_0/XNORlay_2/inverter_0/B GND -0.09867f
+C286 n2 GND -0.55238f
+C287 FDlay2_0/XNORlay_1/inverter_1/B GND -0.10787f
+C288 FDlay2_0/XNORlay_1/inverter_0/B GND -0.09867f
+C289 n1 GND -0.55507f
+C290 FDlay2_0/XNORlay_0/out GND -2.95232f
+C291 FDlay2_0/XNORlay_0/a_1110_960# GND 0
+C292 FDlay2_0/XNORlay_0/inverter_1/B GND -0.1072f
+C293 FDlay2_0/XNORlay_0/inverter_0/B GND -0.09867f
+C294 n6 GND -0.56183f
+C295 FDlay2_0/XNORlay_3/out GND -2.95426f
+C296 FDlay2_0/XNORlay_5/out GND -6.81146f
+C297 FDlay2_0/XNORlay_4/out GND -12.56774f
+C298 FDlay2_0/XNORlay_2/out GND -3.83975f
+C299 FDlay2_0/XNORlay_1/out GND -3.60106f
+C300 FDlay2_0/NAND8lay_0/a_1560_n200# GND 0.00464f
+C301 FDlay2_0/NAND8lay_0/a_1320_n200# GND 0.00182f
+C302 FDlay2_0/NAND8lay_0/a_1080_n200# GND 0
+C303 FDlay2_0/NAND8lay_0/a_840_n200# GND 0
+C304 FDlay2_0/NAND8lay_0/a_600_n200# GND 0
+C305 FDlay2_0/NAND8lay_0/a_360_n200# GND 0
+C306 FDlay2_0/Countlay_6/inverter_1/A GND -0.30687f
+C307 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C308 FDlay2_0/Countlay_6/XORlay_1/out GND -1.94217f
+C309 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C310 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C311 FDlay2_0/Countlay_6/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C312 FDlay2_0/Countlay_6/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C313 FDlay2_0/Countlay_6/XORlay_1/inverter_1/B GND -0.19662f
+C314 FDlay2_0/XNORlay_0/A GND -2.9009f
+C315 FDlay2_0/Countlay_6/XORlay_1/inverter_0/B GND -0.12211f
+C316 FDlay2_0/Countlay_6/XORlay_1/B GND -5.01983f
+C317 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_1/a_110_n10# GND 0.00104f
+C318 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/Y GND -2.16304f
+C319 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/a_110_n10# GND 0
+C320 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_2/a_360_0# GND 0
+C321 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_2/a_120_0# GND 0
+C322 FDlay2_0/XNORlay_7/A GND -5.23761f
+C323 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_1/a_360_0# GND 0
+C324 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_1/a_120_0# GND 0
+C325 FDlay2_0/Countlay2_0/XORlay_0/out GND -1.66406f
+C326 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_0/a_360_0# GND 0
+C327 FDlay2_0/Countlay2_0/DLATCHlay2_0/NMOS_0/a_120_0# GND 0
+C328 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/A GND -0.4013f
+C329 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_350_90# GND 0
+C330 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND3lay_0/a_110_90# GND 0
+C331 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_1/B GND -0.8109f
+C332 FDlay2_0/Countlay2_0/DLATCHlay2_0/NAND2lay_0/A GND -1.17904f
+C333 FDlay2_0/Countlay2_0/DLATCHlay2_0/a_3880_1000# GND -1.39903f
+C334 FDlay2_0/Countlay2_0/XORlay_0/a_800_30# GND 0
+C335 FDlay2_0/Countlay2_0/XORlay_0/a_100_30# GND 0
+C336 FDlay2_0/Countlay2_0/XORlay_0/inverter_1/B GND -0.1955f
+C337 FDlay2_0/Countlay2_0/XORlay_0/inverter_0/B GND -0.11948f
+C338 FDlay2_0/Countlay2_0/XORlay_0/B GND -4.30796f
+C339 FDlay2_0/Countlay_5/inverter_1/A GND -0.30687f
+C340 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C341 FDlay2_0/Countlay_5/XORlay_1/out GND -1.94217f
+C342 Out GND -21.87312f
+C343 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C344 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C345 FDlay2_0/Countlay_5/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C346 FDlay2_0/Countlay_5/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C347 FDlay2_0/Countlay_5/XORlay_1/inverter_1/B GND -0.19662f
+C348 FDlay2_0/XNORlay_3/A GND -3.04485f
+C349 FDlay2_0/Countlay_5/XORlay_1/inverter_0/B GND -0.12211f
+C350 FDlay2_0/Countlay_5/XORlay_1/B GND -5.13206f
+C351 FDlay2_0/Countlay_4/inverter_1/A GND -0.30635f
+C352 FDlay2_0/Countlay_4/NAND2lay_1/a_110_n10# GND 0
+C353 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C354 FDlay2_0/Countlay_4/XORlay_1/out GND -1.94217f
+C355 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C356 FDlay2_0/inverter_3/B GND -24.40491f
+C357 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C358 FDlay2_0/Countlay_4/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C359 FDlay2_0/Countlay_4/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C360 FDlay2_0/Countlay_4/XORlay_1/inverter_1/B GND -0.19662f
+C361 FDlay2_0/XNORlay_5/A GND -3.52884f
+C362 FDlay2_0/Countlay_4/XORlay_1/inverter_0/B GND -0.12211f
+C363 FDlay2_0/Countlay_4/XORlay_1/B GND -1.36665f
+C364 FDlay2_0/Countlay_3/inverter_1/A GND -0.30687f
+C365 FDlay2_0/Countlay_3/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C366 FDlay2_0/XNORlay_4/A GND -3.75452f
+C367 FDlay2_0/Countlay_3/XORlay_1/out GND -1.93494f
+C368 FDlay2_0/Countlay_3/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C369 FDlay2_0/Countlay_3/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C370 FDlay2_0/Countlay_3/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C371 FDlay2_0/Countlay_3/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C372 FDlay2_0/Countlay_3/XORlay_1/inverter_1/B GND -0.1961f
+C373 FDlay2_0/Countlay_3/XORlay_1/inverter_0/B GND -0.12211f
+C374 FDlay2_0/Countlay_3/XORlay_1/B GND -3.70894f
+C375 FDlay2_0/Countlay_2/inverter_1/A GND -0.30687f
+C376 FDlay2_0/Countlay_2/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C377 FDlay2_0/XNORlay_2/A GND -4.23823f
+C378 FDlay2_0/Countlay_2/XORlay_1/out GND -1.93506f
+C379 FDlay2_0/Countlay_2/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C380 FDlay2_0/Countlay_2/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C381 FDlay2_0/Countlay_2/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C382 FDlay2_0/Countlay_2/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C383 FDlay2_0/Countlay_2/XORlay_1/inverter_1/B GND -0.19618f
+C384 FDlay2_0/Countlay_2/XORlay_1/inverter_0/B GND -0.12211f
+C385 FDlay2_0/Countlay_2/XORlay_1/B GND -2.06052f
+C386 FDlay2_0/Countlay_1/inverter_1/A GND -0.30687f
+C387 FDlay2_0/Countlay_1/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C388 FDlay2_0/XNORlay_1/A GND -2.49854f
+C389 FDlay2_0/Countlay_1/XORlay_1/out GND -1.93388f
+C390 FDlay2_0/Countlay_1/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C391 FDlay2_0/Countlay_1/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C392 FDlay2_0/Countlay_1/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C393 FDlay2_0/Countlay_1/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C394 FDlay2_0/Countlay_1/XORlay_1/inverter_1/B GND -0.1959f
+C395 VDD GND -48.00364f
+C396 FDlay2_0/Countlay_1/XORlay_1/inverter_0/B GND -0.12211f
+C397 FDlay2_0/Countlay_1/XORlay_1/B GND -3.70819f
+C398 FDlay2_0/Countlay_0/inverter_1/A GND -0.30687f
+C399 FDlay2_0/Countlay_0/DLATCHlay2_1/NAND3lay_0/Y GND -2.19335f
+C400 FDlay2_0/XNORlay_6/A GND -4.12867f
+C401 FDlay2_0/Countlay_0/XORlay_1/out GND -1.93495f
+C402 FDlay2_0/Countlay_0/DLATCHlay2_1/NAND3lay_0/A GND -0.40304f
+C403 FDlay2_0/Countlay_0/DLATCHlay2_1/NAND2lay_1/B GND -0.82122f
+C404 FDlay2_0/Countlay_0/DLATCHlay2_1/NAND2lay_0/A GND -1.18904f
+C405 FDlay2_0/Countlay_0/DLATCHlay2_1/a_3880_1000# GND -1.40552f
+C406 FDlay2_0/Countlay_0/XORlay_1/inverter_1/B GND -0.19618f
+C407 FDlay2_0/Countlay_0/XORlay_1/inverter_0/B GND -0.12211f
+C408 FDlay2_0/XNORlay_7/out GND -0.45937f
+C409 FDlay2_0/XNORlay_7/a_1110_960# GND 0
+C410 FDlay2_0/XNORlay_7/a_110_960# GND 0.00185f
+C411 FDlay2_0/XNORlay_7/inverter_1/B GND -0.10687f
+C412 FDlay2_0/XNORlay_7/inverter_0/B GND -0.08691f
+C413 n7 GND -0.49986f
+C414 FDlay2_0/inverter_3/A GND -0.29214f
+C415 FDlay2_0/XNORlay_6/out GND -0.43594f
+C416 FDlay2_0/XNORlay_6/a_110_2000# GND 0.00149f
+C417 FDlay2_0/XNORlay_6/inverter_1/B GND -0.10787f
+C418 FDlay2_0/XNORlay_6/inverter_0/B GND -0.09738f
+C419 n0 GND -0.30719f
+C420 FDlay2_0/inverter_2/A GND -0.39026f
+C421 FDlay2_0/XNORlay_5/inverter_1/B GND -0.10787f
+C422 FDlay2_0/XNORlay_5/inverter_0/B GND -0.09867f
+C423 n4 GND -0.56815f
+C424 FDlay2_0/inverter_0/A GND -0.98819f
+C425 FDlay2_0/XNORlay_4/inverter_1/B GND -0.10646f
+C426 FDlay2_0/XNORlay_4/inverter_0/B GND -0.09867f
+C427 n3 GND -0.57371f
+C428 FDlay2_0/XNORlay_3/inverter_1/B GND -0.10787f
+C429 FDlay2_0/XNORlay_3/inverter_0/B GND -0.09867f
+C430 n5 GND -0.58174f
+C431 VCO GND 0.11154f
+C432 VCOlay12_0/a_5880_n60# GND 0.00635f
+C433 VCOlay12_0/a_4580_n60# GND 0.00631f
+C434 VCOlay12_0/a_3280_n60# GND 0.00631f
+C435 VCOlay12_0/a_1780_n60# GND 0.00631f
+C436 VCOlay12_0/a_480_n60# GND 0.00631f
+C437 VCOlay12_0/a_5880_490# GND 0.00298f
+C438 VCOlay12_0/a_4580_490# GND 0.00325f
+C439 VCOlay12_0/a_3280_490# GND 0.00244f
+C440 VCOlay12_0/a_1780_490# GND 0.00325f
+C441 VCOlay12_0/a_480_490# GND 0.00668f
+C442 VCOlay12_0/a_5400_n60# GND 0.09601f
+C443 VCOlay12_0/a_4100_n60# GND 0.10371f
+C444 VCOlay12_0/a_2600_n60# GND 0.08686f
+C445 VCOlay12_0/a_1300_n60# GND 0.09174f
+C446 VCOlay12_0/a_0_n60# GND 0.05263f
+C447 bufferlay_0/a_n6232_n13130# GND 0.10688f
+C448 PFDlay2_0/NAND2lay_0/a_110_n10# GND 0.00592f
+C449 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/Y GND -2.18149f
+C450 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/a_110_n10# GND 0.00357f
+C451 PFDlay2_0/DLATCHlay2_1/NMOS_2/a_360_0# GND 0.00108f
+C452 PFDlay2_0/DLATCHlay2_1/NMOS_2/a_120_0# GND 0.00108f
+C453 PFDlay2_0/NAND2lay_0/A GND -1.38031f
+C454 FD GND 0.96196f
+C455 PFDlay2_0/DLATCHlay2_1/NAND3lay_0/A GND -0.40112f
+C456 PFDlay2_0/DLATCHlay2_1/NAND2lay_1/B GND -0.8201f
+C457 PFDlay2_0/DLATCHlay2_1/NAND2lay_0/A GND -1.17815f
+C458 PFDlay2_0/DLATCHlay2_1/a_3880_1000# GND -1.40307f
+C459 PFDlay2_0/DLATCHlay2_0/NAND3lay_0/Y GND -2.1645f
+C460 PFDlay2_0/inverter_0/A GND -1.29197f
+C461 Data GND 0.20711f
+C462 PFDlay2_0/DLATCHlay2_0/NAND3lay_0/A GND -0.40256f
+C463 PFDlay2_0/NAND2lay_0/C GND -2.24013f
+C464 PFDlay2_0/DLATCHlay2_0/NAND2lay_1/B GND -0.81747f
+C465 PFDlay2_0/DLATCHlay2_0/NAND2lay_0/A GND -1.18684f
+C466 PFDlay2_0/DLATCHlay2_0/a_3880_1000# GND -1.40021f
+C467 PFDlay2_0/inverter_0/B GND -0.16667f
+C468 Vcon GND 0.48159p
+.ends
+
