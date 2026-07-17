@@ -9,6 +9,16 @@
 
 ---
 
+## 🗂️ Repository Structure
+
+Click on the folders below to view the project files:
+
+*   **[Schematic](Schematic/)** - Contains the Xschem schematic files.
+*   **[Layout](Layout/)** - Contains the Magic layout design files.
+*   **[Spice file](Spice%20file/)** - Contains the Ngspice simulation files and netlists.
+
+---
+
 ## Abstract
 
 Digital Phase Locked Loops (DPLLs) are widely used in modern communication systems for applications such as:
